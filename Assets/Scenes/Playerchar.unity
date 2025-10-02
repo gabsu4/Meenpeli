@@ -248,6 +248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 10
+  dodgeSpeed: 50
+  dodgeDuration: 0.15
+  dodgeCooldown: 1
 --- !u!61 &892225656
 BoxCollider2D:
   m_ObjectHideFlags: 0

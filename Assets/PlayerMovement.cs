@@ -2,40 +2,93 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Muuttuja hahmon nopeudelle. Näkyy ja säädettävissä Unityn Inspectorissa.
+    [Header("Movement Settings")]
     [SerializeField] private float moveSpeed = 5f;
 
-    // Viittaus Rigidbody2D-komponenttiin
+    [Header("Dodge Settings")]
+    [SerializeField] private float dodgeSpeed = 15f; // Kuinka nopeasti hahmo väistää
+    [SerializeField] private float dodgeDuration = 0.15f; // Väistön kesto sekunneissa
+    [SerializeField] private float dodgeCooldown = 1.0f; // Väistön jäähdytysaika
+
+    // Viittaukset komponenteihin
     private Rigidbody2D rb;
 
-    // Muuttuja liikesuunnan tallentamiseen
+    // Liikkeen muuttujat
     private Vector2 movement;
 
-    // Awake kutsutaan kun skripti luodaan, ennen Startia.
+    // Väistön tilaa seuraavat muuttujat
+    private bool isDodging = false;
+    private float dodgeTimer = 0f;
+    private float cooldownTimer = 0f;
+
     private void Awake()
     {
-        // Haetaan Rigidbody2D-komponentti, joka on samassa GameObjectissa.
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update kutsutaan kerran per ruutu. Käytetään käyttäjän syötteen lukemiseen.
     private void Update()
     {
-        // Luetaan käyttäjän syöte.
-        // Input.GetAxisRaw antaa arvon -1, 0 tai 1 (ei pehmennystä).
-        float inputX = Input.GetAxisRaw("Horizontal"); // Oletuksena A/D tai nuolinäppäimet
-        float inputY = Input.GetAxisRaw("Vertical");   // Oletuksena W/S tai nuolinäppäimet
+        // --- 1. Jäähdytysajan hallinta ---
+        if (cooldownTimer > 0)
+        {
+            cooldownTimer -= Time.deltaTime;
+        }
 
-        // Luodaan uusi Vector2, joka edustaa hahmon haluttua liikesuuntaa.
+        // --- 2. Väistönhallinta (kun väistö on käynnissä) ---
+        if (isDodging)
+        {
+            dodgeTimer -= Time.deltaTime;
+
+            if (dodgeTimer <= 0)
+            {
+                isDodging = false;
+                // Kun väistö loppuu, palataan normaaliin liikkumiseen FixedUpdate():ssa.
+            }
+            // Älä käsittele muuta syötettä väistön aikana
+            return;
+        }
+
+        // --- 3. Liikesyötteen lukeminen ---
+        float inputX = Input.GetAxisRaw("Horizontal");
+        float inputY = Input.GetAxisRaw("Vertical");
+
+        // Luodaan liikesuunta ja normalisoidaan se (ei vinosti nopeammin)
         movement = new Vector2(inputX, inputY).normalized;
-        // .normalized varmistaa, että liikkuminen vinosti (diagonaalisesti) ei ole nopeampaa.
+
+        // --- 4. Väistönapin käsittely ---
+        // Tarkistetaan, painetaanko Space-näppäintä, ollaanko jäähdytysajan ulkopuolella,
+        // ja onko hahmo liikkumassa johonkin suuntaan (movement.magnitude > 0)
+        if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer <= 0 && movement.magnitude > 0)
+        {
+            StartDodge();
+        }
     }
 
-    // FixedUpdate kutsutaan säännöllisin väliajoin ja on paras paikka fysiikkalaskelmille (kuten Rigidbodyjen liikuttamiseen).
     private void FixedUpdate()
     {
-        // Lasketaan uusi sijainti ja asetetaan se Rigidbody2D:lle.
-        // rb.velocity = nopeus, jolla Rigidbody liikkuu.
-        rb.linearVelocity = movement * moveSpeed;
+        if (isDodging)
+        {
+            // Väistön aikana käytetään tallennettua suuntaa * dodgeSpeed
+            // Väistö on nopeampi ja "työntää" hahmoa
+            rb.linearVelocity = movement * dodgeSpeed;
+        }
+        else
+        {
+            // Normaali liikkuminen
+            rb.linearVelocity = movement * moveSpeed;
+        }
+    }
+
+    private void StartDodge()
+    {
+        // Jos hahmo ei liiku (movement.magnitude on nolla), emme tee väistöä.
+        if (movement.magnitude == 0) return;
+
+        isDodging = true;
+        dodgeTimer = dodgeDuration;
+        cooldownTimer = dodgeCooldown;
+
+        // Tässä vaiheessa *movement* sisältää jo sen suunnan, johon hahmo on juuri liikkunut.
+        // FixedUpdate() käyttää tätä arvoa väistönopeudella.
     }
 }
