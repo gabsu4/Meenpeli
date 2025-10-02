@@ -1,60 +1,61 @@
 using UnityEngine;
+using UnityEngine.UI; // TÄRKEÄ: Tarvitaan Slider-komponentin käyttöön
 
 public class Health : MonoBehaviour
 {
     [Header("Health Settings")]
-    [SerializeField] private int maxHealth = 10; // Hahmon maksimi HP
+    [SerializeField] private int maxHealth = 10; 
     
-    // Yksityinen muuttuja, joka seuraa nykyistä HP:ta
+    // UUSI: Julkinen muuttuja HP-palkin liittämistä varten
+    [Header("UI Settings")]
+    [SerializeField] private Slider healthBarSlider; 
+
     private int currentHealth;
 
     private void Start()
     {
-        // Asetetaan nykyinen terveys maksimitasolle pelin alussa
         currentHealth = maxHealth;
+        
+        // TÄRKEÄ UUSI KOHTA: Määritellään Sliderin maksimiarvo
+        if (healthBarSlider != null)
+        {
+            healthBarSlider.maxValue = maxHealth;
+            // Asetetaan myös nykyinen arvo alussa
+            healthBarSlider.value = currentHealth;
+        }
+
         Debug.Log($"Pelaajan HP: {currentHealth}/{maxHealth}");
     }
 
     /// <summary>
     /// Funktio, jota kutsutaan, kun hahmo ottaa vahinkoa.
     /// </summary>
-    /// <param name="damageAmount">Otettava vahingon määrä.</param>
     public void TakeDamage(int damageAmount)
     {
-        // Vähennetään nykyistä terveyttä
         currentHealth -= damageAmount;
 
-        // Varmistetaan, ettei HP mene nollan alle ennen kuolemaa
         if (currentHealth < 0)
         {
             currentHealth = 0;
         }
+        
+        // UUSI KOHTA: Päivitetään Sliderin arvo
+        if (healthBarSlider != null)
+        {
+            healthBarSlider.value = currentHealth;
+        }
 
         Debug.Log($"Pelaaja otti {damageAmount} DMG:tä. Jäljellä HP: {currentHealth}/{maxHealth}");
 
-        // Tarkistetaan, onko hahmon HP nolla tai alle
         if (currentHealth <= 0)
         {
             Die();
         }
     }
 
-    /// <summary>
-    /// Funktio, joka suoritetaan hahmon kuollessa.
-    /// </summary>
     private void Die()
     {
         Debug.Log("Pelaaja kuoli!");
-        
-        // TÄHÄN TULEE KUOLEMALOGIIKKA:
-        
-        // 1. Pysäytä peli (tai näytä Game Over -ruutu)
-        // Time.timeScale = 0f; 
-        
-        // 2. Piilota tai tuhoa hahmo
         Destroy(gameObject); 
-        
-        // 3. Tai vain deaktivoi se:
-        // gameObject.SetActive(false);
     }
 }
