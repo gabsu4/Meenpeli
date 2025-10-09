@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class testi__health : MonoBehaviour
+public class Health : MonoBehaviour
 {
     public int maxHealth = 10;
     public int health;
