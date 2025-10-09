@@ -5,6 +5,12 @@ public class PlayerMovement : MonoBehaviour
     // Muuttuja hahmon nopeudelle. Näkyy ja säädettävissä Unityn Inspectorissa.
     [SerializeField] private float moveSpeed = 5f;
 
+    public float KBForce;
+    public float KBCounter;
+    public float KBTotalTime;
+
+    public bool KnockFromRight;
+
     // Viittaus Rigidbody2D-komponenttiin
     private Rigidbody2D rb;
 
@@ -34,8 +40,22 @@ public class PlayerMovement : MonoBehaviour
     // FixedUpdate kutsutaan säännöllisin väliajoin ja on paras paikka fysiikkalaskelmille (kuten Rigidbodyjen liikuttamiseen).
     private void FixedUpdate()
     {
-        // Lasketaan uusi sijainti ja asetetaan se Rigidbody2D:lle.
-        // rb.velocity = nopeus, jolla Rigidbody liikkuu.
-        rb.linearVelocity = movement * moveSpeed;
+        if (KBCounter <= 0)
+        {
+            rb.linearVelocity = movement * moveSpeed;
+        }
+        else
+        {
+            if (KnockFromRight == true)
+            {
+                rb.linearVelocity = new Vector2(-KBForce, KBForce);
+            }
+            if (KnockFromRight == false)
+            {
+                rb.linearVelocity = new Vector2(KBForce, KBForce);
+            }
+
+            KBCounter -= Time.deltaTime;
+        }
     }
 }
