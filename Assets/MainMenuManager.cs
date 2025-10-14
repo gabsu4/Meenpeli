@@ -5,7 +5,7 @@ public class MainMenuManager : MonoBehaviour
 {
     public static MainMenuManager _;
     [SerializeField] private bool _debugMode;
-    public enum MainMenuButtons { play, load, options, quit };
+    public enum MainMenuButtons { play, options, quit };
     [SerializeField] private string _sceneToLoadAfterClickingPlay;
     public void Awake()
     {
@@ -25,8 +25,6 @@ public class MainMenuManager : MonoBehaviour
         {
             case MainMenuButtons.play:
             PlayClicked();
-                break;
-            case MainMenuButtons.load:
                 break;
             case MainMenuButtons.options:
                 break;
