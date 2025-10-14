@@ -1,11 +1,7 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class Bandit : MonoBehaviour {
-
-    [SerializeField] float      m_speed = 4.0f;
-    [SerializeField] float      m_jumpForce = 7.5f;
-
+public class Enemyanimation : MonoBehaviour {
     private Animator            m_animator;
     private Rigidbody2D         m_body2d;
     private Sensor_Bandit       m_groundSensor;
@@ -46,13 +42,6 @@ public class Bandit : MonoBehaviour {
                 currentScale.x = Mathf.Abs(currentScale.x); // face left
 
             transform.localScale = currentScale;
-
-        // Move
-        m_body2d.linearVelocity = new Vector2(inputX * m_speed, m_body2d.linearVelocity.y);
-
-        //Set AirSpeed in animator
-        m_animator.SetFloat("AirSpeed", m_body2d.linearVelocity.y);
-
         // -- Handle Animations --
         //Death
         if (Input.GetKeyDown("e")) {

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Timeline;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public float KBForce;
     public float KBCounter;
     public float KBTotalTime;
-
     public bool KnockFromRight;
 
     // Viittaus Rigidbody2D-komponenttiin
@@ -27,16 +27,12 @@ public class PlayerMovement : MonoBehaviour
     // Update kutsutaan kerran per ruutu. Käytetään käyttäjän syötteen lukemiseen.
     private void Update()
     {
-        // Luetaan käyttäjän syöte.
-        // Input.GetAxisRaw antaa arvon -1, 0 tai 1 (ei pehmennystä).
         float inputX = Input.GetAxisRaw("Horizontal"); // Oletuksena A/D tai nuolinäppäimet
         float inputY = Input.GetAxisRaw("Vertical");   // Oletuksena W/S tai nuolinäppäimet
 
         // Luodaan uusi Vector2, joka edustaa hahmon haluttua liikesuuntaa.
         movement = new Vector2(inputX, inputY).normalized;
-        // .normalized varmistaa, että liikkuminen vinosti (diagonaalisesti) ei ole nopeampaa.
     }
-
     // FixedUpdate kutsutaan säännöllisin väliajoin ja on paras paikka fysiikkalaskelmille (kuten Rigidbodyjen liikuttamiseen).
     private void FixedUpdate()
     {
@@ -59,3 +55,4 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
+    
