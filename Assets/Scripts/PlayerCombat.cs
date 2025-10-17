@@ -8,10 +8,16 @@ public class PlayerCombat : MonoBehaviour
     public LayerMask enemyLayers;
     public float attackRange = 0.5f;
     public int attackDamage = 4;
+    public float attackRate = 2f;
+    float nextAttackTime = 0f;
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
-            Attack();
+        if(Time.time >= nextAttackTime)
+        {
+            if(Input.GetMouseButtonDown(0)){
+                Attack();
+                nextAttackTime = Time.time + 1f / attackRate;
+            }
         }
     }
 
