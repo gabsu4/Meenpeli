@@ -6,6 +6,9 @@ public class MainMenuManager : MonoBehaviour
     public static MainMenuManager _;
     [SerializeField] private bool _debugMode;
     public enum MainMenuButtons { play, options, quit };
+    public enum OptionsButtons { back };
+    [SerializeField] GameObject _MainMenuContainer;
+    [SerializeField] GameObject _OptionsMenuContainer;
     [SerializeField] private string _sceneToLoadAfterClickingPlay;
     public void Awake()
     {
@@ -18,6 +21,10 @@ public class MainMenuManager : MonoBehaviour
             Debug.LogError("There are more than 1 MainMenuManager's in the scene");
         }
     }
+    private void Start()
+    {
+        OpenMenu(_MainMenuContainer);
+    }
     public void MainMenuButtonClicked(MainMenuButtons buttonClicked)
     {
         DebugMessage("Button Clicked: " + buttonClicked.ToString());
@@ -27,12 +34,30 @@ public class MainMenuManager : MonoBehaviour
             PlayClicked();
                 break;
             case MainMenuButtons.options:
+                OptionsClicked();
                 break;
             case MainMenuButtons.quit:
                 QuitGame();
                 break;
             default:
                 Debug.Log("Button clicked that wasn't implemented in MainMenuManager Method");
+                break;
+        }
+    }
+    public void OptionsClicked()
+    {
+        OpenMenu(_OptionsMenuContainer);    
+    }
+    public void ReturnToMainMenu()
+    {
+        OpenMenu(_MainMenuContainer);
+    }
+    public void OptionsButtonClicked(OptionsButtons buttonClicked)
+    {
+        switch (buttonClicked)
+        {
+            case OptionsButtons.back:
+                ReturnToMainMenu();
                 break;
         }
     }
@@ -54,5 +79,10 @@ public class MainMenuManager : MonoBehaviour
         #else
             Application.Quit();
         #endif
+    }
+    public void OpenMenu(GameObject menuToOpen)
+    {
+        _MainMenuContainer.SetActive(menuToOpen == _MainMenuContainer);
+        _OptionsMenuContainer.SetActive(menuToOpen == _OptionsMenuContainer);
     }
 }
