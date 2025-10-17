@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
     // Muuttuja hahmon nopeudelle. Näkyy ja säädettävissä Unityn Inspectorissa.
     [SerializeField] private float moveSpeed = 5f;
 
+    public Animator animator;
     public float KBForce;
     public float KBCounter;
     public float KBTotalTime;
@@ -32,6 +33,17 @@ public class PlayerMovement : MonoBehaviour
 
         // Luodaan uusi Vector2, joka edustaa hahmon haluttua liikesuuntaa.
         movement = new Vector2(inputX, inputY).normalized;
+        Vector3 currentScale = transform.localScale;
+
+            if (inputX > 0)
+                currentScale.x = -Mathf.Abs(currentScale.x); // face right
+            else if (inputX < 0)
+                currentScale.x = Mathf.Abs(currentScale.x); // face left
+
+            transform.localScale = currentScale;
+            
+            if (Mathf.Abs(inputX) > Mathf.Epsilon)
+            animator.SetInteger("AnimState", 2);
     }
     // FixedUpdate kutsutaan säännöllisin väliajoin ja on paras paikka fysiikkalaskelmille (kuten Rigidbodyjen liikuttamiseen).
     private void FixedUpdate()
@@ -55,4 +67,3 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 }
-    

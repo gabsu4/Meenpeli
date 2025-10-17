@@ -35,20 +35,20 @@ public class Bandit : MonoBehaviour {
       //  }
 
         // -- Handle input and movement --
-        float inputX = Input.GetAxis("Horizontal");
+       // float inputX = Input.GetAxis("Horizontal");
 
         // Swap direction of sprite depending on walk direction
-        Vector3 currentScale = transform.localScale;
+        //Vector3 currentScale = transform.localScale;
 
-            if (inputX > 0)
-                currentScale.x = -Mathf.Abs(currentScale.x); // face right
-            else if (inputX < 0)
-                currentScale.x = Mathf.Abs(currentScale.x); // face left
+          //  if (inputX > 0)
+            //    currentScale.x = -Mathf.Abs(currentScale.x); // face right
+//            else if (inputX < 0)
+  //              currentScale.x = Mathf.Abs(currentScale.x); // face left
 
-            transform.localScale = currentScale;
+    //        transform.localScale = currentScale;
 
         // Move
-        m_body2d.linearVelocity = new Vector2(inputX * m_speed, m_body2d.linearVelocity.y);
+      //  m_body2d.linearVelocity = new Vector2(inputX * m_speed, m_body2d.linearVelocity.y);
 
         //Set AirSpeed in animator
         m_animator.SetFloat("AirSpeed", m_body2d.linearVelocity.y);
@@ -69,17 +69,17 @@ public class Bandit : MonoBehaviour {
             m_animator.SetTrigger("Hurt");
 
         //Attack
-        else if(Input.GetMouseButtonDown(0)) {
-            m_animator.SetTrigger("Attack");
-        }
+        //else if(Input.GetMouseButtonDown(0)) {
+          //  m_animator.SetTrigger("Attack");
+        //}
 
         //Change between idle and combat idle
         else if (Input.GetKeyDown("f"))
             m_combatIdle = !m_combatIdle;
 
         //Run
-        else if (Mathf.Abs(inputX) > Mathf.Epsilon)
-            m_animator.SetInteger("AnimState", 2);
+       // else if (Mathf.Abs(inputX) > Mathf.Epsilon)
+        //    m_animator.SetInteger("AnimState", 2);
 
         //Combat Idle
         else if (m_combatIdle)
