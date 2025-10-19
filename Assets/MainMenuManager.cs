@@ -1,5 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using System.Collections;
+using TMPro;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -7,8 +10,11 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private bool _debugMode;
     public enum MainMenuButtons { play, options, quit };
     public enum OptionsButtons { back };
-    [SerializeField] GameObject _MainMenuContainer;
-    [SerializeField] GameObject _OptionsMenuContainer;
+    [SerializeField] private GameObject _MainMenuContainer;
+    [SerializeField] private GameObject _OptionsMenuContainer;
+    [SerializeField] private TMP_Text volumeTextValue;
+    [SerializeField] private Slider volumeSlider;
+    [SerializeField] private AudioSource musicSource;
     [SerializeField] private string _sceneToLoadAfterClickingPlay;
     public void Awake()
     {
@@ -24,6 +30,11 @@ public class MainMenuManager : MonoBehaviour
     private void Start()
     {
         OpenMenu(_MainMenuContainer);
+
+        float savedVolume = PlayerPrefs.GetFloat("masterVolume", 1f);
+        volumeSlider.value = savedVolume;
+        SetVolume(savedVolume);
+        volumeSlider.onValueChanged.AddListener(SetVolume);
     }
     public void MainMenuButtonClicked(MainMenuButtons buttonClicked)
     {
@@ -84,5 +95,13 @@ public class MainMenuManager : MonoBehaviour
     {
         _MainMenuContainer.SetActive(menuToOpen == _MainMenuContainer);
         _OptionsMenuContainer.SetActive(menuToOpen == _OptionsMenuContainer);
+    }
+    public void SetVolume(float volume)
+    {
+        musicSource.volume = volume;
+        if (volumeTextValue != null)
+            volumeTextValue.text = volume.ToString("0.0");
+        PlayerPrefs.SetFloat("masterVolume", volume);
+        PlayerPrefs.Save();
     }
 }
