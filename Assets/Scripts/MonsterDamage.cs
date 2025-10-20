@@ -21,18 +21,6 @@ public class MonsterDamage : MonoBehaviour
 
     void Update()
     {
-        if (IsDead)
-        {
-            Debug.Log("Enemy is dead — won't attack.");
-            return;
-        }
-
-        if (Player == null)
-        {
-            Debug.Log("Player reference is missing!");
-            return;
-        }
-
         float distanceToPlayer = Vector2.Distance(transform.position, Player.transform.position);
         Debug.Log("Distance to player: " + distanceToPlayer);
 
