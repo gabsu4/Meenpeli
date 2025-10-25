@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - testi_Player
+  - Sword
   layers:
   - Default
   - TransparentFX
