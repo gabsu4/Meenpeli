@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 53910366}
   - component: {fileID: 53910369}
   - component: {fileID: 53910370}
+  - component: {fileID: 53910371}
   m_Layer: 0
   m_Name: Sword_img
   m_TagString: Sword
@@ -182,8 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d2757d944a22b4eab457323bde8493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwordScript
-  meleeSpeed: 0
+  meleeSpeed: 1
   damage: 0
+  player: {fileID: 1326518550}
 --- !u!212 &53910367
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -230,7 +232,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6006273676293942976, guid: 6b0dbad54b655bb4ca39f09de8650319, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -250,13 +252,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53910365}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.268, y: 0.467, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.4, z: 0}
+  m_LocalRotation: {x: 0.9848078, y: -0, z: -0, w: -0.17364809}
+  m_LocalPosition: {x: 0.4002202, y: 0.555209, z: 0.11495489}
+  m_LocalScale: {x: -1.8, y: 1.8, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 364979674}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 200, y: 0, z: 0}
 --- !u!50 &53910369
 Rigidbody2D:
   serializedVersion: 5
@@ -330,6 +332,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.0870191, y: 0.096547365}
   m_EdgeRadius: 0
+--- !u!95 &53910371
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53910365}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4d20bf7eb5d674f488fc16d9a6792457, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &304517455
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,18 +478,6 @@ MonoBehaviour:
   attackRange: 2
   attackDelay: 1
   animator: {fileID: 627673492}
---- !u!114 &627673489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627673476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66a9233698ee384448782ecc1c394eb7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemyanimation
 --- !u!95 &627673492 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 95734438044755836, guid: 3248535f6a2562c489a1223a75951ef2, type: 3}
@@ -710,7 +722,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1463392086428580, guid: 3248535f6a2562c489a1223a75951ef2, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 4588935210562790, guid: 3248535f6a2562c489a1223a75951ef2, type: 3}
       propertyPath: m_LocalScale.x
@@ -819,9 +831,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1463392086428580, guid: 3248535f6a2562c489a1223a75951ef2, type: 3}
       insertIndex: 2
       addedObject: {fileID: 627673483}
-    - targetCorrespondingSourceObject: {fileID: 1463392086428580, guid: 3248535f6a2562c489a1223a75951ef2, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 627673489}
   m_SourcePrefab: {fileID: 100100000, guid: 3248535f6a2562c489a1223a75951ef2, type: 3}
 --- !u!1 &1425060399
 GameObject:

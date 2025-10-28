@@ -12,20 +12,14 @@ public class PlayerMovement : MonoBehaviour
     public float KBTotalTime;
     public bool KnockFromRight;
 
-    // Viittaus Rigidbody2D-komponenttiin
     private Rigidbody2D rb;
-
-    // Muuttuja liikesuunnan tallentamiseen
     private Vector2 movement;
+    private bool facingRight = false;
 
-    // Awake kutsutaan kun skripti luodaan, ennen Startia.
     private void Awake()
     {
-        // Haetaan Rigidbody2D-komponentti, joka on samassa GameObjectissa.
         rb = GetComponent<Rigidbody2D>();
     }
-
-    // Update kutsutaan kerran per ruutu. Käytetään käyttäjän syötteen lukemiseen.
     private void Update()
     {
         float inputX = Input.GetAxisRaw("Horizontal"); // Oletuksena A/D tai nuolinäppäimet
@@ -35,15 +29,15 @@ public class PlayerMovement : MonoBehaviour
         movement = new Vector2(inputX, inputY).normalized;
         Vector3 currentScale = transform.localScale;
 
-            if (inputX > 0)
-                currentScale.x = -Mathf.Abs(currentScale.x); // face right
-            else if (inputX < 0)
-                currentScale.x = Mathf.Abs(currentScale.x); // face left
-
-            transform.localScale = currentScale;
-            
-            if (Mathf.Abs(inputX) > Mathf.Epsilon)
+        if (Mathf.Abs(inputX) > 0.01f)
             animator.SetInteger("AnimState", 2);
+        else
+            animator.SetInteger("AnimState", 0);
+
+        if (inputX > 0 && !facingRight)
+            Flip();
+        else if (inputX < 0 && facingRight)
+            Flip();
     }
     // FixedUpdate kutsutaan säännöllisin väliajoin ja on paras paikka fysiikkalaskelmille (kuten Rigidbodyjen liikuttamiseen).
     private void FixedUpdate()
@@ -58,12 +52,19 @@ public class PlayerMovement : MonoBehaviour
             {
                 rb.linearVelocity = new Vector2(-KBForce, KBForce);
             }
-            if (KnockFromRight == false)
+            else
             {
                 rb.linearVelocity = new Vector2(KBForce, KBForce);
             }
 
             KBCounter -= Time.deltaTime;
         }
+    }
+    private void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }
