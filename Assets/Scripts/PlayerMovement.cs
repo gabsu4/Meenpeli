@@ -15,7 +15,12 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
     private bool facingRight = false;
+    public Collider2D playerCollider;
 
+    void Start()
+    {
+        Physics2D.IgnoreCollision(playerCollider, GetComponent<Collider2D>());
+    }
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
