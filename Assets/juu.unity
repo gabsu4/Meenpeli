@@ -473,7 +473,7 @@ Animator:
   m_GameObject: {fileID: 364979673}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4d20bf7eb5d674f488fc16d9a6792457, type: 2}
+  m_Controller: {fileID: 9100000, guid: c69e4a6d8beda3b4b93c311ab1a97f7a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -762,7 +762,7 @@ MonoBehaviour:
   KBCounter: 0
   KBTotalTime: 0.2
   KnockFromRight: 0
-  playerCollider: {fileID: 0}
+  playerCollider: {fileID: 364979677}
 --- !u!70 &1326518545
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
