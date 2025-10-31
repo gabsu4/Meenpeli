@@ -2,13 +2,20 @@ using UnityEngine;
 
 public class weaponAmmo : MonoBehaviour
 {
-    public float lifetime = 2f;
-    void Start()
-    {
-        Destroy(gameObject, lifetime);
+    [Range(1, 10)]
+    [SerializeField] private float speed = 10f;
+
+    [Range(1, 10)]
+    [SerializeField] private float lifeTime = 3f;
+
+    private Rigidbody2D rb;
+
+    private void Start() {
+        rb = GetComponent<Rigidbody2D>();
+        Destroy(gameObject, lifeTime);
     }
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
+
+    private void FixedUpdate() {
+        rb.velocity = transform.up * speed;
     }
 }
