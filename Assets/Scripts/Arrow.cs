@@ -1,0 +1,39 @@
+using UnityEngine;
+
+public class Arrow : MonoBehaviour
+{
+    public float speed;
+    public float lifeTime;
+    public float distance;
+    public int damage;
+    public LayerMask whatIsSolid; 
+    public GameObject destroyEffect;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        Invoke("DestroyArrow", lifeTime);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
+        if (hitInfo.collider != null)
+        {
+            if (hitInfo.collider.CompareTag("Enemy"))
+            {
+                Debug.Log("Enemy must take damage");
+                hitInfo.collider.GetComponent<EnemyHealth>().TakeDamage(damage);
+            }
+            DestroyArrow();
+        }
+
+        transform.Translate(transform.up * speed * Time.deltaTime);
+    }
+    void DestroyArrow()
+    {
+        Instantiate(destroyEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
+}
+// https://www.youtube.com/watch?v=bY4Hr2x05p8
