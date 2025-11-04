@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4744530010627580076}
   - component: {fileID: 2766277522788892473}
   - component: {fileID: 2003392190723545047}
-  - component: {fileID: 1171539955392954631}
   m_Layer: 0
   m_Name: IS - Arrow 568
   m_TagString: Untagged
@@ -27,13 +26,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6298432955628001612}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.16529, y: -4.2426696, z: 0}
-  m_LocalScale: {x: 1, y: 0.4718, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2766277522788892473
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -83,8 +82,8 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 38dc82d89995c9044a039a28f6188ba8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 1
+  m_FlipX: 1
+  m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.36, y: 5.68}
   m_AdaptiveModeThreshold: 0.5
@@ -112,15 +111,3 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1152
   destroyEffect: {fileID: 3713269142901300145, guid: 6543620c4a0fb6046b8ac899bd6f6f14, type: 3}
---- !u!114 &1171539955392954631
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6298432955628001612}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7770ae31cb026564d91ab82d2b2b445d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
