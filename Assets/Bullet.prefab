@@ -142,6 +142,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47cda0ee6446c2643bfeb497f65ef6c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BulletBehavior
+  normalBulletSpeed: 15
+  destroyTime: 3
+  whatDestroysBullet:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!50 &6806180770142788912
 Rigidbody2D:
   serializedVersion: 5
