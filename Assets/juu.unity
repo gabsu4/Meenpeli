@@ -540,6 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1086939845}
   - component: {fileID: 1086939846}
+  - component: {fileID: 1086939847}
   m_Layer: 8
   m_Name: GunHolder
   m_TagString: Untagged
@@ -573,6 +574,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0963e88a6bd322c44a945ffcf7e41f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAimAndShoot
+  gun: {fileID: 1675151191}
+  bullet: {fileID: 95752240978519132, guid: bebe1424e763aa04ea164a83d44415c8, type: 3}
+  bulletSpawnPoint: {fileID: 1577033882}
+--- !u!114 &1086939847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086939844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b516d689e1db0c84ead98805bbe41183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAimAndShoot
   gun: {fileID: 1675151191}
@@ -763,6 +779,10 @@ MonoBehaviour:
   gun: {fileID: 0}
   bullet: {fileID: 95752240978519132, guid: bebe1424e763aa04ea164a83d44415c8, type: 3}
   bulletSpawnPoint: {fileID: 1577033882}
+  bulletInst: {fileID: 0}
+  worldPosition: {x: 0, y: 0}
+  direction: {x: 0, y: 0}
+  angle: 0
 --- !u!1001 &1338754781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1097,8 +1117,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675151191}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.488, y: 0.644, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.571, y: 0.638, z: 0}
   m_LocalScale: {x: 0.06, y: 0.059999995, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:

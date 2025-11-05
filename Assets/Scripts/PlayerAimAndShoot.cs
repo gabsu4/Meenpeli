@@ -29,11 +29,23 @@ public class PlayerAimAndShoot : MonoBehaviour
         gun.transform.right = direction;
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         
-        Vector3 localScale = new Vector3(1f, 1f, 1f);
+        Vector3 localScale = gun.transform.localScale;
         
-        if (angle > 90 || angle < -90) { localScale.y = -1f; }
-        else { localScale.y = 1f; } gun.transform.localScale = localScale;
-        
+        if (angle > 90 || angle < -90)
+        {
+            if (localScale.y > 0)
+            {
+                localScale.y *= -1f;
+            }
+        }
+        else
+        {
+            if (localScale.y < 0)
+            {
+                localScale.y *= -1f;
+            }
+        }
+        gun.transform.localScale = localScale;
     }
     
     private void HandleGunShooting()
