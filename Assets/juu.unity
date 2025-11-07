@@ -637,6 +637,12 @@ MonoBehaviour:
   KBCounter: 0
   KBTotalTime: 0.2
   KnockFromRight: 0
+  dodgeSpeed: 15
+  dodgeDuration: 0.15
+  dodgeCooldown: 1
+  isDodging: 1
+  dodgeTimer: 1
+  cooldownTimer: 1
   playerCollider: {fileID: 364979677}
 --- !u!70 &1326518545
 CapsuleCollider2D:
