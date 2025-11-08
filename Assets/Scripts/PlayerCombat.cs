@@ -12,9 +12,10 @@ public class PlayerCombat : MonoBehaviour
     float nextAttackTime = 0f;
     void Update()
     {
-        if(Time.time >= nextAttackTime)
+        if (Time.time >= nextAttackTime)
         {
-            if(Input.GetMouseButtonDown(0)){
+            if (Input.GetMouseButtonDown(0))
+            {
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }

@@ -8,11 +8,7 @@ public class Bowi : MonoBehaviour
     public Transform shotPoint;
     public float startTimeBtwShots;
     private float timeBtwShots;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public int currentClip, maxClipSize = 10, currentAmmo, maxAmmoSize = 100;
 
     // Update is called once per frame
     void Update()
@@ -26,15 +22,38 @@ public class Bowi : MonoBehaviour
 
         if (timeBtwShots <= 0)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (currentClip > 0)
             {
-                Instantiate(arrow, shotPoint.position, arrowRotation);
-                timeBtwShots = startTimeBtwShots;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Instantiate(arrow, shotPoint.position, arrowRotation);
+                    timeBtwShots = startTimeBtwShots;
+                    currentClip--;
+                }
             }
         }
         else
         {
             timeBtwShots -= Time.deltaTime;
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reload();
+        }
     }
-} //https://www.youtube.com/watch?v=bY4Hr2x05p8 
+    public void Reload()
+    {
+        int reloadAmount = maxClipSize - currentClip;
+        reloadAmount = (currentAmmo - reloadAmount) >= 0 ? reloadAmount : currentAmmo;
+        currentClip += reloadAmount;
+        currentAmmo -= reloadAmount;
+    }
+    public void AddAmmo(int ammoAmount)
+    {
+        currentAmmo += ammoAmount;
+        if (currentAmmo > maxAmmoSize)
+        {
+            currentAmmo = maxAmmoSize;
+        }
+    }
+} 
