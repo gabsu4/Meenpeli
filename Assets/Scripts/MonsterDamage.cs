@@ -22,15 +22,11 @@ public class MonsterDamage : MonoBehaviour
     void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, Player.transform.position);
-        Debug.Log("Distance to player: " + distanceToPlayer);
 
         if (distanceToPlayer <= attackRange)
         {
-            Debug.Log("Player is within attack range");
-
             if (Time.time - lastAttackTime >= attackCooldown)
             {
-                Debug.Log("Attack cooldown ready — attacking!");
                 lastAttackTime = Time.time;
                 Attack();
             }
@@ -39,15 +35,13 @@ public class MonsterDamage : MonoBehaviour
 
     void Attack()
     {
-        Debug.Log("Enemy attacking");
         if (animator != null)
-            animator.SetTrigger("Attack");
+            animator.SetTrigger("attack");
 
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, playerlayer);
 
         foreach (Collider2D Player in hitPlayer)
         {
-            Debug.Log("Player hit!");
             if (Player.TryGetComponent<Health>(out Health health))
             {
                 health.TakeDamage(attackDamage);

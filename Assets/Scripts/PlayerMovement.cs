@@ -13,17 +13,9 @@ public class PlayerMovement : MonoBehaviour
     public float KBTotalTime;
     public bool KnockFromRight;
 
-    public float dodgeSpeed = 15f; 
-    public float dodgeDuration = 0.15f;
-    public float dodgeCooldown = 1.0f; 
-    
-    // Tilan hallinta
-    public bool isDodging = false;
-    public float dodgeTimer = 0f;
-    public float cooldownTimer = 0f;
-
     private Rigidbody2D rb;
     private Vector2 movement;
+    private Vector3 lastMoveDir;
     private bool facingRight = false;
     public Collider2D playerCollider;
 
@@ -40,12 +32,18 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        HandleDash();
         float inputX = Input.GetAxisRaw("Horizontal"); // Oletuksena A/D tai nuolinäppäimet
         float inputY = Input.GetAxisRaw("Vertical");   // Oletuksena W/S tai nuolinäppäimet
 
         // Luodaan uusi Vector2, joka edustaa hahmon haluttua liikesuuntaa.
         movement = new Vector2(inputX, inputY).normalized;
         Vector3 currentScale = transform.localScale;
+
+        if (movement.magnitude > 0.1f) // Only update if a direction is being held
+        {
+            lastMoveDir = movement;
+        }
 
         if (Mathf.Abs(inputX) > 0.01f)
             animator.SetInteger("AnimState", 2);
@@ -56,26 +54,7 @@ public class PlayerMovement : MonoBehaviour
             Flip();
         else if (inputX < 0 && facingRight)
             Flip();
-
-        if (isDodging)
-        {
-            if (dodgeTimer <= 0)
-            {
-                isDodging = false;
-            }
-            return;
-        }
-        if (Input.GetKeyDown(KeyCode.Space) && cooldownTimer <= 0 && movement.magnitude > 0)
-        {
-            StartDodge();
-        }
-        if (cooldownTimer > 0)
-        {
-            cooldownTimer -= Time.deltaTime;
-        }
     }
-
-    // FixedUpdate kutsutaan säännöllisin väliajoin ja on paras paikka fysiikkalaskelmille (kuten Rigidbodyjen liikuttamiseen).
     private void FixedUpdate()
     {
         if (animator != null)
@@ -98,28 +77,18 @@ public class PlayerMovement : MonoBehaviour
             }
             KBCounter -= Time.deltaTime;
         }
-        else if (isDodging)
-        {
-            rb.linearVelocity = movement * dodgeSpeed;
-        }
-        else
-        {
-            // Normaali liikkuminen (myös hyökkäyksen aikana)
-            rb.linearVelocity = movement * moveSpeed;
-        }
+       
     }   
     
-    private void StartDodge()
+
+    private void HandleDash()
     {
-        if (movement.magnitude == 0) return;
-
-        isDodging = true;
-        dodgeTimer = dodgeDuration;
-        cooldownTimer = dodgeCooldown;
-
-        // if (animator != null) animator.SetTrigger("Dodge");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            float dashDistance = 5f;
+            transform.position += lastMoveDir * dashDistance;
+        }
     }
-
     private void Flip()
     {
         facingRight = !facingRight;

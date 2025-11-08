@@ -51,8 +51,7 @@ public class SwordScript : MonoBehaviour
     {
         if (other.CompareTag ("Enemy"))
         {
-            other.GetComponent<EnemyHealth>().TakeDamage(damage);
-            Debug.Log("enemy hit");        
+            other.GetComponent<EnemyHealth>().TakeDamage(damage);       
         }
     }
 }

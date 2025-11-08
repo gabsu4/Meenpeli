@@ -6,16 +6,12 @@ using UnityEngine;
 public class AiChase : MonoBehaviour
 {
     private EnemyHealth enemyHealth;
-    public Transform target;
     public Transform attackpoint;
     public GameObject player;
     public float speed;
     private float distance;
 
-    public int damage;
     public float attackRange;
-    public float attackDelay;
-    private float lastAttackTime;
     public Animator animator;
 
     void Start()
@@ -37,18 +33,6 @@ public class AiChase : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
         }
-
-        //attacking
-        float distanceToPlayer = Vector3.Distance(transform.position, target.position);
-        if (distanceToPlayer < attackRange)
-        {
-            if (Time.time > lastAttackTime + attackDelay)
-            {
-                target.SendMessage("TakeDamage", damage);
-                lastAttackTime = Time.time;
-            }
-        }
-
     }
 
     void OnDrawGizmosSelected()
