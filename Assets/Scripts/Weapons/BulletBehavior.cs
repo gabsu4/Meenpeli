@@ -14,8 +14,15 @@ public class BulletBehavior : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         SetDestroyTime();
+    }
 
-        SetStraightVelocity();
+    public void SetDirection(Vector2 dir, float speed)
+    {
+        if (rb == null)
+        {
+            rb = GetComponent<Rigidbody2D>();
+        }
+        rb.velocity = dir * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,11 +31,6 @@ public class BulletBehavior : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void SetStraightVelocity()
-    {
-        rb.velocity = transform.right * normalBulletSpeed;
     }
 
     private void SetDestroyTime()

@@ -539,7 +539,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1086939845}
-  - component: {fileID: 1086939846}
   - component: {fileID: 1086939847}
   m_Layer: 8
   m_Name: GunHolder
@@ -564,21 +563,6 @@ Transform:
   - {fileID: 1675151192}
   m_Father: {fileID: 1326518550}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1086939846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086939844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0963e88a6bd322c44a945ffcf7e41f4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAimAndShoot
-  gun: {fileID: 1675151191}
-  bullet: {fileID: 95752240978519132, guid: bebe1424e763aa04ea164a83d44415c8, type: 3}
-  bulletSpawnPoint: {fileID: 1577033882}
 --- !u!114 &1086939847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +575,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516d689e1db0c84ead98805bbe41183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAimAndShoot
-  gun: {fileID: 1675151191}
   bullet: {fileID: 95752240978519132, guid: bebe1424e763aa04ea164a83d44415c8, type: 3}
   bulletSpawnPoint: {fileID: 1577033882}
 --- !u!1 &1102153105
@@ -764,25 +747,6 @@ MonoBehaviour:
   attackRange: 1.2
   attackDamage: 4
   attackRate: 2
---- !u!114 &1326518555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326518536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0963e88a6bd322c44a945ffcf7e41f4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  gun: {fileID: 0}
-  bullet: {fileID: 95752240978519132, guid: bebe1424e763aa04ea164a83d44415c8, type: 3}
-  bulletSpawnPoint: {fileID: 1577033882}
-  bulletInst: {fileID: 0}
-  worldPosition: {x: 0, y: 0}
-  direction: {x: 0, y: 0}
-  angle: 0
 --- !u!1001 &1338754781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -971,7 +935,7 @@ Transform:
   m_GameObject: {fileID: 1577033881}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.303, y: 1.555, z: 0}
+  m_LocalPosition: {x: 2.77, y: 1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1087,9 +1051,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1689866831511430, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1326518545}
-    - targetCorrespondingSourceObject: {fileID: 1689866831511430, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1326518555}
   m_SourcePrefab: {fileID: 100100000, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
 --- !u!1 &1675151191
 GameObject:
@@ -1101,7 +1062,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1675151192}
   - component: {fileID: 1675151194}
-  - component: {fileID: 1675151193}
   m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
@@ -1117,29 +1077,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1675151191}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.571, y: 0.638, z: 0}
+  m_LocalRotation: {x: -0, y: -0.9997659, z: 0, w: -0.021640321}
+  m_LocalPosition: {x: -0.259, y: 0.63, z: -0.002}
   m_LocalScale: {x: 0.06, y: 0.059999995, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1577033882}
   m_Father: {fileID: 1086939845}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1675151193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675151191}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8f51bb1f5215064bb5bd4ce1242e098, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::weaponGun
-  bulletPrefab: {fileID: 0}
-  ammo: {fileID: 0}
-  bulletSpeed: 10
+  m_LocalEulerAnglesHint: {x: 0, y: -182.48, z: 0}
 --- !u!212 &1675151194
 SpriteRenderer:
   m_ObjectHideFlags: 0
