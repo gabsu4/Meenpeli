@@ -1,0 +1,1235 @@
+fileFormatVersion: 2
+guid: 5274a556ed0f7c846992480aca83307d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9081069307132715015
+    second: uudetpalikat_0
+  - first:
+      213: 7486231733521379743
+    second: uudetpalikat_1
+  - first:
+      213: -8309447732446741480
+    second: uudetpalikat_2
+  - first:
+      213: -696403226459190680
+    second: uudetpalikat_3
+  - first:
+      213: -2924507756691946187
+    second: uudetpalikat_4
+  - first:
+      213: 4716840753918451589
+    second: uudetpalikat_5
+  - first:
+      213: -3133793586253289932
+    second: uudetpalikat_6
+  - first:
+      213: 1180937805741947072
+    second: uudetpalikat_7
+  - first:
+      213: 7191091278746187890
+    second: uudetpalikat_8
+  - first:
+      213: 4605694817027734932
+    second: uudetpalikat_9
+  - first:
+      213: 5060734776054292485
+    second: uudetpalikat_10
+  - first:
+      213: 7842422479558169474
+    second: uudetpalikat_11
+  - first:
+      213: -173432162235793189
+    second: uudetpalikat_12
+  - first:
+      213: 2010483812420094838
+    second: uudetpalikat_13
+  - first:
+      213: -8836045735805774014
+    second: uudetpalikat_14
+  - first:
+      213: -1445098370593388583
+    second: uudetpalikat_15
+  - first:
+      213: 1252513840538740308
+    second: uudetpalikat_16
+  - first:
+      213: 4966578238800505487
+    second: uudetpalikat_17
+  - first:
+      213: -4219605783115298996
+    second: uudetpalikat_18
+  - first:
+      213: 1011637773506812112
+    second: uudetpalikat_19
+  - first:
+      213: -9195270180609914198
+    second: uudetpalikat_20
+  - first:
+      213: -6921475489183784700
+    second: uudetpalikat_21
+  - first:
+      213: 5456448228984379936
+    second: uudetpalikat_22
+  - first:
+      213: 576319155397243805
+    second: uudetpalikat_23
+  - first:
+      213: -4183429094214679715
+    second: uudetpalikat_24
+  - first:
+      213: -4349633709293923345
+    second: uudetpalikat_25
+  - first:
+      213: -2951973175858189522
+    second: uudetpalikat_26
+  - first:
+      213: -1614570883467420171
+    second: uudetpalikat_27
+  - first:
+      213: 2155312334514920918
+    second: uudetpalikat_28
+  - first:
+      213: 3404561653412218385
+    second: uudetpalikat_29
+  - first:
+      213: -8053529236157281121
+    second: uudetpalikat_30
+  - first:
+      213: -2969523621638077220
+    second: uudetpalikat_31
+  - first:
+      213: 3406593277912285679
+    second: uudetpalikat_32
+  - first:
+      213: -3843269936643043066
+    second: uudetpalikat_33
+  - first:
+      213: -1085400138039999721
+    second: uudetpalikat_34
+  - first:
+      213: -5231743438861191728
+    second: uudetpalikat_35
+  - first:
+      213: -1445404987301017076
+    second: uudetpalikat_36
+  - first:
+      213: -3327669479246130223
+    second: uudetpalikat_37
+  - first:
+      213: -5966907829067548221
+    second: uudetpalikat_38
+  - first:
+      213: 4294041798898532535
+    second: uudetpalikat_39
+  - first:
+      213: 4158226755398583367
+    second: uudetpalikat_40
+  - first:
+      213: 7304030594388165676
+    second: uudetpalikat_41
+  - first:
+      213: -3099624817281155304
+    second: uudetpalikat_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: uudetpalikat_0
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 3799
+        width: 178
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ffd6a7249f89f180800000000000000
+      internalID: -9081069307132715015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_1
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 3799
+        width: 674
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f917cce091074e760800000000000000
+      internalID: 7486231733521379743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_2
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 3799
+        width: 186
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81c36db0059eeac80800000000000000
+      internalID: -8309447732446741480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_3
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 3135
+        width: 170
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ac67a84f0e556f0800000000000000
+      internalID: -696403226459190680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_4
+      rect:
+        serializedVersion: 2
+        x: 2871
+        y: 3143
+        width: 674
+        height: 666
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5358083a0bf0a67d0800000000000000
+      internalID: -2924507756691946187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_5
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 3151
+        width: 506
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f156fbca5957140800000000000000
+      internalID: 4716840753918451589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_6
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 3143
+        width: 490
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436a9fb36578284d0800000000000000
+      internalID: -3133793586253289932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_7
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 3135
+        width: 506
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c8f31d6da8836010800000000000000
+      internalID: 1180937805741947072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_8
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 2463
+        width: 1770
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27873110b63ebc360800000000000000
+      internalID: 7191091278746187890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_9
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 2455
+        width: 490
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49dbbc8b807baef30800000000000000
+      internalID: 4605694817027734932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_10
+      rect:
+        serializedVersion: 2
+        x: 2831
+        y: 2871
+        width: 266
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500ae2547775b3640800000000000000
+      internalID: 5060734776054292485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_11
+      rect:
+        serializedVersion: 2
+        x: 3319
+        y: 2679
+        width: 354
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2835a98b1b1e5dc60800000000000000
+      internalID: 7842422479558169474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_12
+      rect:
+        serializedVersion: 2
+        x: 3015
+        y: 2287
+        width: 362
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0ce490e58d79df0800000000000000
+      internalID: -173432162235793189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_13
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 2447
+        width: 266
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b09f9106ca6eb10800000000000000
+      internalID: 2010483812420094838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_14
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 799
+        width: 114
+        height: 1610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 247113af73f006580800000000000000
+      internalID: -8836045735805774014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_15
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 1751
+        width: 114
+        height: 650
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7094b30baf1fbe0800000000000000
+      internalID: -1445098370593388583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_16
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 1935
+        width: 114
+        height: 466
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 456629da3b2d16110800000000000000
+      internalID: 1252513840538740308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_17
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 2087
+        width: 114
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8aa3e81894dce440800000000000000
+      internalID: 4966578238800505487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_18
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 2247
+        width: 114
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c478a3d85e2f075c0800000000000000
+      internalID: -4219605783115298996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_19
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 1935
+        width: 362
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d89d33f13f0a0e00800000000000000
+      internalID: 1011637773506812112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_20
+      rect:
+        serializedVersion: 2
+        x: 1903
+        y: 1935
+        width: 106
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa01074d76d36080800000000000000
+      internalID: -9195270180609914198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_21
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 2319
+        width: 58
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401a0a1d6baf1ff90800000000000000
+      internalID: -6921475489183784700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_22
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 2271
+        width: 58
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a5ce731c239bb40800000000000000
+      internalID: 5456448228984379936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_23
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 2087
+        width: 322
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93b4b6e73f7ff700800000000000000
+      internalID: 576319155397243805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_24
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 1799
+        width: 58
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53cc40576971f5c0800000000000000
+      internalID: -4183429094214679715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_25
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 1807
+        width: 58
+        height: 418
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe3987ecf2ff2a3c0800000000000000
+      internalID: -4349633709293923345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_26
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 2055
+        width: 74
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2bad7a690c7807d0800000000000000
+      internalID: -2951973175858189522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_27
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 1903
+        width: 530
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd5c3af554e799e0800000000000000
+      internalID: -1614570883467420171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_28
+      rect:
+        serializedVersion: 2
+        x: 2647
+        y: 1807
+        width: 26
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dd97ce162539ed10800000000000000
+      internalID: 2155312334514920918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_29
+      rect:
+        serializedVersion: 2
+        x: 2791
+        y: 1815
+        width: 106
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1164d8f19ce6f3f20800000000000000
+      internalID: 3404561653412218385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_30
+      rect:
+        serializedVersion: 2
+        x: 3031
+        y: 1839
+        width: 50
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c4f9244dd1c3090800000000000000
+      internalID: -8053529236157281121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_31
+      rect:
+        serializedVersion: 2
+        x: 3311
+        y: 1655
+        width: 234
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd48124dff12ac6d0800000000000000
+      internalID: -2969523621638077220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_32
+      rect:
+        serializedVersion: 2
+        x: 3695
+        y: 1663
+        width: 194
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe102309986a64f20800000000000000
+      internalID: 3406593277912285679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_33
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 1295
+        width: 114
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 601147aea56f9aac0800000000000000
+      internalID: -3843269936643043066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_34
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1399
+        width: 386
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71347fc3352efe0f0800000000000000
+      internalID: -1085400138039999721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_35
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 1447
+        width: 106
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d5b2b2bf0d1567b0800000000000000
+      internalID: -5231743438861191728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_36
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 1447
+        width: 346
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a485772d3e0fbe0800000000000000
+      internalID: -1445404987301017076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_37
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 1463
+        width: 178
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d310a74d3eb1d1d0800000000000000
+      internalID: -3327669479246130223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_38
+      rect:
+        serializedVersion: 2
+        x: 3439
+        y: 1623
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c97ee881f8413da0800000000000000
+      internalID: -5966907829067548221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_39
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 1031
+        width: 386
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0c60ae340879b30800000000000000
+      internalID: 4294041798898532535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_40
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1031
+        width: 386
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744ce0be33df4b930800000000000000
+      internalID: 4158226755398583367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_41
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 719
+        width: 250
+        height: 562
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c24871f80212d5560800000000000000
+      internalID: 7304030594388165676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: uudetpalikat_42
+      rect:
+        serializedVersion: 2
+        x: 3471
+        y: 1055
+        width: 418
+        height: 434
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81fb8f4b6abebf4d0800000000000000
+      internalID: -3099624817281155304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      uudetpalikat_0: -9081069307132715015
+      uudetpalikat_1: 7486231733521379743
+      uudetpalikat_10: 5060734776054292485
+      uudetpalikat_11: 7842422479558169474
+      uudetpalikat_12: -173432162235793189
+      uudetpalikat_13: 2010483812420094838
+      uudetpalikat_14: -8836045735805774014
+      uudetpalikat_15: -1445098370593388583
+      uudetpalikat_16: 1252513840538740308
+      uudetpalikat_17: 4966578238800505487
+      uudetpalikat_18: -4219605783115298996
+      uudetpalikat_19: 1011637773506812112
+      uudetpalikat_2: -8309447732446741480
+      uudetpalikat_20: -9195270180609914198
+      uudetpalikat_21: -6921475489183784700
+      uudetpalikat_22: 5456448228984379936
+      uudetpalikat_23: 576319155397243805
+      uudetpalikat_24: -4183429094214679715
+      uudetpalikat_25: -4349633709293923345
+      uudetpalikat_26: -2951973175858189522
+      uudetpalikat_27: -1614570883467420171
+      uudetpalikat_28: 2155312334514920918
+      uudetpalikat_29: 3404561653412218385
+      uudetpalikat_3: -696403226459190680
+      uudetpalikat_30: -8053529236157281121
+      uudetpalikat_31: -2969523621638077220
+      uudetpalikat_32: 3406593277912285679
+      uudetpalikat_33: -3843269936643043066
+      uudetpalikat_34: -1085400138039999721
+      uudetpalikat_35: -5231743438861191728
+      uudetpalikat_36: -1445404987301017076
+      uudetpalikat_37: -3327669479246130223
+      uudetpalikat_38: -5966907829067548221
+      uudetpalikat_39: 4294041798898532535
+      uudetpalikat_4: -2924507756691946187
+      uudetpalikat_40: 4158226755398583367
+      uudetpalikat_41: 7304030594388165676
+      uudetpalikat_42: -3099624817281155304
+      uudetpalikat_5: 4716840753918451589
+      uudetpalikat_6: -3133793586253289932
+      uudetpalikat_7: 1180937805741947072
+      uudetpalikat_8: 7191091278746187890
+      uudetpalikat_9: 4605694817027734932
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

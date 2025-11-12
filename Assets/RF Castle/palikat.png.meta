@@ -1,0 +1,1235 @@
+fileFormatVersion: 2
+guid: 4e85be7f145a8a54e8873592905d7c87
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5600433866080360136
+    second: palikat_0
+  - first:
+      213: -6153349835198059497
+    second: palikat_1
+  - first:
+      213: 1842160472183082649
+    second: palikat_2
+  - first:
+      213: 4585272700939755912
+    second: palikat_3
+  - first:
+      213: -4089253560225349976
+    second: palikat_4
+  - first:
+      213: -5467201471521572269
+    second: palikat_5
+  - first:
+      213: 1951708486180408791
+    second: palikat_6
+  - first:
+      213: -8936587265202167215
+    second: palikat_7
+  - first:
+      213: 4604093802323891369
+    second: palikat_8
+  - first:
+      213: -5045636440050426420
+    second: palikat_9
+  - first:
+      213: -8906707534863711784
+    second: palikat_10
+  - first:
+      213: -203978313231857912
+    second: palikat_11
+  - first:
+      213: -8242794845693507710
+    second: palikat_12
+  - first:
+      213: 1153814455576260582
+    second: palikat_13
+  - first:
+      213: 7166849354096202094
+    second: palikat_14
+  - first:
+      213: -4201081480130101458
+    second: palikat_15
+  - first:
+      213: 2105973673820105644
+    second: palikat_16
+  - first:
+      213: -6762387707882581744
+    second: palikat_17
+  - first:
+      213: -6467185100934171488
+    second: palikat_18
+  - first:
+      213: 1745067141941561272
+    second: palikat_19
+  - first:
+      213: 2309144445435494607
+    second: palikat_20
+  - first:
+      213: -6242662648795910515
+    second: palikat_21
+  - first:
+      213: -3525882850432414175
+    second: palikat_22
+  - first:
+      213: -6785050499448980558
+    second: palikat_23
+  - first:
+      213: 5050170902707124137
+    second: palikat_24
+  - first:
+      213: 3108814313384090623
+    second: palikat_25
+  - first:
+      213: -1143433312213363227
+    second: palikat_26
+  - first:
+      213: -8949162336933384048
+    second: palikat_27
+  - first:
+      213: -8489539549886642788
+    second: palikat_28
+  - first:
+      213: -4291501106880311070
+    second: palikat_29
+  - first:
+      213: -6515263929925940927
+    second: palikat_30
+  - first:
+      213: -5176582203094146501
+    second: palikat_31
+  - first:
+      213: 842643634746167216
+    second: palikat_32
+  - first:
+      213: -1224711845939956823
+    second: palikat_33
+  - first:
+      213: 5630527130670408171
+    second: palikat_34
+  - first:
+      213: 1400946745629909917
+    second: palikat_35
+  - first:
+      213: 3680406083037220092
+    second: palikat_36
+  - first:
+      213: 7313422360432384386
+    second: palikat_37
+  - first:
+      213: 4950262309877821015
+    second: palikat_38
+  - first:
+      213: 2525235788122816383
+    second: palikat_39
+  - first:
+      213: -4127821118129764256
+    second: palikat_40
+  - first:
+      213: -1502355391620067206
+    second: palikat_41
+  - first:
+      213: -5725928912751525740
+    second: palikat_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: palikat_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 2374
+        width: 112
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c699c7cdecb8bd40800000000000000
+      internalID: 5600433866080360136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_1
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 2374
+        width: 422
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71caf4e3de8ea9aa0800000000000000
+      internalID: -6153349835198059497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_2
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 2374
+        width: 117
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e0db3703ba09910800000000000000
+      internalID: 1842160472183082649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_3
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1959
+        width: 107
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8816fc94a3922af30800000000000000
+      internalID: 4585272700939755912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_4
+      rect:
+        serializedVersion: 2
+        x: 1794
+        y: 1964
+        width: 422
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ae34428d8d0047c0800000000000000
+      internalID: -4089253560225349976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_5
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1969
+        width: 317
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ab6766a399024b0800000000000000
+      internalID: -5467201471521572269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_6
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 1964
+        width: 307
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dd06ef078cd51b10800000000000000
+      internalID: 1951708486180408791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_7
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 1959
+        width: 317
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1526859fa3ddaf380800000000000000
+      internalID: -8936587265202167215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_8
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 1539
+        width: 1107
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a4d7107be605ef30800000000000000
+      internalID: 4604093802323891369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_9
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 1534
+        width: 307
+        height: 397
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccd1705046c4af9b0800000000000000
+      internalID: -5045636440050426420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_10
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 1794
+        width: 167
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d14722dfa4056480800000000000000
+      internalID: -8906707534863711784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_11
+      rect:
+        serializedVersion: 2
+        x: 2074
+        y: 1674
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8078ee90ec25b2df0800000000000000
+      internalID: -203978313231857912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_12
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 1429
+        width: 227
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287840292c5bb9d80800000000000000
+      internalID: -8242794845693507710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_13
+      rect:
+        serializedVersion: 2
+        x: 2274
+        y: 1529
+        width: 167
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef6559522c230010800000000000000
+      internalID: 1153814455576260582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_14
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 499
+        width: 72
+        height: 1007
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6154a51483c57360800000000000000
+      internalID: 7166849354096202094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_15
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 1094
+        width: 72
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f7f50f6a2c2b5c0800000000000000
+      internalID: -4201081480130101458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_16
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1209
+        width: 72
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cab2f5ef5ebe93d10800000000000000
+      internalID: 2105973673820105644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_17
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1304
+        width: 72
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 011d036553c2722a0800000000000000
+      internalID: -6762387707882581744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_18
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1404
+        width: 72
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4be125a61ff36a0800000000000000
+      internalID: -6467185100934171488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_19
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1209
+        width: 227
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b702a0e159b73810800000000000000
+      internalID: 1745067141941561272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_20
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 1209
+        width: 67
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0cf3583aabb0020800000000000000
+      internalID: 2309144445435494607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_21
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 1449
+        width: 37
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8eabed556b9d59a0800000000000000
+      internalID: -6242662648795910515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_22
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 1419
+        width: 37
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e855c7a3c811fc0800000000000000
+      internalID: -3525882850432414175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_23
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 1304
+        width: 202
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bbb14df488a6d1a0800000000000000
+      internalID: -6785050499448980558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_24
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 1124
+        width: 37
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a73fd6ddafc51640800000000000000
+      internalID: 5050170902707124137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_25
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 1129
+        width: 37
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb98e5952ab42b20800000000000000
+      internalID: 3108814313384090623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_26
+      rect:
+        serializedVersion: 2
+        x: 1749
+        y: 1284
+        width: 47
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e59c21f575b120f0800000000000000
+      internalID: -1143433312213363227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_27
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 1189
+        width: 332
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 090f7cde4403ec380800000000000000
+      internalID: -8949162336933384048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_28
+      rect:
+        serializedVersion: 2
+        x: 1654
+        y: 1129
+        width: 17
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95806642c81f2a80800000000000000
+      internalID: -8489539549886642788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_29
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 1134
+        width: 67
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0143b0b768174c0800000000000000
+      internalID: -4291501106880311070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_30
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 1149
+        width: 32
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14949de99f12595a0800000000000000
+      internalID: -6515263929925940927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_31
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 1034
+        width: 147
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32e6f9b9e51928b0800000000000000
+      internalID: -5176582203094146501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_32
+      rect:
+        serializedVersion: 2
+        x: 2309
+        y: 1039
+        width: 122
+        height: 237
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf0a49dbeba1bb00800000000000000
+      internalID: 842643634746167216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_33
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 809
+        width: 72
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3398e9013f00fe0800000000000000
+      internalID: -1224711845939956823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_34
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 874
+        width: 242
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be12fc1f796a32e40800000000000000
+      internalID: 5630527130670408171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_35
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 904
+        width: 67
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d93a28284a9217310800000000000000
+      internalID: 1400946745629909917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_36
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 904
+        width: 217
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfcce9835dd631330800000000000000
+      internalID: 3680406083037220092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_37
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 914
+        width: 112
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28998fd73ee7e7560800000000000000
+      internalID: 7313422360432384386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_38
+      rect:
+        serializedVersion: 2
+        x: 2149
+        y: 1014
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75ea54dd75dd2b440800000000000000
+      internalID: 4950262309877821015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_39
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 644
+        width: 242
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ff92de1907b0320800000000000000
+      internalID: 2525235788122816383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_40
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 644
+        width: 242
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068058d209807b6c0800000000000000
+      internalID: -4127821118129764256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_41
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 449
+        width: 157
+        height: 352
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70d71c2bbf862be0800000000000000
+      internalID: -1502355391620067206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palikat_42
+      rect:
+        serializedVersion: 2
+        x: 2169
+        y: 659
+        width: 262
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4908e4abdf96980b0800000000000000
+      internalID: -5725928912751525740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      palikat_0: 5600433866080360136
+      palikat_1: -6153349835198059497
+      palikat_10: -8906707534863711784
+      palikat_11: -203978313231857912
+      palikat_12: -8242794845693507710
+      palikat_13: 1153814455576260582
+      palikat_14: 7166849354096202094
+      palikat_15: -4201081480130101458
+      palikat_16: 2105973673820105644
+      palikat_17: -6762387707882581744
+      palikat_18: -6467185100934171488
+      palikat_19: 1745067141941561272
+      palikat_2: 1842160472183082649
+      palikat_20: 2309144445435494607
+      palikat_21: -6242662648795910515
+      palikat_22: -3525882850432414175
+      palikat_23: -6785050499448980558
+      palikat_24: 5050170902707124137
+      palikat_25: 3108814313384090623
+      palikat_26: -1143433312213363227
+      palikat_27: -8949162336933384048
+      palikat_28: -8489539549886642788
+      palikat_29: -4291501106880311070
+      palikat_3: 4585272700939755912
+      palikat_30: -6515263929925940927
+      palikat_31: -5176582203094146501
+      palikat_32: 842643634746167216
+      palikat_33: -1224711845939956823
+      palikat_34: 5630527130670408171
+      palikat_35: 1400946745629909917
+      palikat_36: 3680406083037220092
+      palikat_37: 7313422360432384386
+      palikat_38: 4950262309877821015
+      palikat_39: 2525235788122816383
+      palikat_4: -4089253560225349976
+      palikat_40: -4127821118129764256
+      palikat_41: -1502355391620067206
+      palikat_42: -5725928912751525740
+      palikat_5: -5467201471521572269
+      palikat_6: 1951708486180408791
+      palikat_7: -8936587265202167215
+      palikat_8: 4604093802323891369
+      palikat_9: -5045636440050426420
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
