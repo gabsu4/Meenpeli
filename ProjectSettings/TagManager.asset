@@ -15,10 +15,10 @@ TagManager:
   - 
   - Enemies
   - Player
-  - 
-  - 
-  - 
-  - 
+  - FogofWarMain
+  - FogofWarSecondary
+  - Walls
+  - Fog
   - 
   - 
   - 
@@ -41,6 +41,15 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Walls
+    uniqueID: 179210617
+    locked: 0
+  - name: 
+    uniqueID: 59558779
+    locked: 0
+  - name: Fog
+    uniqueID: 1026928297
     locked: 0
   m_RenderingLayers:
   - Default
