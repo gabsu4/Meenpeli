@@ -8,6 +8,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/jihpii.unity
+    guid: c2adf24ad9e72e7478ee4f3de115bdba
+  - enabled: 1
+    path: Assets/LevelTut.unity
+    guid: 314a6bc357d3abe479df5e95b609f3eb
+  - enabled: 1
+    path: Assets/levelBoss.unity
+    guid: da2a45f1a574283498b4ea64e531302b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
