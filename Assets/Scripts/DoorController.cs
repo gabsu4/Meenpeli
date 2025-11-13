@@ -10,10 +10,11 @@ public class DoorController : MonoBehaviour
     private Keyinv playerInventory; 
 
     // A flag to check if the player is currently standing at the door
-    private bool playerIsAtDoor = false; 
+    private bool playerIsAtDoor = false;
 
     // The tag of the object that acts as the player
     private const string PlayerTag = "Player";
+    public Vector2 destinationSpawnPoint;
 
     void Update()
     {
@@ -52,7 +53,12 @@ public class DoorController : MonoBehaviour
     }
     private void LoadNextArea()
     {
-        // This is where the scene actually loads!
-        SceneManager.LoadScene(nextSceneName);
+        if (GameManager.Instance != null)
+    {
+        GameManager.Instance.nextSpawnPosition = destinationSpawnPoint;
+    }
+
+    // 2. Load the target scene (This destroys the current Player)
+    SceneManager.LoadScene(nextSceneName);
     }
 }
