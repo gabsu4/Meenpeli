@@ -27,11 +27,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (GameManager.Instance != null && GameManager.Instance.nextSpawnPosition != Vector2.zero)
         {
-            // Move the player to the stored position
             transform.position = GameManager.Instance.nextSpawnPosition;
-
-            // Optional: Reset the stored position so the player doesn't always spawn here 
-            // if they die or reload the scene normally.
             GameManager.Instance.nextSpawnPosition = Vector2.zero; 
         }
     }
