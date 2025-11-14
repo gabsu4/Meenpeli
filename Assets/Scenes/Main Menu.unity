@@ -212,7 +212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: BACK
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7d587b245b3efda4986520ade13aaa8f, type: 2}
   m_sharedMaterial: {fileID: 8435889745949973454, guid: 7d587b245b3efda4986520ade13aaa8f, type: 2}
@@ -848,8 +848,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -6555839782105155228, guid: d97a38b682f153849896b05a17f20d45, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 283292183}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
@@ -2321,6 +2321,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117372361}
     m_Modifications:
+    - target: {fileID: 514256693802623004, guid: fa2c229410d7449448990f674fc33ee1, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 514256693802623004, guid: fa2c229410d7449448990f674fc33ee1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2832391376292276715, guid: 308415be6a718604d8874df4868f8b6b, type: 3}
     - target: {fileID: 1379436855478341885, guid: fa2c229410d7449448990f674fc33ee1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2411,7 +2419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7881400264966009626, guid: fa2c229410d7449448990f674fc33ee1, type: 3}
       propertyPath: m_text
-      value: OPTIONS
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3068,6 +3076,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2117372361}
     m_Modifications:
+    - target: {fileID: 514256693802623004, guid: fa2c229410d7449448990f674fc33ee1, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 514256693802623004, guid: fa2c229410d7449448990f674fc33ee1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6078140837305707903, guid: 316ba803bbe8220409ef9f67d9c5e43a, type: 3}
     - target: {fileID: 1379436855478341885, guid: fa2c229410d7449448990f674fc33ee1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3151,6 +3167,10 @@ PrefabInstance:
     - target: {fileID: 7601876886929255170, guid: fa2c229410d7449448990f674fc33ee1, type: 3}
       propertyPath: m_Name
       value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 7881400264966009626, guid: fa2c229410d7449448990f674fc33ee1, type: 3}
+      propertyPath: m_text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
