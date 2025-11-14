@@ -11,7 +11,7 @@ public class PlayerAimAndShoot : MonoBehaviour
     { 
         HandleGunShooting();
     }
-    
+
     private void HandleGunShooting()
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -33,6 +33,6 @@ public class PlayerAimAndShoot : MonoBehaviour
             {
                 Physics2D.IgnoreCollision(bulletCollider, playerCollider);
             }
-        }
-    }
+         }
+     }
 }

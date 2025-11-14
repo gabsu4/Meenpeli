@@ -19,10 +19,12 @@ public class BulletBehavior : MonoBehaviour
     public void SetDirection(Vector2 dir, float speed)
     {
         if (rb == null)
-        {
             rb = GetComponent<Rigidbody2D>();
-        }
+
         rb.velocity = dir * speed;
+
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
