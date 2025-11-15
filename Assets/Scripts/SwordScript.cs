@@ -5,11 +5,13 @@ using UnityEngine.Rendering;
 
 public class SwordScript : MonoBehaviour
 {
+    [SerializeField] private AudioClip Lyönti;
     private Animator anim;
     public float meleeSpeed;
     public int damage;
     float timeUntilMelee;
     public Transform player;
+
 
     void Start()
     {
@@ -38,6 +40,10 @@ public class SwordScript : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
+                if (SoundManager.instance != null)
+            {
+                SoundManager.instance.PlaySound(Lyönti);
+            }
                 anim.SetTrigger("Attack");
                 timeUntilMelee = meleeSpeed;
             }

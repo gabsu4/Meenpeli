@@ -4,8 +4,10 @@ using UnityEngine.Timeline;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Muuttuja hahmon nopeudelle. Näkyy ja säädettävissä Unityn Inspectorissa.
+    [SerializeField] private AudioClip[] Walk;
+    [SerializeField] private float WalkInterval = 0.4f;
     [SerializeField] private float moveSpeed = 5f;
+    private float nextStepTime = 0f;
 
     public Animator animator;
     public float KBForce;
@@ -38,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         HandleDash();
+        HandleFootsteps();
         float inputX = Input.GetAxisRaw("Horizontal"); // Oletuksena A/D tai nuolinäppäimet
         float inputY = Input.GetAxisRaw("Vertical");   // Oletuksena W/S tai nuolinäppäimet
 
@@ -54,11 +57,12 @@ public class PlayerMovement : MonoBehaviour
             animator.SetInteger("AnimState", 2);
         else
             animator.SetInteger("AnimState", 0);
-        
+
         if (inputX > 0 && !facingRight)
             Flip();
         else if (inputX < 0 && facingRight)
             Flip();
+        
     }
     private void FixedUpdate()
     {
@@ -82,9 +86,40 @@ public class PlayerMovement : MonoBehaviour
             }
             KBCounter -= Time.deltaTime;
         }
-       
+
     }   
     
+    private void HandleFootsteps()
+{
+    // Check if the player is moving AND if the sound is ready to play
+    if (rb.linearVelocity.magnitude > 0.1f && Time.time >= nextStepTime)
+    {
+        PlayRandomFootstep();
+        nextStepTime = Time.time + WalkInterval; // Reset the timer
+    }
+}
+
+private void PlayRandomFootstep()
+{
+    // 1. Check if the array is valid and has clips
+    if (Walk == null || Walk.Length == 0)
+    {
+        Debug.LogWarning("Footstep Sounds array is empty! Assign clips in the Inspector.");
+        return;
+    }
+
+    // 2. Select a random index from 0 up to (but not including) the array length
+    int randomIndex = Random.Range(0, Walk.Length);
+    
+    // 3. Get the random clip
+    AudioClip randomClip = Walk[randomIndex];
+
+    // 4. Play the sound using your SoundManager
+    if (SoundManager.instance != null)
+    {
+        SoundManager.instance.PlaySound(randomClip);
+    }
+}
 
     private void HandleDash()
     {

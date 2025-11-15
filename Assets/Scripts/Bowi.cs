@@ -10,6 +10,7 @@ public class Bowi : MonoBehaviour
     private float timeBtwShots;
     public int currentClip, maxClipSize = 10, currentAmmo, maxAmmoSize = 100;
 
+
     // Update is called once per frame
     void Update()
     {

@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class MonsterDamage : MonoBehaviour
 {
+    [SerializeField] private AudioClip hit;
     public int attackDamage = 4;
     public Transform attackpoint;
     public LayerMask playerlayer;
@@ -27,6 +28,7 @@ public class MonsterDamage : MonoBehaviour
         {
             if (Time.time - lastAttackTime >= attackCooldown)
             {
+                SoundManager.instance.PlaySound(hit);
                 lastAttackTime = Time.time;
                 Attack();
             }

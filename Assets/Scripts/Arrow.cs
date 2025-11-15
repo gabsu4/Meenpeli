@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
+    [SerializeField] private AudioClip bow;
     public float speed;
     public float lifeTime;
     public float distance;
@@ -11,6 +12,7 @@ public class Arrow : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        SoundManager.instance.PlaySound(bow);
         Invoke("DestroyArrow", lifeTime);
     }
 
