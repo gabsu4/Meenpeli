@@ -575,12 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b516d689e1db0c84ead98805bbe41183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAimAndShoot
-  bullet: {fileID: 95752240978519132, guid: bebe1424e763aa04ea164a83d44415c8, type: 3}
   bulletSpawnPoint: {fileID: 1577033882}
-  maxClipSize: 10
-  maxTotalAmmo: 100
-  reloadTime: 1.5
-  reloadKey: 32
 --- !u!1 &1102153105
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,7 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeee689f7d03cdd44a80f4a6dd1be6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  playerGunController: {fileID: 1086939847}
+  gunController: {fileID: 1086939847}
 --- !u!114 &1326518556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -776,7 +771,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0e99bd085a1f7843b77d7b277100748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
-  hotbarItems: []
+  hotbarItems:
+  - {fileID: 0}
   hotbarSize: 5
   hotbarController: {fileID: 5524332083238357175, guid: c2cb3d330f2c3074b83036944c15b73c, type: 3}
 --- !u!1001 &1338754781
@@ -1205,6 +1201,38 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2514057665109407673, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514057665109407673, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514057665109407673, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514057665109407673, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 6.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514057665109407673, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514057665109407673, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 6.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514057665109407673, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 2514057665109407673, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2529257497222318309, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.1
@@ -1253,15 +1281,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4205304933517646339, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
+      propertyPath: itemData
+      value: 
+      objectReference: {fileID: 11400000, guid: 2a72af80f280de943a19179efe210578, type: 2}
     - target: {fileID: 7926087302217802192, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
       propertyPath: m_Name
       value: GunPickUpPrefab
       objectReference: {fileID: 0}
     - target: {fileID: 9061169446652061374, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9061169446652061374, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9061169446652061374, guid: 63d912f2ca73a41429f1cbc0e8808c1b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

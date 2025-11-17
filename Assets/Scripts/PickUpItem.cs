@@ -6,17 +6,28 @@ public class PickUpItem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-        {
-            InventoryManager inventory = other.GetComponent<InventoryManager>();
+        Debug.Log("Trigger with: " + other.name);
 
-            if (inventory != null)
+        // Etsitään InventoryManager myös parent objekteista (tärkein muutos!)
+        InventoryManager inventory = other.GetComponentInParent<InventoryManager>();
+
+        if (inventory != null)
+        {
+            Debug.Log("InventoryManager FOUND!");
+
+            if (inventory.AddItem(itemData))
             {
-                if (inventory.AddItem(itemData))
-                {
-                    Destroy(gameObject);
-                }
+                Debug.Log("Item added to inventory!");
+                Destroy(gameObject);
             }
+            else
+            {
+                Debug.Log("Hotbar full!");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("InventoryManager NOT FOUND on object: " + other.name);
         }
     }
 }

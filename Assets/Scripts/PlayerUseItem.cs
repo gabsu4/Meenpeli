@@ -1,42 +1,23 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerUseItem : MonoBehaviour
 {
     private ItemData currentlySelectedItem;
+    public PlayerAimAndShoot gunController;
 
-    public PlayerAimAndShoot playerGunController;
-
-    private void Update()
-    {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
-        {
-            UseSelectedItem();
-        }
-    }
     public void SetSelectedItem(ItemData item)
     {
         currentlySelectedItem = item;
 
-        if (playerGunController != null)
-        {
-            playerGunController.enabled = false; 
-        }
+        if (gunController != null)
+            gunController.SetGun(null); // oletuksena pois päältä
 
-        if (currentlySelectedItem != null)
-        {
-            if (currentlySelectedItem.itemType == ItemType.Gun && playerGunController != null)
-            {
-                playerGunController.enabled = true; 
-            }
-        }
-    }
+        if (item == null) return;
 
-    private void UseSelectedItem()
-    {
-        if (currentlySelectedItem == null)
+        if (item.itemType == ItemType.Gun)
         {
-            return;
+            GunItemData gun = item as GunItemData;
+            gunController.SetGun(gun);
         }
     }
 }
