@@ -22,6 +22,12 @@ public class InventoryManager : MonoBehaviour
                 if (hotbarController != null)
                 {
                     hotbarController.UpdateSlot(i, itemToAdd);
+
+                    PlayerUseItem playerUse = FindObjectOfType<PlayerUseItem>();
+                    if (playerUse != null && i == hotbarController.GetSelectedIndex())
+                    {
+                        playerUse.SetSelectedItem(itemToAdd);
+                    }
                 }
                 return true;
             }

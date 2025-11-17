@@ -96,7 +96,7 @@ public class HotbarController : MonoBehaviour
         }
     }
 
-    public int GetItemInSlot()
+    public int GetSelectedIndex()
     {
         return selectedIndex;
     }
