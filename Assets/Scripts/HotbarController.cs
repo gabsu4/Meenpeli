@@ -68,6 +68,16 @@ public class HotbarController : MonoBehaviour
             else
                 slots[i].color = new Color(26f/255f, 26f/255f, 26f/255f, 0.4f);
         }
+
+        if (inventoryManager != null)
+        {
+            PlayerUseItem playerUse = FindObjectOfType<PlayerUseItem>();
+            if (playerUse != null)
+            {
+                ItemData selectedItem = inventoryManager.GetItemInSlot(selectedIndex);
+                playerUse.SetSelectedItem(selectedItem);
+            }
+        }
     }
 
     public void UpdateSlot(int index, ItemData item)
