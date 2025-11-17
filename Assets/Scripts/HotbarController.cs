@@ -3,13 +3,29 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class HotbarController : MonoBehaviour
 {
     public Image[] slots;
     public TMP_Text[] countTexts;
+    public Image[] itemIcons;
 
     private int selectedIndex = 0;
+
+    private InventoryManager inventoryManager;
+
+    void Start()
+    {
+        inventoryManager = FindObjectOfType<InventoryManager>();
+
+        SelectSlot(selectedIndex);
+
+        for (int i = 0; i < inventoryManager.hotbarItems.Length; i++)
+        {
+            UpdateSlot(i, inventoryManager.hotbarItems[i]);
+        }
+    }
 
     void Update()
     {
@@ -52,5 +68,26 @@ public class HotbarController : MonoBehaviour
             else
                 slots[i].color = new Color(26f/255f, 26f/255f, 26f/255f, 0.4f);
         }
+    }
+
+    public void UpdateSlot(int index, ItemData item)
+    {
+        if (index < 0 || index >= itemIcons.Length) return;
+
+        if (item != null)
+        {
+            itemIcons[index].sprite = item.icon;
+            itemIcons[index].enabled = true;
+        }
+        else
+        {
+            itemIcons[index].sprite = null;
+            itemIcons[index].enabled = false;
+        }
+    }
+
+    public int GetItemInSlot()
+    {
+        return selectedIndex;
     }
 }

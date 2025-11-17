@@ -577,6 +577,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAimAndShoot
   bullet: {fileID: 95752240978519132, guid: bebe1424e763aa04ea164a83d44415c8, type: 3}
   bulletSpawnPoint: {fileID: 1577033882}
+  maxClipSize: 10
+  maxTotalAmmo: 100
+  reloadTime: 1.5
+  reloadKey: 32
 --- !u!1 &1102153105
 GameObject:
   m_ObjectHideFlags: 0
@@ -747,6 +751,34 @@ MonoBehaviour:
   attackRange: 1.2
   attackDamage: 4
   attackRate: 2
+--- !u!114 &1326518555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326518536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeee689f7d03cdd44a80f4a6dd1be6a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  playerGunController: {fileID: 1086939847}
+--- !u!114 &1326518556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326518536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e99bd085a1f7843b77d7b277100748, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  hotbarItems: []
+  hotbarSize: 5
+  hotbarController: {fileID: 5524332083238357175, guid: c2cb3d330f2c3074b83036944c15b73c, type: 3}
 --- !u!1001 &1338754781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1051,6 +1083,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1689866831511430, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1326518545}
+    - targetCorrespondingSourceObject: {fileID: 1689866831511430, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1326518555}
+    - targetCorrespondingSourceObject: {fileID: 1689866831511430, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1326518556}
   m_SourcePrefab: {fileID: 100100000, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
 --- !u!1 &1675151191
 GameObject:
