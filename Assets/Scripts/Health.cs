@@ -17,10 +17,20 @@ public class Health : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            AudioSource.PlayClipAtPoint(Die, transform.position);
             //audioSource.PlayOneShot(Die);
             //float soundDuration = Die.length;
-            Destroy(gameObject);
+            DiePlayer();
+        }
+    }
+    private void DiePlayer()
+    {
+        // 1. Play the death sound at the player's position
+        AudioSource.PlayClipAtPoint(Die, transform.position);
+
+        // 2. Tell the persistent GameManager to end the game and show the UI
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.EndGame();
         }
     }
 }
