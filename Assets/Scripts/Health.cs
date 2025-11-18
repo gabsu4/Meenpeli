@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private AudioClip Die;
+    private AudioSource audioSource;
     public int maxHealth = 10;
     public int health;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         health = maxHealth;
     }
 
@@ -15,6 +17,9 @@ public class Health : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            AudioSource.PlayClipAtPoint(Die, transform.position);
+            //audioSource.PlayOneShot(Die);
+            //float soundDuration = Die.length;
             Destroy(gameObject);
         }
     }

@@ -29,6 +29,12 @@ public class AiChase : MonoBehaviour
         {
             return;
         }
+        if(player == null)
+        {
+            SetRunningAnimation(false);
+            this.enabled = false;
+            return;
+        }
         distance = Vector2.Distance(transform.position, player.transform.position);
         Vector2 direction = player.transform.position - transform.position;
 

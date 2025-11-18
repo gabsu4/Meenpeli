@@ -22,6 +22,10 @@ public class MonsterDamage : MonoBehaviour
 
     void Update()
     {
+        if(Player == null)
+        {
+            return;
+        }
         float distanceToPlayer = Vector2.Distance(transform.position, Player.transform.position);
 
         if (distanceToPlayer <= attackRange)
