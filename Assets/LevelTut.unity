@@ -6105,6 +6105,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 7b6970945a5e00e4fb3a95aa6e33e7c7, type: 3}
     - target: {fileID: 1260792072064772802, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
+      propertyPath: Hurt
+      value: 
+      objectReference: {fileID: 8300000, guid: 52996367c027f894a80c0f3f17c00a03, type: 3}
+    - target: {fileID: 1260792072064772802, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
       propertyPath: health
       value: 2
       objectReference: {fileID: 0}
@@ -6112,6 +6116,26 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1260792072064772802, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
+      propertyPath: hurtVolume
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260792072064772802, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
+      propertyPath: soundVolume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260792072064772802, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
+      propertyPath: Hurt.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1260792072064772802, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
+      propertyPath: 'Hurt.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 52996367c027f894a80c0f3f17c00a03, type: 3}
+    - target: {fileID: 1260792072064772802, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
+      propertyPath: 'Hurt.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9a9f43e971388954a9521b6dd330413d, type: 3}
     - target: {fileID: 3584446913978902030, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.5504894
