@@ -7,7 +7,6 @@ public class ButtonSoundAndMovement : MonoBehaviour, IPointerClickHandler, IPoin
 {
     [SerializeField] private AudioClip pressedSound;
     [SerializeField] private AudioClip highlightSound;
-    [SerializeField] private AudioClip selectedSound;
     [SerializeField] private float hoverEffectScale = 0.06f;
 
     private Vector3 originalScale;
@@ -27,7 +26,8 @@ public class ButtonSoundAndMovement : MonoBehaviour, IPointerClickHandler, IPoin
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if (buttonComponent.IsInteractable()) PlayButtonPressedSound();
+        if (buttonComponent.IsInteractable())
+            PlayButtonPressedSound();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -41,13 +41,9 @@ public class ButtonSoundAndMovement : MonoBehaviour, IPointerClickHandler, IPoin
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (buttonComponent.IsInteractable())
+        if (buttonComponent.IsInteractable() && !isPointerDown)
         {
-            isPointerInside = false;
-            if (!isPointerDown)
-            {
                 transform.localScale = originalScale;
-            }
         }
     }
 
@@ -66,7 +62,7 @@ public class ButtonSoundAndMovement : MonoBehaviour, IPointerClickHandler, IPoin
         if (buttonComponent.IsInteractable())
         {
             isPointerDown = false;
-            transform.localScale = originalScale * (isPointerInside ? (1f + hoverEffectScale) : 1f);
+            transform.localScale = originalScale;
         }
     }
 
@@ -74,11 +70,11 @@ public class ButtonSoundAndMovement : MonoBehaviour, IPointerClickHandler, IPoin
     {
         if (highlightSound != null)
         {
-            MainMenuButtonSoundManager.Instance.PlaySound(highlightSound, transform.position);
+            MainMenuButtonSoundManager.Instance.PlaySound(highlightSound, 0.8f);
         }
         else
         {
-            MainMenuButtonSoundManager.Instance.PlayButtonHoverSound(transform.position);
+            MainMenuButtonSoundManager.Instance.PlayButtonHoverSound();
         }
     }
 
@@ -86,11 +82,11 @@ public class ButtonSoundAndMovement : MonoBehaviour, IPointerClickHandler, IPoin
     {
         if (pressedSound != null)
         {
-            MainMenuButtonSoundManager.Instance.PlaySound(pressedSound, transform.position);
+            MainMenuButtonSoundManager.Instance.PlaySound(pressedSound, 1f);
         }
         else
         {
-            MainMenuButtonSoundManager.Instance.PlayButtonClickSound(transform.position);
+            MainMenuButtonSoundManager.Instance.PlayButtonClickSound();
         }
     }
 }
