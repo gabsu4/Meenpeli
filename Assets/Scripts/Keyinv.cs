@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class Keyinv : MonoBehaviour
 {
-    public bool hasKey = false; // Starts false
+    [SerializeField] private AudioClip pickup;
+    public bool hasKey = false;
     
-    // Call this method when the player picks up the key item
     public void CollectKey()
     {
+        SoundManager.instance.PlaySound(pickup);
         hasKey = true;
         Debug.Log("Key Collected!");
     }
