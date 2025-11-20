@@ -12,11 +12,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Floor
   - Enemies
   - Player
-  - FogofWarMain
-  - FogofWarSecondary
+  - 
+  - 
   - Walls
   - Fog
   - 
@@ -42,10 +42,10 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Walls
+  - name: Floor
     uniqueID: 179210617
     locked: 0
-  - name: 
+  - name: Walls
     uniqueID: 59558779
     locked: 0
   - name: Fog
