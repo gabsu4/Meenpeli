@@ -3,10 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags:
-  - testi_Player
-  - Sword
-  - Enemy
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -15,10 +12,10 @@ TagManager:
   - Water
   - UI
   - 
-  - Enemies
-  - Player
-  - Miekka
-  - Enviroment
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -43,9 +40,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Miekka
-    uniqueID: 1099041267
     locked: 0
   m_RenderingLayers:
   - Default

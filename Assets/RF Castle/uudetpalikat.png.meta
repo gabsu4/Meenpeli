@@ -229,12 +229,12 @@ TextureImporter:
       name: uudetpalikat_0
       rect:
         serializedVersion: 2
-        x: 255
-        y: 3799
-        width: 178
-        height: 130
+        x: 253
+        y: 3798
+        width: 182
+        height: 133
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -251,12 +251,12 @@ TextureImporter:
       name: uudetpalikat_1
       rect:
         serializedVersion: 2
-        x: 487
-        y: 3799
-        width: 674
-        height: 130
+        x: 485
+        y: 3798
+        width: 676
+        height: 133
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: uudetpalikat_2
       rect:
         serializedVersion: 2
-        x: 1199
-        y: 3799
-        width: 186
-        height: 130
+        x: 1198
+        y: 3798
+        width: 188
+        height: 133
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -295,12 +295,12 @@ TextureImporter:
       name: uudetpalikat_3
       rect:
         serializedVersion: 2
-        x: 2191
-        y: 3135
-        width: 170
-        height: 666
+        x: 2190
+        y: 3134
+        width: 172
+        height: 668
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -317,12 +317,12 @@ TextureImporter:
       name: uudetpalikat_4
       rect:
         serializedVersion: 2
-        x: 2871
-        y: 3143
-        width: 674
-        height: 666
+        x: 2870
+        y: 3142
+        width: 676
+        height: 668
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -339,12 +339,12 @@ TextureImporter:
       name: uudetpalikat_5
       rect:
         serializedVersion: 2
-        x: 231
-        y: 3151
-        width: 506
-        height: 562
+        x: 230
+        y: 3149
+        width: 507
+        height: 565
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -361,12 +361,12 @@ TextureImporter:
       name: uudetpalikat_6
       rect:
         serializedVersion: 2
-        x: 911
-        y: 3143
-        width: 490
-        height: 562
+        x: 909
+        y: 3142
+        width: 492
+        height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -383,12 +383,12 @@ TextureImporter:
       name: uudetpalikat_7
       rect:
         serializedVersion: 2
-        x: 1623
-        y: 3135
-        width: 506
-        height: 562
+        x: 1622
+        y: 3134
+        width: 508
+        height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -405,12 +405,12 @@ TextureImporter:
       name: uudetpalikat_8
       rect:
         serializedVersion: 2
-        x: 239
-        y: 2463
-        width: 1770
-        height: 562
+        x: 237
+        y: 2462
+        width: 1774
+        height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -427,12 +427,12 @@ TextureImporter:
       name: uudetpalikat_9
       rect:
         serializedVersion: 2
-        x: 2207
-        y: 2455
-        width: 490
-        height: 634
+        x: 2206
+        y: 2454
+        width: 492
+        height: 637
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -449,12 +449,12 @@ TextureImporter:
       name: uudetpalikat_10
       rect:
         serializedVersion: 2
-        x: 2831
-        y: 2871
-        width: 266
-        height: 170
+        x: 2829
+        y: 2870
+        width: 270
+        height: 172
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -471,12 +471,12 @@ TextureImporter:
       name: uudetpalikat_11
       rect:
         serializedVersion: 2
-        x: 3319
-        y: 2679
-        width: 354
-        height: 354
+        x: 3317
+        y: 2677
+        width: 358
+        height: 357
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -493,12 +493,12 @@ TextureImporter:
       name: uudetpalikat_12
       rect:
         serializedVersion: 2
-        x: 3015
-        y: 2287
-        width: 362
-        height: 426
+        x: 3013
+        y: 2286
+        width: 365
+        height: 428
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -515,12 +515,12 @@ TextureImporter:
       name: uudetpalikat_13
       rect:
         serializedVersion: 2
-        x: 3639
-        y: 2447
-        width: 266
-        height: 282
+        x: 3638
+        y: 2446
+        width: 269
+        height: 283
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -538,11 +538,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 263
-        y: 799
-        width: 114
-        height: 1610
+        y: 798
+        width: 115
+        height: 1613
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -559,12 +559,12 @@ TextureImporter:
       name: uudetpalikat_15
       rect:
         serializedVersion: 2
-        x: 503
-        y: 1751
-        width: 114
-        height: 650
+        x: 501
+        y: 1749
+        width: 117
+        height: 652
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -581,12 +581,12 @@ TextureImporter:
       name: uudetpalikat_16
       rect:
         serializedVersion: 2
-        x: 759
+        x: 757
         y: 1935
-        width: 114
+        width: 117
         height: 466
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -603,12 +603,12 @@ TextureImporter:
       name: uudetpalikat_17
       rect:
         serializedVersion: 2
-        x: 943
-        y: 2087
-        width: 114
-        height: 306
+        x: 942
+        y: 2085
+        width: 116
+        height: 309
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -625,12 +625,12 @@ TextureImporter:
       name: uudetpalikat_18
       rect:
         serializedVersion: 2
-        x: 1111
-        y: 2247
-        width: 114
-        height: 146
+        x: 1110
+        y: 2245
+        width: 116
+        height: 149
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -647,12 +647,12 @@ TextureImporter:
       name: uudetpalikat_19
       rect:
         serializedVersion: 2
-        x: 1503
+        x: 1501
         y: 1935
-        width: 362
-        height: 426
+        width: 365
+        height: 427
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -669,12 +669,12 @@ TextureImporter:
       name: uudetpalikat_20
       rect:
         serializedVersion: 2
-        x: 1903
+        x: 1901
         y: 1935
-        width: 106
-        height: 426
+        width: 110
+        height: 427
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -691,12 +691,12 @@ TextureImporter:
       name: uudetpalikat_21
       rect:
         serializedVersion: 2
-        x: 2143
-        y: 2319
-        width: 58
-        height: 50
+        x: 2142
+        y: 2317
+        width: 60
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -713,12 +713,12 @@ TextureImporter:
       name: uudetpalikat_22
       rect:
         serializedVersion: 2
-        x: 2255
+        x: 2253
         y: 2271
-        width: 58
-        height: 146
+        width: 62
+        height: 148
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -735,12 +735,12 @@ TextureImporter:
       name: uudetpalikat_23
       rect:
         serializedVersion: 2
-        x: 1103
-        y: 2087
-        width: 322
-        height: 146
+        x: 1101
+        y: 2085
+        width: 326
+        height: 150
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -757,12 +757,12 @@ TextureImporter:
       name: uudetpalikat_24
       rect:
         serializedVersion: 2
-        x: 2143
-        y: 1799
-        width: 58
-        height: 418
+        x: 2142
+        y: 1798
+        width: 60
+        height: 420
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -779,12 +779,12 @@ TextureImporter:
       name: uudetpalikat_25
       rect:
         serializedVersion: 2
-        x: 2255
-        y: 1807
-        width: 58
-        height: 418
+        x: 2253
+        y: 1806
+        width: 62
+        height: 420
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -801,12 +801,12 @@ TextureImporter:
       name: uudetpalikat_26
       rect:
         serializedVersion: 2
-        x: 2799
-        y: 2055
-        width: 74
-        height: 98
+        x: 2798
+        y: 2054
+        width: 76
+        height: 99
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -823,12 +823,12 @@ TextureImporter:
       name: uudetpalikat_27
       rect:
         serializedVersion: 2
-        x: 943
-        y: 1903
-        width: 530
-        height: 146
+        x: 942
+        y: 1901
+        width: 532
+        height: 149
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -845,12 +845,12 @@ TextureImporter:
       name: uudetpalikat_28
       rect:
         serializedVersion: 2
-        x: 2647
-        y: 1807
-        width: 26
-        height: 202
+        x: 2646
+        y: 1806
+        width: 29
+        height: 205
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -867,12 +867,12 @@ TextureImporter:
       name: uudetpalikat_29
       rect:
         serializedVersion: 2
-        x: 2791
-        y: 1815
-        width: 106
-        height: 186
+        x: 2790
+        y: 1813
+        width: 108
+        height: 190
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -889,12 +889,12 @@ TextureImporter:
       name: uudetpalikat_30
       rect:
         serializedVersion: 2
-        x: 3031
+        x: 3030
         y: 1839
-        width: 50
-        height: 162
+        width: 53
+        height: 164
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -911,12 +911,12 @@ TextureImporter:
       name: uudetpalikat_31
       rect:
         serializedVersion: 2
-        x: 3311
-        y: 1655
-        width: 234
-        height: 378
+        x: 3310
+        y: 1653
+        width: 236
+        height: 381
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -933,12 +933,12 @@ TextureImporter:
       name: uudetpalikat_32
       rect:
         serializedVersion: 2
-        x: 3695
-        y: 1663
-        width: 194
-        height: 378
+        x: 3694
+        y: 1661
+        width: 196
+        height: 381
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -956,11 +956,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 511
-        y: 1295
-        width: 114
-        height: 330
+        y: 1294
+        width: 115
+        height: 332
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -977,12 +977,12 @@ TextureImporter:
       name: uudetpalikat_34
       rect:
         serializedVersion: 2
-        x: 751
-        y: 1399
-        width: 386
-        height: 330
+        x: 749
+        y: 1397
+        width: 389
+        height: 332
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1000,11 +1000,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1519
-        y: 1447
-        width: 106
-        height: 426
+        y: 1446
+        width: 107
+        height: 428
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1021,12 +1021,12 @@ TextureImporter:
       name: uudetpalikat_36
       rect:
         serializedVersion: 2
-        x: 1671
-        y: 1447
-        width: 346
-        height: 426
+        x: 1669
+        y: 1446
+        width: 350
+        height: 428
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1043,12 +1043,12 @@ TextureImporter:
       name: uudetpalikat_37
       rect:
         serializedVersion: 2
-        x: 2407
-        y: 1463
-        width: 178
-        height: 306
+        x: 2405
+        y: 1462
+        width: 182
+        height: 308
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1065,12 +1065,12 @@ TextureImporter:
       name: uudetpalikat_38
       rect:
         serializedVersion: 2
-        x: 3439
-        y: 1623
-        width: 10
-        height: 26
+        x: 3437
+        y: 1622
+        width: 13
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1087,12 +1087,12 @@ TextureImporter:
       name: uudetpalikat_39
       rect:
         serializedVersion: 2
-        x: 751
-        y: 1031
-        width: 386
-        height: 330
+        x: 749
+        y: 1030
+        width: 389
+        height: 332
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1109,12 +1109,12 @@ TextureImporter:
       name: uudetpalikat_40
       rect:
         serializedVersion: 2
-        x: 1191
-        y: 1031
-        width: 386
-        height: 330
+        x: 1190
+        y: 1030
+        width: 389
+        height: 332
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1131,12 +1131,12 @@ TextureImporter:
       name: uudetpalikat_41
       rect:
         serializedVersion: 2
-        x: 1631
-        y: 719
-        width: 250
-        height: 562
+        x: 1630
+        y: 718
+        width: 252
+        height: 564
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1153,12 +1153,12 @@ TextureImporter:
       name: uudetpalikat_42
       rect:
         serializedVersion: 2
-        x: 3471
-        y: 1055
-        width: 418
-        height: 434
+        x: 3470
+        y: 1054
+        width: 420
+        height: 435
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1175,7 +1175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 17cbcd92f72e0984ea1b70992b3b1050
     internalID: 0
     vertices: []
     indices: 
@@ -1183,7 +1183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       uudetpalikat_0: -9081069307132715015
       uudetpalikat_1: 7486231733521379743
