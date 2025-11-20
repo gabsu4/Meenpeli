@@ -6573,7 +6573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5293274708109992384, guid: fa5f897d96b41c34296dc4a3c65e7c39, type: 3}
       propertyPath: playerlayer.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 5807558643797159116, guid: fa5f897d96b41c34296dc4a3c65e7c39, type: 3}
       propertyPath: speed
