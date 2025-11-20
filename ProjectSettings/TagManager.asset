@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Sword
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -12,12 +14,12 @@ TagManager:
   - Water
   - UI
   - 
+  - Floor
+  - Player
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Walls
+  - Fog
   - 
   - 
   - 
@@ -40,6 +42,18 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 346296791
+    locked: 0
+  - name: Player
+    uniqueID: 2197684465
+    locked: 0
+  - name: Walls
+    uniqueID: 4045016073
+    locked: 0
+  - name: Fog
+    uniqueID: 2709027659
     locked: 0
   m_RenderingLayers:
   - Default
