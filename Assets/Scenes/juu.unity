@@ -151,7 +151,9 @@ MonoBehaviour:
   inventoryPanel: {fileID: 2108345979}
   slotPrefab: {fileID: 222799212264633791, guid: d8b0b4b9db752ba46975e86efcc7c3c5, type: 3}
   slotCount: 24
-  itemPrefabs: []
+  itemPrefabs:
+  - {fileID: 5663659729767919178, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+  - {fileID: 1279549095562434764, guid: 3cc995124ce56244aa31a06ad14916a4, type: 3}
 --- !u!4 &67469835
 Transform:
   m_ObjectHideFlags: 0
@@ -454,7 +456,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1099041267
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -6006273676293942976, guid: 6b0dbad54b655bb4ca39f09de8650319, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1096,6 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   Die: {fileID: 0}
+  Hurt: []
   maxHealth: 10
   health: 10
 --- !u!114 &1326518543
@@ -1186,6 +1189,18 @@ MonoBehaviour:
   attackRange: 1.2
   attackDamage: 4
   attackRate: 2
+--- !u!114 &1326518552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326518536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efdc0449fba6d8e44bf3a8d6c78bbcd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1338754781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1532,6 +1547,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1689866831511430, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1326518545}
+    - targetCorrespondingSourceObject: {fileID: 1689866831511430, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1326518552}
   m_SourcePrefab: {fileID: 100100000, guid: 2e2183501755a214591e802f3aff33d2, type: 3}
 --- !u!1 &1943764995
 GameObject:

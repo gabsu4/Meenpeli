@@ -2825,7 +2825,7 @@ MonoBehaviour:
   volumeTextValue: {fileID: 1337191161}
   volumeSlider: {fileID: 507286635}
   musicSource: {fileID: 759040163}
-  _sceneToLoadAfterClickingPlay: LevelTut
+  _sceneToLoadAfterClickingPlay: LevelTutoriaali
 --- !u!4 &1676193041
 Transform:
   m_ObjectHideFlags: 0
