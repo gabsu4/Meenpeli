@@ -5865,7 +5865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1959464111
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6094,6 +6094,14 @@ PrefabInstance:
       propertyPath: "k\xE4vely.Array.data[4]"
       value: 
       objectReference: {fileID: 8300000, guid: d8989f6005bbbf1478fea82bc78a3806, type: 3}
+    - target: {fileID: 1031469676494193408, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.1692538
+      objectReference: {fileID: 0}
+    - target: {fileID: 1031469676494193408, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.40974224
+      objectReference: {fileID: 0}
     - target: {fileID: 1260792072064772802, guid: 5386ae32d452b084bb8ace8e69d15726, type: 3}
       propertyPath: Die
       value: 
