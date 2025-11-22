@@ -4,12 +4,14 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private AudioClip Die;
     [SerializeField] private AudioClip[] Hurt;
-    public int maxHealth = 10;
+    public int maxHealth = 50;
     public int health;
+    private PlayerMovement playerMovement;
     
     void Start()
     {
         health = maxHealth;
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     public void TakeDamage(int damage)
@@ -30,12 +32,21 @@ public class Health : MonoBehaviour
     }
     private void DiePlayer()
     {
-        AudioSource.PlayClipAtPoint(Die, transform.position);
-
+        if (Die != null)
+        {
+            AudioSource.PlayClipAtPoint(Die, transform.position);
+        }
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = false;
+        }
         if (GameManager.Instance != null)
         {
             GameManager.Instance.EndGame();
         }
-        Destroy(gameObject);
+        foreach (var col in GetComponents<Collider2D>())
+        {
+            col.enabled = false;
+        }
     }
 }

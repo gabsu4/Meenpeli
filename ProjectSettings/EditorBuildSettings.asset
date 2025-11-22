@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 90411d724ced96c4cbd8fc222254555e
   - enabled: 1
-    path: Assets/Scripts/LevelTutoriaali.unity
+    path: Assets/Scenes/LevelTutoriaali.unity
     guid: c24146c4b33cb034d8abee10c8c83676
   - enabled: 1
+    path: Assets/Scenes/levelBoss.unity
+    guid: da2a45f1a574283498b4ea64e531302b
+  - enabled: 0
+    path: Assets/Scenes/cutScene levelBoss.unity
+    guid: 9626d6fecc23ec647a78de62ae4414c1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 0
@@ -20,9 +26,6 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LevelTut.unity
     guid: 314a6bc357d3abe479df5e95b609f3eb
-  - enabled: 0
-    path: Assets/Scenes/levelBoss.unity
-    guid: da2a45f1a574283498b4ea64e531302b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

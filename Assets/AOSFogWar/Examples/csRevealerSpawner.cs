@@ -47,7 +47,7 @@ namespace FischlWorks_FogWar
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.P))
             {
                 Vector3 randomPoint = new Vector3(
                     Random.Range(-fogWar.levelData.levelDimensionX / 2.5f, fogWar.levelData.levelDimensionX / 2.5f),
