@@ -11,7 +11,7 @@ public class BossAiChase : MonoBehaviour
     public GameObject player;
     public float speed;
     private float distance;
-    private const float ChaseDistance = 15;
+    private const float ChaseDistance = 40;
     public float chaseHoldTime = 0.5f;
     private Coroutine stopChase;
 
@@ -51,15 +51,18 @@ public class BossAiChase : MonoBehaviour
 
         if(player == null)
         {
-            SetRunningAnimation(false);
             this.enabled = false;
             return;
         }
 
-        if(bossDamage != null && bossDamage.IsAttacking)
+        bool currentlyAttacking = 
+            (bossDamage != null && bossDamage.enabled && bossDamage.IsAttacking) ||
+            (fireballAttack != null && fireballAttack.enabled && fireballAttack.IsAttacking);
+        
+        if(currentlyAttacking)
         {
-            SetRunningAnimation(false);
-            return;
+           if (player != null) { FlipEnemy(); } 
+            return; 
         }
 
         if (isPhaseTwo)
@@ -68,16 +71,16 @@ public class BossAiChase : MonoBehaviour
             return;
         }
 
+
         distance = Vector2.Distance(transform.position, player.transform.position);
 
 
         if (distance < ChaseDistance)
         {
+            if (player != null) { FlipEnemy(); }
+
             if(distance > bossDamage.attackRange)
             {
-                SetRunningAnimation(true);
-                FlipEnemy();
-
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
 
                 if (stopChase != null)
@@ -85,10 +88,6 @@ public class BossAiChase : MonoBehaviour
                     StopCoroutine(stopChase);
                     stopChase = null;
                 }
-            }
-            else
-            {
-                SetRunningAnimation(false);
             }
         }
         else
@@ -105,7 +104,6 @@ public class BossAiChase : MonoBehaviour
         isPhaseTwo = true;
         Debug.Log("Phase two active");
 
-        SetRunningAnimation(false);
         if (stopChase != null)
         {
             StopCoroutine(stopChase);
@@ -125,28 +123,19 @@ public class BossAiChase : MonoBehaviour
     private void HandlePhaseTwoBehavior()
     {
         FlipEnemy();
-        SetRunningAnimation(false);
     }
     private IEnumerator StopChasingAfterDelay()
     {
         yield return new WaitForSeconds(chaseHoldTime);
 
-        SetRunningAnimation(false);
         stopChase = null;
-    }
-    private void SetRunningAnimation(bool isRunning)
-    {
-        if (animator != null)
-        {
-            animator.SetBool("IsRunning", isRunning); 
-        }
     }
     private void FlipEnemy()
     {
         float playerX = player.transform.position.x;
         float enemyX = transform.position.x;
 
-        const float Flipping = 0.05f;
+        const float Flipping = 0.5f;
 
         if (playerX > enemyX + Flipping && !isFacingRight)//oikee flip
         {
@@ -169,7 +158,7 @@ public class BossAiChase : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        if (attackpoint != null)
+        if (attackpoint != null && bossDamage != null)
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(attackpoint.position, bossDamage.attackRange);

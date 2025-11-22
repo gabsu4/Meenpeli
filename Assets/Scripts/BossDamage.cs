@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class BossDamage : MonoBehaviour
@@ -23,6 +24,10 @@ public class BossDamage : MonoBehaviour
 
     void Update()
     {
+        if (IsDead)
+        {
+            return;
+        }
         if(Player == null)
         {
             return;
@@ -46,6 +51,8 @@ public class BossDamage : MonoBehaviour
         if (animator != null)
             animator.SetTrigger("attack");
 
+            StartCoroutine(ResetAttackAfterTime());
+
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, playerlayer);
 
         foreach (Collider2D Player in hitPlayer)
@@ -62,6 +69,11 @@ public class BossDamage : MonoBehaviour
             }
         }
     }
+    private IEnumerator ResetAttackAfterTime()
+    {
+        yield return new WaitForSeconds(0.8f);
+        IsAttacking = false;
+    }
     public void EndAttack()
     {
         IsAttacking = false;
@@ -72,6 +84,8 @@ public class BossDamage : MonoBehaviour
         animator.SetBool("IsDead", true);
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
+
+        StopAllCoroutines();
     }
 
     void OnDrawGizmosSelected()
