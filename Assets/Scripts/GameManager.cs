@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+    private UIManager uiManager;
     public GameObject deathScreenUI;
     public Vector2 nextSpawnPosition = Vector2.zero;
     private bool isGameOver = false;
@@ -20,6 +21,15 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Start()
+    {
+        uiManager = FindFirstObjectByType<UIManager>(); 
+    
+        if (uiManager == null)
+        {
+            Debug.LogError("GameManager couldn't find a UIManager in the scene!");
+        }
+    }
     public void EndGame()
     {
         if (isGameOver)
@@ -27,9 +37,9 @@ public class GameManager : MonoBehaviour
 
         isGameOver = true;
         
-        if (deathScreenUI != null)
+        if (uiManager != null)
         {
-            deathScreenUI.SetActive(true);
+            uiManager.ToggleDeathPanel();
         }
         
         Time.timeScale = 0f; 
@@ -39,11 +49,20 @@ public class GameManager : MonoBehaviour
     {
         isGameOver = false;
 
-        if (deathScreenUI != null)
+        if (uiManager != null)
         {
-            deathScreenUI.SetActive(false);
+            if (uiManager.deathPanel.activeSelf)
+            {
+                uiManager.ToggleDeathPanel();
+            }
         }
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void RegisterDeathScreenUI(GameObject uiObject)
+    {
+        deathScreenUI = uiObject;
+        deathScreenUI.SetActive(false);
     }
 }
