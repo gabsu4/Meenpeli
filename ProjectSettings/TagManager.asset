@@ -14,7 +14,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Items
   - Floor
   - Player
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Fog
     uniqueID: 2709027659
+    locked: 0
+  - name: Items
+    uniqueID: 1257326089
     locked: 0
   m_RenderingLayers:
   - Default
