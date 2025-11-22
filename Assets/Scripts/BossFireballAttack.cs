@@ -53,7 +53,6 @@ public class BossFireballAttack : MonoBehaviour
     {
         if (fireballPrefab == null || shootPoint == null)
         {
-            Debug.LogError("Fireball Prefab or Shoot Point not assigned!");
             return;
         }
         
@@ -63,12 +62,23 @@ public class BossFireballAttack : MonoBehaviour
         
         if (fireball.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
         {
-            rb.velocity = direction * fireballSpeed;
+            rb.linearVelocity = direction * fireballSpeed;
         }
         
-        // Optional: Rotate the fireball to face the direction of travel
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        float adjustedAngle = angle + 90f;
         fireball.transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
+
+
+
+    void OnDrawGizmosSelected()
+    {
+        if (shootPoint != null)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(shootPoint.position, shootingRange);
+        }
     }
 }
 
