@@ -1,13 +1,18 @@
 using NUnit.Framework;
 using UnityEngine;
+using System;
 
 public class EnemyHealth : MonoBehaviour
 {
     public Animator animator;
+    public event Action OnHealthThresholdReached;
+    public int CurrentHealth => currentHealth;
     public int maxHealth = 10;
     public int currentHealth;
     public bool IsDead = false;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private const int PhaseTwoThreshold = 25;
+    private bool phaseTwoTriggered = false;
+    
     void Start()
     {
         currentHealth = maxHealth;
@@ -15,8 +20,15 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (IsDead) return;
+
         currentHealth -= damage;
         animator.SetTrigger("Hurt");
+
+        if (!phaseTwoTriggered && currentHealth <= PhaseTwoThreshold)
+        {
+            phaseTwoTriggered = true;
+            OnHealthThresholdReached?.Invoke();
+        }
 
         if(currentHealth <= 0)
         {

@@ -15,6 +15,9 @@ public class BossAiChase : MonoBehaviour
     public float chaseHoldTime = 0.5f;
     private Coroutine stopChase;
 
+    private BossFireballAttack fireballAttack;
+    public bool isPhaseTwo { get; private set; } = false;
+
     public Animator animator;
     private bool isFacingRight = true;
 
@@ -24,6 +27,18 @@ public class BossAiChase : MonoBehaviour
         if (bossDamage == null)
         {
             bossDamage = GetComponent<BossDamage>();
+        }
+        fireballAttack = GetComponent<BossFireballAttack>();
+        if (enemyHealth != null)
+        {
+            enemyHealth.OnHealthThresholdReached += StartPhaseTwo; 
+        }
+    }
+    void OnDestroy()
+    {
+        if (enemyHealth != null)
+        {
+            enemyHealth.OnHealthThresholdReached -= StartPhaseTwo; 
         }
     }
 
@@ -44,6 +59,12 @@ public class BossAiChase : MonoBehaviour
         if(bossDamage != null && bossDamage.IsAttacking)
         {
             SetRunningAnimation(false);
+            return;
+        }
+
+        if (isPhaseTwo)
+        {
+            HandlePhaseTwoBehavior();
             return;
         }
 
@@ -77,6 +98,34 @@ public class BossAiChase : MonoBehaviour
                 stopChase = StartCoroutine(StopChasingAfterDelay());
             }
         }
+    }
+
+    private void StartPhaseTwo()
+    {
+        isPhaseTwo = true;
+        Debug.Log("Phase two active");
+
+        SetRunningAnimation(false);
+        if (stopChase != null)
+        {
+            StopCoroutine(stopChase);
+            stopChase = null;
+        }
+
+        if (bossDamage != null)
+        {
+            bossDamage.enabled = false;
+        }
+
+        if (fireballAttack != null)
+        {
+            fireballAttack.enabled = true;
+        }
+    }
+    private void HandlePhaseTwoBehavior()
+    {
+        FlipEnemy();
+        SetRunningAnimation(false);
     }
     private IEnumerator StopChasingAfterDelay()
     {
