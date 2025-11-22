@@ -179,3 +179,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
   uiItemPrefab: {fileID: 5663659729767919178, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+  ID: 0
+  Name: Bow
+  itemIcon: {fileID: -1634585476465559712, guid: 7746382c86299b8479375fa95581c43f, type: 3}

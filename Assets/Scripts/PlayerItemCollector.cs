@@ -20,6 +20,7 @@ public class PlayerItemCollector : MonoBehaviour
 
                 if (itemAdded)
                 {
+                    pickup.Pickup();
                     Destroy(collision.gameObject);
                 }
             }
