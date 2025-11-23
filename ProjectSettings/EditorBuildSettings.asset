@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LevelTut.unity
     guid: 314a6bc357d3abe479df5e95b609f3eb
+  - enabled: 1
+    path: Assets/Scenes/End Credits.unity
+    guid: 0e775700fce2b5645bf48174f4b1dcf3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
