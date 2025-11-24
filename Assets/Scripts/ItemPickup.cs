@@ -8,6 +8,11 @@ public class ItemPickup : MonoBehaviour
     public string Name;
     public Sprite itemIcon;
 
+    public virtual void UseItem()
+    {
+        Debug.Log("Using item" + Name);
+    }
+
     public void Pickup()
     {
         Sprite icon = this.itemIcon;
