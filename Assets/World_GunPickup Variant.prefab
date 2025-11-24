@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1629708923819063656
+--- !u!1001 &4730479395569838566
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -18,39 +18,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 504007172066547483, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.71
+      value: 3.1
       objectReference: {fileID: 0}
     - target: {fileID: 504007172066547483, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.72
+      value: 2.19
       objectReference: {fileID: 0}
     - target: {fileID: 1788219699545655153, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_Name
-      value: World_HealthPotionPickup Variant
+      value: World_GunPickup Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: Name
-      value: Healthpotion
+      value: Gun
       objectReference: {fileID: 0}
     - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: itemIcon
       value: 
-      objectReference: {fileID: 4576071727898395855, guid: f7ccedf1f8f542e4db8202a0ed5b4aad, type: 3}
+      objectReference: {fileID: 2778561926078659640, guid: a6ca20c0760e72242b2914243bb9b320, type: 3}
     - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: uiItemPrefab
       value: 
-      objectReference: {fileID: 1160214797651799987, guid: 5ea7c5415982c854383a1e8afbf091c5, type: 3}
+      objectReference: {fileID: 3049249134794473650, guid: e90dd405a60a6104e932f3107358cf45, type: 3}
     - target: {fileID: 5148169003983553086, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4576071727898395855, guid: f7ccedf1f8f542e4db8202a0ed5b4aad, type: 3}
+      objectReference: {fileID: 2778561926078659640, guid: a6ca20c0760e72242b2914243bb9b320, type: 3}
     - target: {fileID: 8760949174611136887, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.94511
+      value: 10.113
       objectReference: {fileID: 0}
     - target: {fileID: 8760949174611136887, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.39174
+      value: -2.55776
       objectReference: {fileID: 0}
     - target: {fileID: 8760949174611136887, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_LocalPosition.z
