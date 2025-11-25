@@ -6483,7 +6483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
   "ovi\xC4\xE4ni": {fileID: 8300000, guid: e242df4e898b91749952f443564a820e, type: 3}
-  nextSceneName: levelBoss
+  nextSceneName: level1 1
   destinationSpawnPoint: {x: 0, y: 0}
 --- !u!4 &786833909
 Transform:
@@ -6517,7 +6517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &798766398
 BoxCollider2D:
   m_ObjectHideFlags: 0
