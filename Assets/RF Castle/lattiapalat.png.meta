@@ -1,0 +1,1309 @@
+fileFormatVersion: 2
+guid: 53516120a9c61a44f9045985ed47b415
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4902068912502646546
+    second: lattiapalat_0
+  - first:
+      213: -4632796118917757656
+    second: lattiapalat_1
+  - first:
+      213: -6407688034542647993
+    second: lattiapalat_2
+  - first:
+      213: 493846214763977047
+    second: lattiapalat_3
+  - first:
+      213: -425499687104645656
+    second: lattiapalat_4
+  - first:
+      213: 5645560659079793295
+    second: lattiapalat_5
+  - first:
+      213: 4379009965245196219
+    second: lattiapalat_6
+  - first:
+      213: 104236688475879285
+    second: lattiapalat_7
+  - first:
+      213: 4970590296683588376
+    second: lattiapalat_8
+  - first:
+      213: 7337202581588983610
+    second: lattiapalat_9
+  - first:
+      213: 7524085705151967216
+    second: lattiapalat_10
+  - first:
+      213: 9044547872848283141
+    second: lattiapalat_11
+  - first:
+      213: 6968562579115459226
+    second: lattiapalat_12
+  - first:
+      213: -5220279031365952830
+    second: lattiapalat_13
+  - first:
+      213: -617835338583575531
+    second: lattiapalat_14
+  - first:
+      213: -2051399112656132617
+    second: lattiapalat_15
+  - first:
+      213: -4669396544162532714
+    second: lattiapalat_16
+  - first:
+      213: -7233426161426133547
+    second: lattiapalat_17
+  - first:
+      213: 8147518401951172066
+    second: lattiapalat_18
+  - first:
+      213: 9016688759910377310
+    second: lattiapalat_19
+  - first:
+      213: 3478103170978268945
+    second: lattiapalat_20
+  - first:
+      213: 2438298854113879201
+    second: lattiapalat_21
+  - first:
+      213: -4926773613749605872
+    second: lattiapalat_22
+  - first:
+      213: -7872641348502166686
+    second: lattiapalat_23
+  - first:
+      213: -2197169201405543033
+    second: lattiapalat_24
+  - first:
+      213: 341788967739560406
+    second: lattiapalat_25
+  - first:
+      213: 7852265046413502857
+    second: lattiapalat_26
+  - first:
+      213: 6514636254331714173
+    second: lattiapalat_27
+  - first:
+      213: 1841651888641057024
+    second: lattiapalat_28
+  - first:
+      213: 5897083939346897713
+    second: lattiapalat_29
+  - first:
+      213: -6950121410336299231
+    second: lattiapalat_30
+  - first:
+      213: 5850658762073015853
+    second: lattiapalat_31
+  - first:
+      213: 442671329045365452
+    second: lattiapalat_32
+  - first:
+      213: 2947320962583216337
+    second: lattiapalat_33
+  - first:
+      213: -3127658682793615078
+    second: lattiapalat_34
+  - first:
+      213: -8450441579383862272
+    second: lattiapalat_35
+  - first:
+      213: 6784312851588282122
+    second: lattiapalat_36
+  - first:
+      213: 6067695724106341797
+    second: lattiapalat_37
+  - first:
+      213: -3927675283478273833
+    second: lattiapalat_38
+  - first:
+      213: -2587053956677049056
+    second: lattiapalat_39
+  - first:
+      213: -3691428252398440963
+    second: lattiapalat_40
+  - first:
+      213: -2407072759026789118
+    second: lattiapalat_41
+  - first:
+      213: 8490182829377262308
+    second: lattiapalat_42
+  - first:
+      213: 8382307264642087567
+    second: lattiapalat_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: lattiapalat_0
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 3149
+        width: 676
+        height: 668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217a43224b5a70440800000000000000
+      internalID: 4902068912502646546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_1
+      rect:
+        serializedVersion: 2
+        x: 1093
+        y: 3157
+        width: 181
+        height: 668
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8254917b97005bfb0800000000000000
+      internalID: -4632796118917757656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_2
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 3581
+        width: 470
+        height: 318
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74580959ea15317a0800000000000000
+      internalID: -6407688034542647993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_3
+      rect:
+        serializedVersion: 2
+        x: 2054
+        y: 3591
+        width: 373
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7599dac048e7ad600800000000000000
+      internalID: 493846214763977047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_4
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 3591
+        width: 469
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5761af942581af0800000000000000
+      internalID: -425499687104645656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_5
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 3470
+        width: 358
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a0f5a028f095e40800000000000000
+      internalID: 5645560659079793295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_6
+      rect:
+        serializedVersion: 2
+        x: 3870
+        y: 3638
+        width: 12
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb7e556cc5e55cc30800000000000000
+      internalID: 4379009965245196219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_7
+      rect:
+        serializedVersion: 2
+        x: 3886
+        y: 3599
+        width: 37
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 577fa2547b2527100800000000000000
+      internalID: 104236688475879285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_8
+      rect:
+        serializedVersion: 2
+        x: 1429
+        y: 3214
+        width: 470
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b24dd1a851bf440800000000000000
+      internalID: 4970590296683588376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_9
+      rect:
+        serializedVersion: 2
+        x: 2054
+        y: 3214
+        width: 373
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3fb0b0bfdaf2d560800000000000000
+      internalID: 7337202581588983610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_10
+      rect:
+        serializedVersion: 2
+        x: 2614
+        y: 3222
+        width: 469
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ff6d23a51cea6860800000000000000
+      internalID: 7524085705151967216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_11
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 2382
+        width: 668
+        height: 428
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 506032bce50b48d70800000000000000
+      internalID: 9044547872848283141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_12
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 2366
+        width: 109
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a92c143aebe45b060800000000000000
+      internalID: 6968562579115459226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_13
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 2446
+        width: 381
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca130311e7dd87b0800000000000000
+      internalID: -5220279031365952830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_14
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 2446
+        width: 381
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514fa0278020d67f0800000000000000
+      internalID: -617835338583575531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_15
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 2446
+        width: 380
+        height: 317
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f564953067f783e0800000000000000
+      internalID: -2051399112656132617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_16
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 2149
+        width: 692
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69271c52598f23fb0800000000000000
+      internalID: -4669396544162532714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_17
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 2085
+        width: 381
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd8d230b35bd9b90800000000000000
+      internalID: -7233426161426133547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_18
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 2085
+        width: 381
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e50245b1dcc11170800000000000000
+      internalID: 8147518401951172066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_19
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 2085
+        width: 380
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5727b897a6b12d70800000000000000
+      internalID: 9016688759910377310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_20
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1889
+        width: 11
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117c15ef764b44030800000000000000
+      internalID: 3478103170978268945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_21
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1511
+        width: 652
+        height: 427
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a423bf93e396d120800000000000000
+      internalID: 2438298854113879201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_22
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 1718
+        width: 381
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01aefaf508590abb0800000000000000
+      internalID: -4926773613749605872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_23
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 1718
+        width: 381
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 263e9729762ceb290800000000000000
+      internalID: -7872641348502166686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_24
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 1718
+        width: 380
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d3bce90461281e0800000000000000
+      internalID: -2197169201405543033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_25
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 1633
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1934a51474eb400800000000000000
+      internalID: 341788967739560406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_26
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1600
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98961b5e479d8fc60800000000000000
+      internalID: 7852265046413502857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_27
+      rect:
+        serializedVersion: 2
+        x: 809
+        y: 1496
+        width: 31
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ab2544823a86a50800000000000000
+      internalID: 6514636254331714173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_28
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1344
+        width: 27
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 001a06e92acde8910800000000000000
+      internalID: 1841651888641057024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_29
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1134
+        width: 270
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13bde674996a6d150800000000000000
+      internalID: 5897083939346897713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_30
+      rect:
+        serializedVersion: 2
+        x: 1917
+        y: 1093
+        width: 86
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 127611f86653c8f90800000000000000
+      internalID: -6950121410336299231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_31
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 1046
+        width: 229
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d26836f5527b13150800000000000000
+      internalID: 5850658762073015853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_32
+      rect:
+        serializedVersion: 2
+        x: 3126
+        y: 935
+        width: 437
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2cff77a3fa42600800000000000000
+      internalID: 442671329045365452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_33
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 765
+        width: 388
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0c5d5ccccf6e820800000000000000
+      internalID: 2947320962583216337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_34
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 765
+        width: 373
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a11ab61cff25894d0800000000000000
+      internalID: -3127658682793615078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_35
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 765
+        width: 389
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00c42a9e7200aba80800000000000000
+      internalID: -8450441579383862272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_36
+      rect:
+        serializedVersion: 2
+        x: 1813
+        y: 886
+        width: 157
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07790cf798b62e50800000000000000
+      internalID: 6784312851588282122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_37
+      rect:
+        serializedVersion: 2
+        x: 2077
+        y: 935
+        width: 190
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5add380fc19c43450800000000000000
+      internalID: 6067695724106341797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_38
+      rect:
+        serializedVersion: 2
+        x: 1005
+        y: 413
+        width: 381
+        height: 326
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d0223fa3281e79c0800000000000000
+      internalID: -3927675283478273833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_39
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 606
+        width: 525
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 025ee791220f81cd0800000000000000
+      internalID: -2587053956677049056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_40
+      rect:
+        serializedVersion: 2
+        x: 2774
+        y: 726
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd23fdff8965ccc0800000000000000
+      internalID: -3691428252398440963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_41
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 397
+        width: 388
+        height: 325
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20550b1341c589ed0800000000000000
+      internalID: -2407072759026789118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_42
+      rect:
+        serializedVersion: 2
+        x: 2757
+        y: 702
+        width: 37
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e21727ec4033d570800000000000000
+      internalID: 8490182829377262308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_43
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 54
+        width: 388
+        height: 324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8afa2bbb00f35470800000000000000
+      internalID: 8382307264642087567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_44
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 54
+        width: 373
+        height: 324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c9c3357662a57440a9a55d0196daa37
+      internalID: -2065581894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lattiapalat_45
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 54
+        width: 389
+        height: 324
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 041f155106b92d04d8fa4c9662222004
+      internalID: -1691878673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 521d9cd31180aa24f9a750f198256fa7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      lattiapalat_0: 4902068912502646546
+      lattiapalat_1: -4632796118917757656
+      lattiapalat_10: 7524085705151967216
+      lattiapalat_11: 9044547872848283141
+      lattiapalat_12: 6968562579115459226
+      lattiapalat_13: -5220279031365952830
+      lattiapalat_14: -617835338583575531
+      lattiapalat_15: -2051399112656132617
+      lattiapalat_16: -4669396544162532714
+      lattiapalat_17: -7233426161426133547
+      lattiapalat_18: 8147518401951172066
+      lattiapalat_19: 9016688759910377310
+      lattiapalat_2: -6407688034542647993
+      lattiapalat_20: 3478103170978268945
+      lattiapalat_21: 2438298854113879201
+      lattiapalat_22: -4926773613749605872
+      lattiapalat_23: -7872641348502166686
+      lattiapalat_24: -2197169201405543033
+      lattiapalat_25: 341788967739560406
+      lattiapalat_26: 7852265046413502857
+      lattiapalat_27: 6514636254331714173
+      lattiapalat_28: 1841651888641057024
+      lattiapalat_29: 5897083939346897713
+      lattiapalat_3: 493846214763977047
+      lattiapalat_30: -6950121410336299231
+      lattiapalat_31: 5850658762073015853
+      lattiapalat_32: 442671329045365452
+      lattiapalat_33: 2947320962583216337
+      lattiapalat_34: -3127658682793615078
+      lattiapalat_35: -8450441579383862272
+      lattiapalat_36: 6784312851588282122
+      lattiapalat_37: 6067695724106341797
+      lattiapalat_38: -3927675283478273833
+      lattiapalat_39: -2587053956677049056
+      lattiapalat_4: -425499687104645656
+      lattiapalat_40: -3691428252398440963
+      lattiapalat_41: -2407072759026789118
+      lattiapalat_42: 8490182829377262308
+      lattiapalat_43: 8382307264642087567
+      lattiapalat_44: -2065581894
+      lattiapalat_45: -1691878673
+      lattiapalat_5: 5645560659079793295
+      lattiapalat_6: 4379009965245196219
+      lattiapalat_7: 104236688475879285
+      lattiapalat_8: 4970590296683588376
+      lattiapalat_9: 7337202581588983610
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
