@@ -1,9 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class DoorController : MonoBehaviour
 {
     [SerializeField] private AudioClip oviÄäni;
+    public GameObject pressEPrompt;
+    public GameObject lockedPrompt;
     public string nextSceneName = "Level02"; 
 
     private Keyinv playerInventory; 
@@ -12,9 +15,28 @@ public class DoorController : MonoBehaviour
 
     private const string PlayerTag = "Player";
     public Vector2 destinationSpawnPoint;
+    private Coroutine hideLockedRoutine;
+
+    void Start()
+    {
+        if (pressEPrompt != null)
+        {
+            pressEPrompt.SetActive(false);
+        }
+        if (lockedPrompt != null)
+        {
+            lockedPrompt.SetActive(false);
+        }
+    }
 
     void Update()
-    {   
+    {
+        bool isLockedPromptVisible = (lockedPrompt != null && lockedPrompt.activeInHierarchy);
+        if (pressEPrompt != null)
+        {
+            pressEPrompt.SetActive(playerIsAtDoor && !isLockedPromptVisible);
+        }
+
         if (playerIsAtDoor && Input.GetKeyDown(KeyCode.E))
         {
             if (playerInventory != null && playerInventory.hasKey)
@@ -23,9 +45,44 @@ public class DoorController : MonoBehaviour
             }
             else
             {
-                Debug.Log("Door is locked. Find the key!");
+                ShowLockedPrompt();
             }
         }
+    }
+
+    private void ShowLockedPrompt()
+    {
+        if (lockedPrompt != null)
+        {
+            if (hideLockedRoutine != null)
+            {
+                StopCoroutine(hideLockedRoutine);
+            }
+            
+            pressEPrompt.SetActive(false);
+            lockedPrompt.SetActive(true);
+
+            hideLockedRoutine = StartCoroutine(HideLockedPromptAfterDelay(2f)); 
+        }
+        
+        Debug.Log("Door is locked. Find the key!"); 
+    }
+
+    IEnumerator HideLockedPromptAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        
+        if (lockedPrompt != null)
+        {
+            lockedPrompt.SetActive(false);
+        }
+        
+        if (playerIsAtDoor && pressEPrompt != null)
+        {
+            pressEPrompt.SetActive(true);
+        }
+        
+        hideLockedRoutine = null;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {   
@@ -34,7 +91,12 @@ public class DoorController : MonoBehaviour
             playerIsAtDoor = true;
             playerInventory = other.GetComponent<Keyinv>(); 
             Debug.Log("Press 'E' to use door.");
+            if (pressEPrompt != null)
+            {
+                pressEPrompt.SetActive(playerIsAtDoor);
+            }
         }
+        
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -42,7 +104,16 @@ public class DoorController : MonoBehaviour
         {
             playerIsAtDoor = false;
             playerInventory = null; 
+            if (hideLockedRoutine != null)
+            {
+                StopCoroutine(hideLockedRoutine);
+            }
+            if (lockedPrompt != null)
+            {
+                lockedPrompt.SetActive(false);
+            }
         }
+        
     }
     private void LoadNextArea()
     {

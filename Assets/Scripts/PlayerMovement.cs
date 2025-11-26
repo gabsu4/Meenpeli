@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     public float KBTotalTime;
     public bool KnockFromRight;
 
+    private float dashCooldown = 1.0f;
+    private float nextDashTime = 0f;
+
     private Rigidbody2D rb;
     private Vector2 movement;
     private Vector3 lastMoveDir;
@@ -44,11 +47,10 @@ public class PlayerMovement : MonoBehaviour
         float inputX = Input.GetAxisRaw("Horizontal"); // Oletuksena A/D tai nuolinäppäimet
         float inputY = Input.GetAxisRaw("Vertical");   // Oletuksena W/S tai nuolinäppäimet
 
-        // Luodaan uusi Vector2, joka edustaa hahmon haluttua liikesuuntaa.
         movement = new Vector2(inputX, inputY).normalized;
         Vector3 currentScale = transform.localScale;
 
-        if (movement.magnitude > 0.1f) // Only update if a direction is being held
+        if (movement.magnitude > 0.1f) 
         {
             lastMoveDir = movement;
         }
@@ -91,30 +93,24 @@ public class PlayerMovement : MonoBehaviour
     
     private void HandleFootsteps()
 {
-    // Check if the player is moving AND if the sound is ready to play
     if (rb.linearVelocity.magnitude > 0.1f && Time.time >= nextStepTime)
     {
         PlayRandomFootstep();
-        nextStepTime = Time.time + WalkInterval; // Reset the timer
+        nextStepTime = Time.time + WalkInterval; 
     }
 }
 
 private void PlayRandomFootstep()
 {
-    // 1. Check if the array is valid and has clips
     if (Walk == null || Walk.Length == 0)
     {
-        Debug.LogWarning("Footstep Sounds array is empty! Assign clips in the Inspector.");
         return;
     }
 
-    // 2. Select a random index from 0 up to (but not including) the array length
     int randomIndex = Random.Range(0, Walk.Length);
     
-    // 3. Get the random clip
     AudioClip randomClip = Walk[randomIndex];
 
-    // 4. Play the sound using your SoundManager
     if (SoundManager.instance != null)
     {
         SoundManager.instance.PlaySound(randomClip);
@@ -123,10 +119,11 @@ private void PlayRandomFootstep()
 
     private void HandleDash()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextDashTime)
         {
             float dashDistance = 5f;
             transform.position += lastMoveDir * dashDistance;
+            nextDashTime = Time.time + dashCooldown;
         }
     }
     private void Flip()
