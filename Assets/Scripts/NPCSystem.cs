@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class NPCSystem : MonoBehaviour
 {
     bool player_detection = false;
+    public GameObject pressEPrompt;
     public GameObject dialougePanel;
     public Text dialougeText;
     public string[] dialouge;
@@ -17,10 +18,30 @@ public class NPCSystem : MonoBehaviour
     void Start()
     {
         dialougeText.text = "";
+        if (pressEPrompt != null)
+        {
+            pressEPrompt.SetActive(false);
+        }
     }
     void Update()
     {
         if (dialougePanel == null || contButton == null || dialougeText == null) return;
+
+        if (player_detection && !dialougePanel.activeInHierarchy)
+        {
+            if (pressEPrompt != null)
+            {
+                pressEPrompt.SetActive(true);
+            }
+        }
+        else
+        {
+            if (pressEPrompt != null)
+            {
+                pressEPrompt.SetActive(false);
+            }
+        }
+
         if (player_detection && Input.GetKeyDown(KeyCode.E))
         {
             if (dialougePanel.activeInHierarchy)
