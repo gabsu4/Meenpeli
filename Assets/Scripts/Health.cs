@@ -18,13 +18,13 @@ public class Health : MonoBehaviour
     {
         health -= damage;
         if (health > 0 && Hurt.Length > 0)
-    {
-        int randomIndex = Random.Range(0, Hurt.Length);
+        {
+            int randomIndex = Random.Range(0, Hurt.Length);
         
-        AudioClip randomClip = Hurt[randomIndex];
+            AudioClip randomClip = Hurt[randomIndex];
 
-        AudioSource.PlayClipAtPoint(randomClip, transform.position);
-    }
+            AudioSource.PlayClipAtPoint(randomClip, transform.position);
+        }
         if (health <= 0)
         {
             DiePlayer();
