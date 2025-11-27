@@ -260,7 +260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218554641124614910, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2310942060272299052, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: m_Size.x
@@ -343,11 +343,31 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: Dead
+      value: 
+      objectReference: {fileID: 8300000, guid: 782244b9ec83c51469ae262867ccd3e9, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: LowHp
+      value: 
+      objectReference: {fileID: 8300000, guid: 243722edbb2aab148880924447076b38, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: PhaseHp
+      value: 
+      objectReference: {fileID: 8300000, guid: b9ce11fe6e6b1cc4abb5193254c14bbd, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: maxHealth
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: NearDeathHp
+      value: 
+      objectReference: {fileID: 8300000, guid: 0af22fd1890e8334eb805f2979f85e27, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: currentHealth
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6694133105078228803, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
@@ -411,7 +431,7 @@ PrefabInstance:
       addedObject: {fileID: 960963731}
     - targetCorrespondingSourceObject: {fileID: 2218554641124614910, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 960963742}
+      addedObject: {fileID: 960963746}
   m_SourcePrefab: {fileID: 100100000, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
 --- !u!1001 &39986721
 PrefabInstance:
@@ -10346,6 +10366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossAiChase
   bossDamage: {fileID: 960963732}
+  First: {fileID: 8300000, guid: de73d90d9d0421646b8cdeed1d479a91, type: 3}
   attackpoint: {fileID: 1896796015}
   player: {fileID: 1053980124}
   speed: 3
@@ -10356,8 +10377,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3495134225706019735, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
   m_PrefabInstance: {fileID: 37916013}
   m_PrefabAsset: {fileID: 0}
---- !u!61 &960963742
-BoxCollider2D:
+--- !u!70 &960963746
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10390,18 +10411,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.38332292, y: -0.19924593}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.4, y: 0.93}
-    newSize: {x: 1.28, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.28339773, y: 0.5415081}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.3666334, y: -0.1793214}
+  m_Size: {x: 0.40009233, y: 0.59789246}
+  m_Direction: 0
 --- !u!1 &964503064
 GameObject:
   m_ObjectHideFlags: 0
@@ -14950,6 +14962,7 @@ MonoBehaviour:
   targetCameraSize: 15
   zoomSpeed: 2
   bossGameObject: {fileID: 960963724}
+  Enter: {fileID: 8300000, guid: 1a527032eafd4ad43bd7d746a922f2a9, type: 3}
 --- !u!4 &1539897409
 Transform:
   m_ObjectHideFlags: 0

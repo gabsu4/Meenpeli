@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 23f7a4fdaa4ae8543a3e658ec8154986
+guid: 52ddbdcc95e1fc24aa889bf0ccb86f15
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
@@ -25,5 +25,5 @@ AssetOrigin:
   productId: 213968
   packageName: 'Game Character Voices: Boss Voice Pack'
   packageVersion: 1.0
-  assetPath: Assets/Boss Voice Pack/Boss 3/BOSS3 - Effort 5.wav
+  assetPath: Assets/Boss Voice Pack/Boss 2 (Playable)/BOSS2 - Consider It Done.wav
   uploadId: 482533

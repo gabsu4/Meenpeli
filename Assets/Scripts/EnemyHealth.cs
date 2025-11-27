@@ -8,14 +8,27 @@ public class EnemyHealth : MonoBehaviour
     public Animator animator;
     [SerializeField] private AudioClip Dead;
     [SerializeField] private AudioClip[] Hurt;
+    public AudioClip LowHp;
+    public AudioClip NearDeathHp;
+    public AudioClip PhaseHp;
     private float soundVolumeBoost = 0.5f;
+
     public event Action OnHealthThresholdReached;
     public int CurrentHealth => currentHealth;
     public int maxHealth = 10;
     public int currentHealth;
     public bool IsDead = false;
+
     private const int PhaseTwoThreshold = 25;
+    private const int LowHpLine = 30;
+    private const int NearDeathHpLine = 10;
+
     private bool phaseTwoTriggered = false;
+    private bool lowHpTriggered = false; 
+    private bool nearDeathHpTriggered = false;
+
+    private bool Hp = false;
+    private bool Hp10 = false;
     
     void Start()
     {
@@ -39,7 +52,20 @@ public class EnemyHealth : MonoBehaviour
         if (!phaseTwoTriggered && currentHealth <= PhaseTwoThreshold)
         {
             phaseTwoTriggered = true;
+            AudioHelper.PlayClip2D(PhaseHp, transform.position, soundVolumeBoost);
             OnHealthThresholdReached?.Invoke();
+        }
+
+        if (!lowHpTriggered && currentHealth <= LowHpLine)
+        {
+            lowHpTriggered = true;
+            AudioHelper.PlayClip2D(LowHp, transform.position, soundVolumeBoost);
+        }
+
+        if (!nearDeathHpTriggered && currentHealth <= NearDeathHpLine)
+        {
+            nearDeathHpTriggered = true;
+            AudioHelper.PlayClip2D(NearDeathHp, transform.position, soundVolumeBoost);
         }
 
         if(currentHealth <= 0)

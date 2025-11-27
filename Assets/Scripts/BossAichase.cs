@@ -6,6 +6,7 @@ using UnityEngine;
 public class BossAiChase : MonoBehaviour
 {
     [SerializeField] private BossDamage bossDamage;
+    public AudioClip First;
     private EnemyHealth enemyHealth;
     public Transform attackpoint;
     public GameObject player;
@@ -20,6 +21,9 @@ public class BossAiChase : MonoBehaviour
 
     public Animator animator;
     private bool isFacingRight = true;
+    private bool Voice = false;
+    private bool isInitialized = false;
+    private float soundVolumeBoost = 0.5f;
 
     void Start()
     {
@@ -33,6 +37,7 @@ public class BossAiChase : MonoBehaviour
         {
             enemyHealth.OnHealthThresholdReached += StartPhaseTwo; 
         }
+        isInitialized = true;
     }
     void OnDestroy()
     {
@@ -44,6 +49,10 @@ public class BossAiChase : MonoBehaviour
 
     void Update()
     {
+        if (!isInitialized)
+        {
+            return;
+        }
         if (enemyHealth != null && enemyHealth.IsDead)
         {
             return;
@@ -79,7 +88,15 @@ public class BossAiChase : MonoBehaviour
         {
             if (player != null) { FlipEnemy(); }
 
-            if(distance > bossDamage.attackRange)
+            if(distance <= bossDamage.attackRange && !Voice)
+            {
+                if (player != null) 
+                {
+                    PlayVoiceLine();
+                    Voice = true; 
+                }
+            }
+            else if(distance > bossDamage.attackRange)
             {
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
 
@@ -92,6 +109,7 @@ public class BossAiChase : MonoBehaviour
         }
         else
         {
+            Voice = false;
             if (stopChase == null)
             {
                 stopChase = StartCoroutine(StopChasingAfterDelay());
@@ -154,6 +172,14 @@ public class BossAiChase : MonoBehaviour
         localScale.x *= -1f; 
 
         transform.localScale = localScale;
+    }
+
+    private void PlayVoiceLine()
+    {
+        if(First != null)
+        {
+            AudioHelper.PlayClip2D(First, transform.position, soundVolumeBoost);
+        }
     }
 
     void OnDrawGizmosSelected()
