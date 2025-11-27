@@ -2,23 +2,23 @@ using UnityEngine;
 
 public class UIPanelController : MonoBehaviour
 {
-    public GameObject mapCanvas;
+    public GameObject optionsCanvas;
     public GameObject inventoryCanvas;
 
     void Start()
     {
-        mapCanvas.SetActive(false);
+        optionsCanvas.SetActive(false);
         inventoryCanvas.SetActive(false);
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab))
+        if(Input.GetKeyDown(KeyCode.Escape))
         {
-            mapCanvas.SetActive(!mapCanvas.activeSelf);
+            optionsCanvas.SetActive(!optionsCanvas.activeSelf);
         }
 
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Tab))
         {
             inventoryCanvas.SetActive(!inventoryCanvas.activeSelf);
         }

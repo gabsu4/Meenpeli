@@ -1,7 +1,10 @@
 using UnityEngine;
+using System;
 
 public class Health : MonoBehaviour
 {
+    public event Action<int, int> OnHealthChanged;
+
     [SerializeField] private AudioClip Die;
     [SerializeField] private AudioClip[] Hurt;
     public int maxHealth = 50;
@@ -12,14 +15,21 @@ public class Health : MonoBehaviour
     {
         health = maxHealth;
         playerMovement = GetComponent<PlayerMovement>();
+
+        OnHealthChanged?.Invoke(health, maxHealth);
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
+
+        health = Mathf.Max(health, 0);
+
+        OnHealthChanged?.Invoke(health, maxHealth);
+
         if (health > 0 && Hurt.Length > 0)
         {
-            int randomIndex = Random.Range(0, Hurt.Length);
+            int randomIndex = UnityEngine.Random.Range(0, Hurt.Length);
         
             AudioClip randomClip = Hurt[randomIndex];
 
@@ -30,6 +40,15 @@ public class Health : MonoBehaviour
             DiePlayer();
         }
     }
+
+    public void Heal(int amount)
+    {
+        health += amount;
+        health = Mathf.Min(health, maxHealth);
+
+        OnHealthChanged?.Invoke(health, maxHealth);
+    }
+
     private void DiePlayer()
     {
         if (Die != null)

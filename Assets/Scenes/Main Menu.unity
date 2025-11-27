@@ -729,7 +729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8220330456141167775, guid: fa2c229410d7449448990f674fc33ee1, type: 3}
       propertyPath: m_MinHeight
-      value: 120
+      value: 150.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2898,7 +2898,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8612718180454931500, guid: e3571fae83bd1404283437396a3d4373, type: 3}
+  m_Sprite: {fileID: 292834599812221561, guid: b457fde554db4f741a8a0b23d8d2722d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

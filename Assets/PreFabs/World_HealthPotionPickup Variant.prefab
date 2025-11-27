@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: Name
-      value: Healthpotion
+      value: Potion
       objectReference: {fileID: 0}
     - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: itemIcon
@@ -44,6 +44,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 4576071727898395855, guid: f7ccedf1f8f542e4db8202a0ed5b4aad, type: 3}
+    - target: {fileID: 8760949174611136887, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760949174611136887, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8760949174611136887, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.94511
