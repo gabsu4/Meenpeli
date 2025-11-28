@@ -8,9 +8,16 @@ public class ItemPickup : MonoBehaviour
     public string Name;
     public Sprite itemIcon;
 
+    public bool isConsumableItem = false;
+
     public virtual void UseItem()
     {
         Debug.Log("Using item" + Name);
+    }
+
+    public bool IsConsumable()
+    {
+        return isConsumableItem;
     }
 
     public void Pickup()

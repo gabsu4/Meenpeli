@@ -14,9 +14,15 @@ public class InventoryController : MonoBehaviour
             Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();
             if(i < itemPrefabs.Length)
             {
-                GameObject item = Instantiate(itemPrefabs[i], slot.transform);
-                item.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-                slot.currentItem = item;
+                GameObject itemGo = Instantiate(itemPrefabs[i], slot.transform);
+                itemGo.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+                ItemPickup itemComponent = itemGo.GetComponent<ItemPickup>();
+
+                if (itemComponent != null)
+                {
+                    slot.currentItem = itemComponent;
+                }
             }
         }
     }
@@ -28,10 +34,16 @@ public class InventoryController : MonoBehaviour
             Slot slot = slotTransform.GetComponent<Slot>();
             if (slot != null && slot.currentItem == null)
             {
-                GameObject newItem = Instantiate(itemPrefab, slotTransform);
-                newItem.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-                slot.currentItem = newItem;
-                return true;
+                GameObject newItemGo = Instantiate(itemPrefab, slotTransform);
+                newItemGo.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+                ItemPickup newItemComponent = newItemGo.GetComponent<ItemPickup>();
+
+                if (newItemComponent != null)
+                {
+                    slot.currentItem = newItemComponent;
+                    return true;
+                }
             }
         }
         return false;
