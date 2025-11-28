@@ -10,12 +10,22 @@ public class Health : MonoBehaviour
     public int maxHealth = 50;
     public int health;
     private PlayerMovement playerMovement;
+
+    private float soundVolumeBoost = 0.5f;
+    private BossDamage bossDamage;
     
     void Start()
     {
         health = maxHealth;
         playerMovement = GetComponent<PlayerMovement>();
 
+        OnHealthChanged?.Invoke(health, maxHealth);
+
+        GameObject bossObject = GameObject.FindGameObjectWithTag("Boss");
+        if (bossObject != null)
+        {
+            bossDamage = bossObject.GetComponent<BossDamage>();
+        }
         OnHealthChanged?.Invoke(health, maxHealth);
     }
 
@@ -33,7 +43,7 @@ public class Health : MonoBehaviour
         
             AudioClip randomClip = Hurt[randomIndex];
 
-            AudioSource.PlayClipAtPoint(randomClip, transform.position);
+            AudioHelper.PlayClip2D(randomClip, transform.position, soundVolumeBoost);
         }
         if (health <= 0)
         {
@@ -51,9 +61,13 @@ public class Health : MonoBehaviour
 
     private void DiePlayer()
     {
+        if (bossDamage != null)
+        {
+            bossDamage.PlayDeathTaunt(); 
+        }
         if (Die != null)
         {
-            AudioSource.PlayClipAtPoint(Die, transform.position);
+            AudioHelper.PlayClip2D(Die, transform.position, soundVolumeBoost);
         }
         if (playerMovement != null)
         {
@@ -67,5 +81,9 @@ public class Health : MonoBehaviour
         {
             col.enabled = false;
         }
+    }
+    public bool IsDead()
+    {
+        return health <= 0;
     }
 }

@@ -32,17 +32,19 @@ public class MonsterDamage : MonoBehaviour
         {
             if (Time.time - lastAttackTime >= attackCooldown)
             {
-                SoundManager.instance.PlaySound(hit);
+                if (animator != null)
+                    animator.SetTrigger("attack");
                 lastAttackTime = Time.time;
-                Attack();
             }
         }
     }
 
-    void Attack()
+    public void ApplyDamage()
     {
-        if (animator != null)
-            animator.SetTrigger("attack");
+        if (SoundManager.instance != null)
+        {
+             SoundManager.instance.PlaySound(hit);
+        }
 
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, playerlayer);
 
