@@ -7,7 +7,7 @@ public class HotBarController : MonoBehaviour
     public Slot[] slots;
 
     public GameObject hotbarPanel;
-    public int slotCount = 10;
+    public int slotCount = 7;
 
     private int selectedSlotIndex = -1;
 
@@ -41,7 +41,7 @@ public class HotBarController : MonoBehaviour
     {
         if (playerEquipmentManager == null)
         {
-            GameObject player = UnityEngine.GameObject.FindObjectWithTag("Player");
+            GameObject player = GameObject.FindWithTag("Player");
             if (player!= null)
             {
                 playerEquipmentManager = player.GetComponent<EquipmentManager>();
