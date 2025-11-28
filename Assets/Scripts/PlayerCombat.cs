@@ -22,7 +22,6 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Attack()
     {
         animator.SetTrigger("Attack");

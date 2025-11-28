@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.InputSystem;
 using UnityEngine.Rendering;
 
@@ -11,31 +12,23 @@ public class SwordScript : MonoBehaviour
     public int damage;
     float timeUntilMelee;
     public Transform player;
-
+    private Collider2D swordCollider;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         Collider2D playerCollider = player.GetComponent<Collider2D>();
-        Collider2D swordCollider = GetComponent<Collider2D>();
+        swordCollider = GetComponent<Collider2D>();
+
         if (playerCollider != null && swordCollider != null)
         {
             Physics2D.IgnoreCollision(playerCollider, swordCollider);
-        }
-        else
-        {
-            Debug.LogWarning("Missing collider on player or sword!");
-        }      
+            swordCollider.enabled = false;
+        }     
     }
 
     void Update()
     {
-       // Vector3 scale = transform.localScale;
-       // scale.x = Mathf.Sign(player.localScale.x) * Mathf.Abs(scale.x);
-       // transform.localScale = scale;
-
-       // transform.position = player.position;
-
         if (timeUntilMelee <= 0f)
         {
             if (Input.GetMouseButtonDown(0))
@@ -45,7 +38,7 @@ public class SwordScript : MonoBehaviour
                 SoundManager.instance.PlaySound(Lyönti);
             }
                 anim.SetTrigger("Attack");
-                timeUntilMelee = meleeSpeed;
+                timeUntilMelee = meleeSpeed;   
             }
         }
         else
@@ -53,9 +46,29 @@ public class SwordScript : MonoBehaviour
             timeUntilMelee -= Time.deltaTime;
         }
     }
+
+    public void EnableSwordCollider()
+    {
+        if (swordCollider != null)
+        {
+            swordCollider.enabled = true;
+        }
+    }
+    public void DisableSwordCollider()
+    {
+        if (swordCollider != null)
+        {
+            swordCollider.enabled = false;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag ("Enemy"))
+        {
+            other.GetComponent<EnemyHealth>().TakeDamage(damage);       
+        }
+        if (other.CompareTag ("Boss"))
         {
             other.GetComponent<EnemyHealth>().TakeDamage(damage);       
         }

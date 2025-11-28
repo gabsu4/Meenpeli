@@ -9,20 +9,23 @@ public class Arrow : MonoBehaviour
     public int damage;
     public LayerMask whatIsSolid; 
     public GameObject destroyEffect;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         SoundManager.instance.PlaySound(bow);
         Invoke("DestroyArrow", lifeTime);
     }
 
-    // Update is called once per frame
     void Update()
     {
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.right, distance, whatIsSolid);
         if (hitInfo.collider != null)
         {
             if (hitInfo.collider.CompareTag("Enemy"))
+            {
+                Debug.Log("Enemy must take damage");
+                hitInfo.collider.GetComponent<EnemyHealth>().TakeDamage(damage);
+            }
+            if (hitInfo.collider.CompareTag("Boss"))
             {
                 Debug.Log("Enemy must take damage");
                 hitInfo.collider.GetComponent<EnemyHealth>().TakeDamage(damage);

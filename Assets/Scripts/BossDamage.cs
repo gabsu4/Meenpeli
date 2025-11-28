@@ -4,6 +4,7 @@ using UnityEngine;
 public class BossDamage : MonoBehaviour
 {
     [SerializeField] private AudioClip hit;
+    [SerializeField]private AudioClip playerDeathTaunt;
     public int attackDamage = 4;
     public Transform attackpoint;
     public LayerMask playerlayer;
@@ -61,6 +62,10 @@ public class BossDamage : MonoBehaviour
             {
                 health.TakeDamage(attackDamage);
             }
+            if (health.IsDead() && playerDeathTaunt != null) 
+                {
+                    AudioHelper.PlayClip2D(playerDeathTaunt, transform.position, 1f); 
+                }
 
             if (Player.TryGetComponent<PlayerMovement>(out PlayerMovement movement))
             {
@@ -86,6 +91,14 @@ public class BossDamage : MonoBehaviour
         this.enabled = false;
 
         StopAllCoroutines();
+    }
+
+    public void PlayDeathTaunt()
+    {
+        if (playerDeathTaunt != null)
+        {
+            AudioHelper.PlayClip2D(playerDeathTaunt, transform.position, 1f); 
+        }
     }
 
     void OnDrawGizmosSelected()
