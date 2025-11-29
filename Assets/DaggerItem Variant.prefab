@@ -12,6 +12,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2486521743634864436, guid: 469fa156074ece347ae32f86df05c0e8, type: 3}
+    - target: {fileID: 3587562653715573300, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+      propertyPath: Name
+      value: Dagger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587562653715573300, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+      propertyPath: itemIcon
+      value: 
+      objectReference: {fileID: -2486521743634864436, guid: 469fa156074ece347ae32f86df05c0e8, type: 3}
     - target: {fileID: 3773086942240019926, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -11,11 +11,19 @@ PrefabInstance:
     - target: {fileID: -6320194078090735593, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2778561926078659640, guid: a6ca20c0760e72242b2914243bb9b320, type: 3}
+      objectReference: {fileID: -8109868644350658199, guid: 12f84280a6a36914c9d732ec24549460, type: 3}
+    - target: {fileID: 3587562653715573300, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+      propertyPath: Name
+      value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587562653715573300, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+      propertyPath: itemIcon
+      value: 
+      objectReference: {fileID: -8109868644350658199, guid: 12f84280a6a36914c9d732ec24549460, type: 3}
     - target: {fileID: 3773086942240019926, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2778561926078659640, guid: a6ca20c0760e72242b2914243bb9b320, type: 3}
+      objectReference: {fileID: -8109868644350658199, guid: 12f84280a6a36914c9d732ec24549460, type: 3}
     - target: {fileID: 5663659729767919178, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
       propertyPath: m_Name
       value: GunItem Variant

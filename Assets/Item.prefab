@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6295533133153389087}
   - component: {fileID: -6320194078090735593}
   - component: {fileID: 6987186542549967673}
+  - component: {fileID: 3587562653715573300}
   m_Layer: 5
   m_Name: Item
   m_TagString: Item
@@ -197,3 +198,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 4.5768733, y: 4.1649556}
   m_Radius: 7.015
+--- !u!114 &3587562653715573300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5663659729767919178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aef6ea2a825d48b4d9429605e123d80d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ItemPickup
+  uiItemPrefab: {fileID: 5663659729767919178}
+  ID: 0
+  Name: Bow
+  itemIcon: {fileID: -1634585476465559712, guid: 7746382c86299b8479375fa95581c43f, type: 3}
+  isConsumableItem: 0

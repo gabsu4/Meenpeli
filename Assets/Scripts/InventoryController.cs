@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryController : MonoBehaviour
 {
@@ -8,42 +9,47 @@ public class InventoryController : MonoBehaviour
     public GameObject[] itemPrefabs;
 
     void Start()
+{
+    for(int i = 0; i < slotCount; i++)
     {
-        for(int i = 0; i < slotCount; i++)
+        Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();
+        if(i < itemPrefabs.Length)
         {
-            Slot slot = Instantiate(slotPrefab, inventoryPanel.transform).GetComponent<Slot>();
-            if(i < itemPrefabs.Length)
+            GameObject itemGo = Instantiate(itemPrefabs[i], slot.transform);
+            itemGo.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+
+            ItemPickup itemComponent = itemGo.GetComponent<ItemPickup>();
+
+            if (itemComponent != null)
             {
-                GameObject itemGo = Instantiate(itemPrefabs[i], slot.transform);
-                itemGo.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-
-                ItemPickup itemComponent = itemGo.GetComponent<ItemPickup>();
-
-                if (itemComponent != null)
-                {
-                    slot.currentItem = itemComponent;
-                }
+                slot.currentItem = itemComponent; 
+                slot.itemGameObject = itemGo;
             }
         }
     }
+}
 
-    public bool AddItem(GameObject itemPrefab)
+    public bool AddItem(ItemPickup itemData) 
     {
         foreach(Transform slotTransform in inventoryPanel.transform)
         {
             Slot slot = slotTransform.GetComponent<Slot>();
             if (slot != null && slot.currentItem == null)
             {
-                GameObject newItemGo = Instantiate(itemPrefab, slotTransform);
+                GameObject newItemGo = Instantiate(itemData.uiItemPrefab, slotTransform);
                 newItemGo.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
-                ItemPickup newItemComponent = newItemGo.GetComponent<ItemPickup>();
+                Image itemImage = newItemGo.GetComponent<Image>();
 
-                if (newItemComponent != null)
+                if (itemImage != null)
                 {
-                    slot.currentItem = newItemComponent;
-                    return true;
+                    itemImage.sprite = itemData.itemIcon;
+                    itemImage.enabled = true;
                 }
+
+                slot.currentItem = itemData; 
+
+                return true;
             }
         }
         return false;

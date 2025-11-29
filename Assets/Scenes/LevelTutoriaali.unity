@@ -13306,7 +13306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthBarUi
   healthSlider: {fileID: 1528767182}
-  targetHealthScript: {fileID: 0}
+  targetHealthScript: {fileID: 8190586072423523767}
 --- !u!114 &1528767182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15623,6 +15623,9 @@ MonoBehaviour:
   itemPrefabs:
   - {fileID: 5663659729767919178, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
   - {fileID: 1279549095562434764, guid: 3cc995124ce56244aa31a06ad14916a4, type: 3}
+  - {fileID: 3049249134794473650, guid: e90dd405a60a6104e932f3107358cf45, type: 3}
+  - {fileID: 1160214797651799987, guid: 5ea7c5415982c854383a1e8afbf091c5, type: 3}
+  - {fileID: 7433636961620290244, guid: cef817dc889c7a54a931f39beb8677b1, type: 3}
 --- !u!4 &1666036289
 Transform:
   m_ObjectHideFlags: 0
@@ -17053,6 +17056,17 @@ MonoBehaviour:
   swordObject: {fileID: 978292117}
   bowObject: {fileID: 2050593164}
   gunObject: {fileID: 1965392452}
+--- !u!114 &8190586072423523767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 370726778858095533, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+  m_PrefabInstance: {fileID: 8190586072423523748}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8190586072423523749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28db2fcce5de9549b21acaede54727e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

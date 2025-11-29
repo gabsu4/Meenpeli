@@ -18,11 +18,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 504007172066547483, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 3.1
+      value: 2.9
       objectReference: {fileID: 0}
     - target: {fileID: 504007172066547483, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.19
+      value: 1.86
       objectReference: {fileID: 0}
     - target: {fileID: 1788219699545655153, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_Name
@@ -35,7 +35,7 @@ PrefabInstance:
     - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: itemIcon
       value: 
-      objectReference: {fileID: 2778561926078659640, guid: a6ca20c0760e72242b2914243bb9b320, type: 3}
+      objectReference: {fileID: -8109868644350658199, guid: 12f84280a6a36914c9d732ec24549460, type: 3}
     - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: uiItemPrefab
       value: 
@@ -43,7 +43,7 @@ PrefabInstance:
     - target: {fileID: 5148169003983553086, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2778561926078659640, guid: a6ca20c0760e72242b2914243bb9b320, type: 3}
+      objectReference: {fileID: -8109868644350658199, guid: 12f84280a6a36914c9d732ec24549460, type: 3}
     - target: {fileID: 8760949174611136887, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.113

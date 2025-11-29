@@ -32,4 +32,28 @@ public class Slot : MonoBehaviour
             selectionHighlight.SetActive(false);
         }
     }
+
+    public void SetItem(ItemPickup itemData, GameObject uiInstance)
+    {
+        if (itemGameObject != null)
+        {
+            Destroy(itemGameObject);
+        }
+
+        currentItem = itemData;
+
+        itemGameObject = uiInstance; 
+        
+        if (itemGameObject != null)
+        {
+            Image visualImage = itemGameObject.GetComponent<Image>();
+            
+            if (visualImage != null)
+            {
+                visualImage.sprite = itemData.itemIcon;
+                visualImage.enabled = true;
+                visualImage.color = Color.white;
+            }
+        }
+    }
 }

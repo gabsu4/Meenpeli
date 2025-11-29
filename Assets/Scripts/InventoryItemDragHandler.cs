@@ -17,20 +17,18 @@ public class InventoryItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragH
     }
 
     public void OnBeginDrag(PointerEventData eventData)
-    {
-        Slot originalSlot = transform.parent.GetComponent<Slot>();
-        if (originalSlot == null) return;
+{
+    Slot originalSlot = transform.parent.GetComponent<Slot>();
+    if (originalSlot == null) return;
 
-        originalParent = originalSlot.transform;
-
-        originalSlot.currentItem = null;
-
-        originalSlot.itemGameObject = null;
-
-        transform.SetParent(transform.root);
-        canvasGroup.blocksRaycasts = false;
-        canvasGroup.alpha = 0.6f;
-    }
+    originalParent = originalSlot.transform;
+    originalSlot.currentItem = null;
+    originalSlot.itemGameObject = null; 
+    
+    transform.SetParent(transform.root);
+    canvasGroup.blocksRaycasts = false;
+    canvasGroup.alpha = 0.6f;
+}
 
     public void OnDrag(PointerEventData eventData)
     {
@@ -41,45 +39,45 @@ public class InventoryItemDragHandler : MonoBehaviour, IBeginDragHandler, IDragH
     {
         canvasGroup.blocksRaycasts = true;
         canvasGroup.alpha = 1f;
-
+    
         Slot dropSlot = eventData.pointerEnter?.GetComponentInParent<Slot>();
+    
+        Slot originalSlot = originalParent.GetComponent<Slot>();
 
         if(dropSlot != null)
         {
             ItemPickup itemInDropSlotData = dropSlot.currentItem;
-            GameObject itemInDropSlot = dropSlot.itemGameObject;
+            GameObject itemInDropSlotVisual = dropSlot.itemGameObject;
 
-            if(itemInDropSlot != null)
+            if (itemInDropSlotVisual != null)
             {
-                itemInDropSlot.transform.SetParent(originalParent);
-                itemInDropSlot.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
-
-                Slot originalSlot = originalParent.GetComponent<Slot>();
+                itemInDropSlotVisual.transform.SetParent(originalParent);
+                itemInDropSlotVisual.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
+            
                 if (originalSlot != null)
                 {
-                    originalSlot.currentItem = itemInDropSlotData;
-                    originalSlot.itemGameObject = itemInDropSlot;
+                    originalSlot.SetItem(itemInDropSlotData, itemInDropSlotVisual);
                 }
+            } 
+            else if (originalSlot != null && itemInDropSlotVisual == null)
+            {
+            
             }
 
             transform.SetParent(dropSlot.transform);
 
-            dropSlot.currentItem = itemComponent;
-            dropSlot.itemGameObject = gameObject;
+            dropSlot.SetItem(itemComponent, gameObject);
         }
         else
         {
-            Slot originalSlot = originalParent.GetComponent<Slot>();
-
+        
             transform.SetParent(originalParent);
-
+        
             if (originalSlot != null)
             {
-                originalSlot.currentItem = itemComponent;
-                originalSlot.itemGameObject = gameObject;
+                originalSlot.SetItem(itemComponent, gameObject); 
             }
         }
-        
         rectTransform.anchoredPosition = Vector2.zero;
     }
 }

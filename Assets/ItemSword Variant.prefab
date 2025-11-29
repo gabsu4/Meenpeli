@@ -16,6 +16,14 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3587562653715573300, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+      propertyPath: Name
+      value: Sword
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587562653715573300, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+      propertyPath: itemIcon
+      value: 
+      objectReference: {fileID: 2752560227983454312, guid: 56fb811248b621f4687f6d8e56ce0257, type: 3}
     - target: {fileID: 3773086942240019926, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
       propertyPath: m_Sprite
       value: 

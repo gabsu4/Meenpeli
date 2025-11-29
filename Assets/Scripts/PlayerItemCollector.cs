@@ -16,7 +16,7 @@ public class PlayerItemCollector : MonoBehaviour
             ItemPickup pickup = collision.GetComponent<ItemPickup>();
             if(pickup != null && pickup.uiItemPrefab != null)
             {
-                bool itemAdded = InventoryController.AddItem(pickup.uiItemPrefab);
+                bool itemAdded = InventoryController.AddItem(pickup);
 
                 if (itemAdded)
                 {
