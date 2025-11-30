@@ -122,6 +122,7 @@ public class BossAiChase : MonoBehaviour
                     PlayVoiceLine();
                     Voice = true; 
                 }
+                animator.SetBool("IsWalking", false);
             }
             else if(distance > bossDamage.attackRange)
             {
@@ -129,12 +130,13 @@ public class BossAiChase : MonoBehaviour
                 Vector2 currentPosition = transform.position;
         
                 Vector2 moveDirection = (targetPosition - currentPosition).normalized;
+                Debug.Log("CHASING: Setting IsWalking to TRUE and moving.");
         
                 animator.SetBool("IsWalking", true);
                 UpdateVisuals(moveDirection);
 
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-
+            
                 if (stopChase != null)
                 {
                     StopCoroutine(stopChase);
