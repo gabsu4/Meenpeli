@@ -15,9 +15,13 @@ public class HotBarController : MonoBehaviour
 
     private UnityEngine.InputSystem.Key[] hotbarKeys;
 
+    public AmmoDisplay ammoDisplay;
+
     public void Awake()
     {
         itemDictionary = FindObjectOfType<ItemDictionary>();
+
+        ammoDisplay = FindObjectOfType<AmmoDisplay>();
 
         slots = new Slot[slotCount];
         hotbarKeys = new UnityEngine.InputSystem.Key[slotCount];
@@ -74,10 +78,36 @@ public class HotBarController : MonoBehaviour
         slots[selectedSlotIndex].SelectVisual();
 
         ItemPickup itemToEquip = slots[selectedSlotIndex].currentItem;
+        Bowi equippedWeapon = null;
 
         if (playerEquipmentManager != null)
-        {
+        {   
             playerEquipmentManager.EquipItem(itemToEquip);
+
+            if (equippedWeapon == null)
+            {
+                Bowi temporaryBowi = playerEquipmentManager.gameObject.GetComponentInChildren<Bowi>(true); 
+
+                if (temporaryBowi != null)
+                {
+                    temporaryBowi.ForceRegister(); 
+                    equippedWeapon = Bowi.ActiveWeapon; 
+                    Debug.Log("Bowi: Pakotettu rekisteröinti kutsuttu ja viite päivitetty.");
+                }
+                else
+                {
+                    Debug.LogError("Bowi rekisteröity."); 
+                }
+            }
+        }
+        if (ammoDisplay != null)
+        {
+            Debug.Log("HotBarController: Yritetään asettaa uusi ase AmmoDisplaylle.");
+            ammoDisplay.SetCurrentWeapon(equippedWeapon);
+        }
+        else
+        {
+            Debug.LogError("HotBarController: AmmoDisplay on NULL. Linkitys epäonnistui Inspectorissa tai FindObjectOfType.");
         }
 
         if (itemToEquip != null && itemToEquip.IsConsumable())

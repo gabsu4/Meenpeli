@@ -10,8 +10,37 @@ public class Bowi : MonoBehaviour
     private float timeBtwShots;
     public int currentClip, maxClipSize = 10, currentAmmo, maxAmmoSize = 100;
 
+    public event Action<int, int> OnAmmoChanged;
 
-    // Update is called once per frame
+    public static Bowi ActiveWeapon { get; private set; }
+
+    /* void OnEnable()
+    {
+        ActiveWeapon = this;
+        Debug.Log("Bowi: Komponentti aktivoitu. Rekisteröity ActiveWeaponiksi.");
+    }
+
+    void OnDisable()
+    {
+        if (ActiveWeapon == this)
+        {
+            ActiveWeapon = null;
+            Debug.Log("Bowi: Komponentti de-aktivoitu. Viite poistettu.");
+        }
+    }
+    */
+
+    public void ForceRegister()
+    {
+        ActiveWeapon = this;
+        Debug.Log("Bowi: Pakotettu rekisteröinti suoritettu.");
+    }
+
+    void Start()
+    {
+        InvokeAmmoChange();
+    }
+
     void Update()
     {
         Vector3 cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -30,6 +59,8 @@ public class Bowi : MonoBehaviour
                     Instantiate(arrow, shotPoint.position, arrowRotation);
                     timeBtwShots = startTimeBtwShots;
                     currentClip--;
+
+                    InvokeAmmoChange();
                 }
             }
         }
@@ -44,17 +75,36 @@ public class Bowi : MonoBehaviour
     }
     public void Reload()
     {
-        int reloadAmount = maxClipSize - currentClip;
-        reloadAmount = (currentAmmo - reloadAmount) >= 0 ? reloadAmount : currentAmmo;
-        currentClip += reloadAmount;
-        currentAmmo -= reloadAmount;
+        int ammoNeeded = maxClipSize - currentClip;
+        int originalCurrentAmmo = currentAmmo;
+        int ammoToTransfer = Mathf.Min(ammoNeeded, currentAmmo);
+
+        currentClip += ammoToTransfer;
+        currentAmmo -= ammoToTransfer;
+
+        if (ammoToTransfer > 0)
+        {
+            InvokeAmmoChange();
+        }
     }
     public void AddAmmo(int ammoAmount)
     {
+        int originalCurrentAmmo = currentAmmo;
         currentAmmo += ammoAmount;
         if (currentAmmo > maxAmmoSize)
         {
             currentAmmo = maxAmmoSize;
         }
+
+        if (currentAmmo != originalCurrentAmmo)
+        {
+            InvokeAmmoChange();
+        }
+    }
+
+    private void InvokeAmmoChange()
+    {
+        Debug.Log($"Bowi: Lähettää ammuspäivityksen: Clip={currentClip}, Reserve={currentAmmo}");
+        OnAmmoChanged?.Invoke(currentClip, currentAmmo);
     }
 } 

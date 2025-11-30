@@ -182,3 +182,5 @@ MonoBehaviour:
   ID: 0
   Name: Bow
   itemIcon: {fileID: -1634585476465559712, guid: 7746382c86299b8479375fa95581c43f, type: 3}
+  isConsumableItem: 0
+  isWeapon: 1

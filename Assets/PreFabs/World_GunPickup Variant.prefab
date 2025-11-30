@@ -33,6 +33,10 @@ PrefabInstance:
       value: Gun
       objectReference: {fileID: 0}
     - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
+      propertyPath: isWeapon
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: itemIcon
       value: 
       objectReference: {fileID: -8109868644350658199, guid: 12f84280a6a36914c9d732ec24549460, type: 3}

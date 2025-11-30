@@ -10,6 +10,8 @@ public class ItemPickup : MonoBehaviour
 
     public bool isConsumableItem = false;
 
+    public bool isWeapon = false;
+
     public virtual void UseItem()
     {
         Debug.Log("Using item" + Name);
