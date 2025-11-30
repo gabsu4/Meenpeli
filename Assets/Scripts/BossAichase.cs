@@ -6,6 +6,7 @@ using UnityEngine;
 public class BossAiChase : MonoBehaviour
 {
     [SerializeField] private BossDamage bossDamage;
+    private BossFireballAttack fireballAttack;
     public AudioClip First;
     private EnemyHealth enemyHealth;
     public Transform attackpoint;
@@ -16,28 +17,32 @@ public class BossAiChase : MonoBehaviour
     public float chaseHoldTime = 0.5f;
     private Coroutine stopChase;
 
-    private BossFireballAttack fireballAttack;
     public bool isPhaseTwo { get; private set; } = false;
 
     public Animator animator;
-    private bool isFacingRight = true;
     private bool Voice = false;
-    private bool isInitialized = false;
     private float soundVolumeBoost = 0.5f;
+
+    public bool IsActive { get; set; } = false;
+    private const int DIR_FRONT = 0;
+    private const int DIR_BACK = 1;
+    private const int DIR_RIGHT = 2;
+    private const int DIR_LEFT = 3;
+    
 
     void Start()
     {
         enemyHealth = GetComponent<EnemyHealth>();
-        if (bossDamage == null)
-        {
-            bossDamage = GetComponent<BossDamage>();
-        }
+
+        bossDamage = GetComponent<BossDamage>();
         fireballAttack = GetComponent<BossFireballAttack>();
+        if (bossDamage != null) bossDamage.enabled = false;
+        if (fireballAttack != null) fireballAttack.enabled = false;
+
         if (enemyHealth != null)
         {
             enemyHealth.OnHealthThresholdReached += StartPhaseTwo; 
         }
-        isInitialized = true;
     }
     void OnDestroy()
     {
@@ -47,9 +52,33 @@ public class BossAiChase : MonoBehaviour
         }
     }
 
+    public void ActivateBoss() 
+    {
+        if (IsActive) return; 
+
+        if (bossDamage == null) bossDamage = GetComponent<BossDamage>();
+        if (fireballAttack == null) fireballAttack = GetComponent<BossFireballAttack>();
+
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player"); 
+        }
+        IsActive = true;
+        
+        if (bossDamage != null)
+        {
+            bossDamage.enabled = true;
+        }
+        if (fireballAttack != null)
+        {
+            fireballAttack.enabled = false;
+        }
+    }
+
     void Update()
     {
-        if (!isInitialized)
+        Debug.Log($"AI Status: IsActive={IsActive}, Player={player}");
+        if (!IsActive)
         {
             return;
         }
@@ -70,7 +99,6 @@ public class BossAiChase : MonoBehaviour
         
         if(currentlyAttacking)
         {
-           if (player != null) { FlipEnemy(); } 
             return; 
         }
 
@@ -86,7 +114,6 @@ public class BossAiChase : MonoBehaviour
 
         if (distance < ChaseDistance)
         {
-            if (player != null) { FlipEnemy(); }
 
             if(distance <= bossDamage.attackRange && !Voice)
             {
@@ -98,6 +125,14 @@ public class BossAiChase : MonoBehaviour
             }
             else if(distance > bossDamage.attackRange)
             {
+                Vector2 targetPosition = player.transform.position;
+                Vector2 currentPosition = transform.position;
+        
+                Vector2 moveDirection = (targetPosition - currentPosition).normalized;
+        
+                animator.SetBool("IsWalking", true);
+                UpdateVisuals(moveDirection);
+
                 transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
 
                 if (stopChase != null)
@@ -110,12 +145,44 @@ public class BossAiChase : MonoBehaviour
         else
         {
             Voice = false;
+            animator.SetBool("IsWalking", false);
             if (stopChase == null)
             {
                 stopChase = StartCoroutine(StopChasingAfterDelay());
             }
         }
     }
+
+    private void UpdateVisuals(Vector2 intendedMovementDirection)
+    {
+        float horizontal = intendedMovementDirection.x;
+        float vertical = intendedMovementDirection.y;
+        Debug.Log($"H: {horizontal:F2}, V: {vertical:F2} | Abs(H) > Abs(V): {Mathf.Abs(horizontal) > Mathf.Abs(vertical)}");
+        if (Mathf.Abs(horizontal) > Mathf.Abs(vertical))
+        {
+            if (horizontal > 0)
+            {
+                animator.SetInteger("Direction", DIR_RIGHT);
+            }
+            else
+            {
+                animator.SetInteger("Direction", DIR_LEFT);
+            }
+        }
+        else
+        {
+        
+            if (vertical > 0)
+            {
+                animator.SetInteger("Direction", DIR_BACK);
+            }
+            else
+            {
+                animator.SetInteger("Direction", DIR_FRONT);
+            }
+        }
+    }
+
 
     private void StartPhaseTwo()
     {
@@ -140,38 +207,35 @@ public class BossAiChase : MonoBehaviour
     }
     private void HandlePhaseTwoBehavior()
     {
-        FlipEnemy();
+        if (player == null)
+        {
+            animator.SetBool("IsWalking", false);
+            return;
+        }   
+        distance = Vector2.Distance(transform.position, player.transform.position);
+
+        if (distance > fireballAttack.shootingRange)
+    {
+        Vector2 targetPosition = player.transform.position;
+        Vector2 currentPosition = transform.position;
+        
+        Vector2 moveDirection = (targetPosition - currentPosition).normalized;
+        
+        animator.SetBool("IsWalking", true);
+        UpdateVisuals(moveDirection);
+
+        transform.position = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
+    }
+    else 
+    {
+        animator.SetBool("IsWalking", false);
+    }
     }
     private IEnumerator StopChasingAfterDelay()
     {
         yield return new WaitForSeconds(chaseHoldTime);
 
         stopChase = null;
-    }
-    private void FlipEnemy()
-    {
-        float playerX = player.transform.position.x;
-        float enemyX = transform.position.x;
-
-        const float Flipping = 0.5f;
-
-        if (playerX > enemyX + Flipping && !isFacingRight)//oikee flip
-        {
-            Flip();
-        }
-        else if (playerX < enemyX - Flipping && isFacingRight)//vasen flip
-        {
-            Flip();
-        }
-    }
-    private void Flip()
-    {
-        isFacingRight = !isFacingRight;
-
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1f; 
-
-        transform.localScale = localScale;
     }
 
     private void PlayVoiceLine()

@@ -6,19 +6,21 @@ public class BossTrigger : MonoBehaviour
     [SerializeField] private float targetCameraSize = 8f;
     [SerializeField] private float zoomSpeed = 2f;
     [SerializeField] private GameObject bossGameObject;
+    private BossTransformation bossTransformer;
     private float soundVolumeBoost = 0.5f;
     private bool isTriggered = false;
     public AudioClip Enter;
 
     void Start()
     {
-        if (bossGameObject != null)
-        {
-            bossGameObject.SetActive(false);
-        }
         if (mainCamera == null)
         {
             mainCamera = Camera.main;
+        }
+        if (bossGameObject != null)
+        {
+            bossGameObject.SetActive(false);
+            bossTransformer = bossGameObject.GetComponent<BossTransformation>();
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -31,6 +33,11 @@ public class BossTrigger : MonoBehaviour
             {
                 bossGameObject.SetActive(true);
             }
+            if(bossTransformer != null)
+            {
+                bossTransformer.PlayerEnteredArena();
+            }
+            GetComponent<Collider2D>().enabled = false;
         }
     }
 
