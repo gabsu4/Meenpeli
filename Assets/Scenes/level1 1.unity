@@ -272,6 +272,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -295,9 +299,17 @@ PrefabInstance:
       value: HeavyBandit
       objectReference: {fileID: 0}
     - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackRange
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3495134225706019735, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: m_LocalPosition.x
       value: 149.99101
@@ -346,6 +358,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackRange
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -416,6 +432,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3546,6 +3566,10 @@ PrefabInstance:
       value: HeavyBandit
       objectReference: {fileID: 0}
     - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 643145503}
@@ -3597,6 +3621,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3667,6 +3695,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4611,6 +4643,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1254119712109227626, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.125
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254119712109227626, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254119712109227626, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254119712109227626, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.43
+      objectReference: {fileID: 0}
     - target: {fileID: 1534996495689162008, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_Name
       value: 'Pelaaja '
@@ -4619,13 +4667,25 @@ PrefabInstance:
       propertyPath: startTimeBtwShots
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3533280362313658670, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a8bb42f5612a5794989d62c711ab4e38, type: 2}
+    - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -61.97357
+      value: -60.97357
       objectReference: {fileID: 0}
     - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -78.16381
+      value: -76.16381
       objectReference: {fileID: 0}
     - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4657,6 +4717,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4547326890638612097, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822737938746812147, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822737938746812147, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822737938746812147, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 5822737938746812147, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6537985856625255961, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -384863430394946757, guid: 3f9b92c62369e0746a3c4a2b7e9c2aeb, type: 3}
+    - target: {fileID: 7970577249133422408, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5211,6 +5299,10 @@ PrefabInstance:
       value: HeavyBandit
       objectReference: {fileID: 0}
     - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 643145503}
@@ -5422,9 +5514,17 @@ PrefabInstance:
       value: 'HeavyBandit '
       objectReference: {fileID: 0}
     - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: speed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackRange
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3495134225706019735, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.980263
@@ -5473,6 +5573,14 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackRange
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5494,6 +5602,10 @@ PrefabInstance:
     - target: {fileID: 2218554641124614910, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: m_Name
       value: 'HeavyBandit '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: speed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: player
@@ -5547,6 +5659,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5568,6 +5684,10 @@ PrefabInstance:
     - target: {fileID: 2218554641124614910, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: m_Name
       value: HeavyBandit
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: speed
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: player
@@ -5621,6 +5741,14 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5713,6 +5841,10 @@ PrefabInstance:
       value: 'HeavyBandit '
       objectReference: {fileID: 0}
     - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: speed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 643145503}
@@ -5764,6 +5896,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6396,6 +6532,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7246,9 +7386,17 @@ PrefabInstance:
       value: HeavyBandit
       objectReference: {fileID: 0}
     - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 2394967044222791349, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackRange
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3495134225706019735, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: m_LocalPosition.x
       value: 168.07234
@@ -7297,6 +7445,14 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackRange
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19787,6 +19943,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38429,6 +38589,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 643145503}
+    - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: attackDamage
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

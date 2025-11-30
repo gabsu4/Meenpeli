@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     private float dashCooldown = 1.0f;
     private float nextDashTime = 0f;
+    private bool isDead = false;
 
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -42,8 +43,16 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        if(isDead)
+            return;
+
         HandleDash();
         HandleFootsteps();
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            animator.SetTrigger("Attack"); 
+        }
+
         float inputX = Input.GetAxisRaw("Horizontal"); // Oletuksena A/D tai nuolinäppäimet
         float inputY = Input.GetAxisRaw("Vertical");   // Oletuksena W/S tai nuolinäppäimet
 
@@ -55,10 +64,8 @@ public class PlayerMovement : MonoBehaviour
             lastMoveDir = movement;
         }
 
-        if (Mathf.Abs(inputX) > 0.01f)
-            animator.SetInteger("AnimState", 2);
-        else
-            animator.SetInteger("AnimState", 0);
+        bool isMoving = movement.magnitude > 0.1f;
+        animator.SetBool("IsWalking", isMoving);
 
         if (inputX > 0 && !facingRight)
             Flip();
@@ -68,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        if(isDead)
+            return;
         if (animator != null)
         {
             animator.SetFloat("Speed", movement.magnitude);
@@ -132,5 +141,21 @@ private void PlayRandomFootstep()
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+    public void Die()
+    {
+        if (isDead)
+            return; 
+
+        isDead = true; 
+
+        animator.SetTrigger("Die");
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero; 
+            rb.linearVelocity = Vector2.zero;
+            rb.isKinematic = true;
+        }
     }
 }

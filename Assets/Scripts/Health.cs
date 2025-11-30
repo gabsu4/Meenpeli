@@ -71,7 +71,7 @@ public class Health : MonoBehaviour
         }
         if (playerMovement != null)
         {
-            playerMovement.enabled = false;
+            playerMovement.Die();
         }
         if (GameManager.Instance != null)
         {

@@ -22,6 +22,7 @@ public class BossAiChase : MonoBehaviour
     public Animator animator;
     private bool Voice = false;
     private float soundVolumeBoost = 0.5f;
+    private Collider2D bossCollider;
 
     public bool IsActive { get; set; } = false;
     private const int DIR_FRONT = 0;
@@ -32,16 +33,23 @@ public class BossAiChase : MonoBehaviour
 
     void Start()
     {
-        enemyHealth = GetComponent<EnemyHealth>();
+        if (enemyHealth == null) enemyHealth = GetComponent<EnemyHealth>();
+        if (bossDamage == null) bossDamage = GetComponent<BossDamage>();
+        if (fireballAttack == null) fireballAttack = GetComponent<BossFireballAttack>();
+        if (animator == null) animator = GetComponent<Animator>();
+        if (bossCollider == null) bossCollider = GetComponent<Collider2D>();
 
-        bossDamage = GetComponent<BossDamage>();
-        fireballAttack = GetComponent<BossFireballAttack>();
         if (bossDamage != null) bossDamage.enabled = false;
         if (fireballAttack != null) fireballAttack.enabled = false;
-
+        
         if (enemyHealth != null)
         {
             enemyHealth.OnHealthThresholdReached += StartPhaseTwo; 
+        }
+
+        if (bossCollider != null)
+        {
+            bossCollider.isTrigger = true;
         }
     }
     void OnDestroy()
@@ -56,13 +64,19 @@ public class BossAiChase : MonoBehaviour
     {
         if (IsActive) return; 
 
-        if (bossDamage == null) bossDamage = GetComponent<BossDamage>();
-        if (fireballAttack == null) fireballAttack = GetComponent<BossFireballAttack>();
-
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player"); 
         }
+
+        if (bossCollider != null) 
+        {
+            if (bossCollider.isTrigger) 
+            {
+                bossCollider.isTrigger = false;
+            }
+        }
+
         IsActive = true;
         
         if (bossDamage != null)
@@ -77,19 +91,9 @@ public class BossAiChase : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"AI Status: IsActive={IsActive}, Player={player}");
-        if (!IsActive)
+        if (!IsActive || enemyHealth == null || enemyHealth.IsDead || player == null)
         {
-            return;
-        }
-        if (enemyHealth != null && enemyHealth.IsDead)
-        {
-            return;
-        }
-
-        if(player == null)
-        {
-            this.enabled = false;
+            if (player == null) this.enabled = false;
             return;
         }
 
@@ -99,6 +103,7 @@ public class BossAiChase : MonoBehaviour
         
         if(currentlyAttacking)
         {
+            animator.SetBool("IsWalking", false);
             return; 
         }
 
@@ -111,13 +116,11 @@ public class BossAiChase : MonoBehaviour
 
         distance = Vector2.Distance(transform.position, player.transform.position);
 
-
         if (distance < ChaseDistance)
         {
-
-            if(distance <= bossDamage.attackRange && !Voice)
+            if(distance <= bossDamage.attackRange)
             {
-                if (player != null) 
+                if (player != null & !Voice) 
                 {
                     PlayVoiceLine();
                     Voice = true; 
@@ -130,7 +133,6 @@ public class BossAiChase : MonoBehaviour
                 Vector2 currentPosition = transform.position;
         
                 Vector2 moveDirection = (targetPosition - currentPosition).normalized;
-                Debug.Log("CHASING: Setting IsWalking to TRUE and moving.");
         
                 animator.SetBool("IsWalking", true);
                 UpdateVisuals(moveDirection);
@@ -159,16 +161,17 @@ public class BossAiChase : MonoBehaviour
     {
         float horizontal = intendedMovementDirection.x;
         float vertical = intendedMovementDirection.y;
-        Debug.Log($"H: {horizontal:F2}, V: {vertical:F2} | Abs(H) > Abs(V): {Mathf.Abs(horizontal) > Mathf.Abs(vertical)}");
+
+        int finalDirection = 0;
         if (Mathf.Abs(horizontal) > Mathf.Abs(vertical))
         {
             if (horizontal > 0)
             {
-                animator.SetInteger("Direction", DIR_RIGHT);
+                finalDirection = DIR_RIGHT;
             }
             else
             {
-                animator.SetInteger("Direction", DIR_LEFT);
+                finalDirection = DIR_LEFT;
             }
         }
         else
@@ -176,20 +179,21 @@ public class BossAiChase : MonoBehaviour
         
             if (vertical > 0)
             {
-                animator.SetInteger("Direction", DIR_BACK);
+                finalDirection = DIR_BACK;
             }
             else
             {
-                animator.SetInteger("Direction", DIR_FRONT);
+                finalDirection = DIR_FRONT;
             }
         }
+        animator.SetInteger("Direction", finalDirection);
     }
 
 
     private void StartPhaseTwo()
     {
+        if (isPhaseTwo) return;
         isPhaseTwo = true;
-        Debug.Log("Phase two active");
 
         if (stopChase != null)
         {
@@ -217,26 +221,25 @@ public class BossAiChase : MonoBehaviour
         distance = Vector2.Distance(transform.position, player.transform.position);
 
         if (distance > fireballAttack.shootingRange)
-    {
-        Vector2 targetPosition = player.transform.position;
-        Vector2 currentPosition = transform.position;
+        {
+            Vector2 targetPosition = player.transform.position;
+            Vector2 currentPosition = transform.position;
         
-        Vector2 moveDirection = (targetPosition - currentPosition).normalized;
+            Vector2 moveDirection = (targetPosition - currentPosition).normalized;
         
-        animator.SetBool("IsWalking", true);
-        UpdateVisuals(moveDirection);
+            animator.SetBool("IsWalking", true);
+            UpdateVisuals(moveDirection);
 
-        transform.position = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
-    }
-    else 
-    {
-        animator.SetBool("IsWalking", false);
-    }
+            transform.position = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
+        }
+        else 
+        {
+            animator.SetBool("IsWalking", false);
+        }
     }
     private IEnumerator StopChasingAfterDelay()
     {
         yield return new WaitForSeconds(chaseHoldTime);
-
         stopChase = null;
     }
 

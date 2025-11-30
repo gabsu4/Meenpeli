@@ -39,14 +39,27 @@ public class DoorController : MonoBehaviour
 
         if (playerIsAtDoor && Input.GetKeyDown(KeyCode.E))
         {
-            if (playerInventory != null && playerInventory.hasKey)
+            GameObject player = GameObject.FindGameObjectWithTag(PlayerTag);
+            Keyinv inventory = FindObjectOfType<Keyinv>();
+        
+        if (player != null)
+        {
+            if (playerInventory != null) {
+        Debug.Log("Door check: playerInventory found. Key status: " + playerInventory.hasKey);
+    } else {
+        Debug.LogWarning("Door check: playerInventory is NULL. Did the player have Keyinv when entering?");
+    }
+            if (inventory != null && inventory.hasKey)
             {
+                Debug.Log("Access Granted! Key found: " + inventory.hasKey);
                 LoadNextArea();
             }
             else
             {
+                Debug.Log("Access Denied! Key status: " + (inventory != null ? inventory.hasKey.ToString() : "NULL INVENTORY"));
                 ShowLockedPrompt();
             }
+        }
         }
     }
 
@@ -89,7 +102,6 @@ public class DoorController : MonoBehaviour
         if (other.CompareTag(PlayerTag))
         {
             playerIsAtDoor = true;
-            playerInventory = other.GetComponent<Keyinv>(); 
             Debug.Log("Press 'E' to use door.");
             if (pressEPrompt != null)
             {
@@ -103,7 +115,6 @@ public class DoorController : MonoBehaviour
         if (other.CompareTag(PlayerTag))
         {
             playerIsAtDoor = false;
-            playerInventory = null; 
             if (hideLockedRoutine != null)
             {
                 StopCoroutine(hideLockedRoutine);

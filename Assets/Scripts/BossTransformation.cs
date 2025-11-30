@@ -9,6 +9,8 @@ public class BossTransformation : MonoBehaviour
     private Collider2D interactionCollider;
     private bool arenaEntered = false;
 
+    public GameObject pressEPrompt;
+
     private const string TRANSFORM_TRIGGER = "Transform"; 
 
     void Start()
@@ -24,9 +26,21 @@ public class BossTransformation : MonoBehaviour
         {
             bossAnimator.Play("Boss_jorma"); 
         }
+        if (pressEPrompt != null)
+        {
+            pressEPrompt.SetActive(false);
+        }
     }
     void Update()
     {
+        if (playerInRange && !hasTransformed && pressEPrompt != null)
+        {
+            pressEPrompt.SetActive(true);
+        }
+        else if (pressEPrompt != null)
+        {
+            pressEPrompt.SetActive(false);
+        }
         if (arenaEntered && playerInRange && !hasTransformed && Input.GetKeyDown(KeyCode.E))
         {
             TransformIntoBoss();
@@ -38,6 +52,7 @@ public class BossTransformation : MonoBehaviour
         if (interactionCollider != null)
         {
             interactionCollider.isTrigger = true;
+            interactionCollider.enabled = true;
         }
     }
 
@@ -75,6 +90,11 @@ public class BossTransformation : MonoBehaviour
     {
         hasTransformed = true; 
         
+        if (pressEPrompt != null)
+        {
+            pressEPrompt.SetActive(false);
+        }
+
         if (bossAnimator != null)
         {
             bossAnimator.SetTrigger(TRANSFORM_TRIGGER); 
@@ -84,5 +104,7 @@ public class BossTransformation : MonoBehaviour
             interactionCollider.enabled = false;
         }
     }
+
+
 }
 

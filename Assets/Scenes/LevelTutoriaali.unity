@@ -13614,8 +13614,8 @@ MonoBehaviour:
     options.
   - Your goal is to find a key on the map and find the door and go through it. You
     can also find other weapons on the map.
-  - Now i want you to try you're weapon and kill those enemies behind me and get
-    the key!!!
+  - Now i want you to try your weapon(Tab + drag) and kill those enemies behind me
+    and get the key!!!
   - Now go away.
   contButton: {fileID: 600810758}
   wordSpeed: 0.03
@@ -14290,7 +14290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1959464111
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14310,8 +14310,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -203.01111}
-  m_SizeDelta: {x: 416, y: -463}
+  m_AnchoredPosition: {x: 0, y: -320}
+  m_SizeDelta: {x: 410, y: -760}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1959464112
 MonoBehaviour:
@@ -15036,21 +15036,89 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1254119712109227626, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254119712109227626, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254119712109227626, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 1254119712109227626, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1512445996101519940, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_SortingOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1534996495689162008, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_Name
       value: Pelaaja (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1722222504846948294, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1813528468769113314, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: startTimeBtwShots
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3533280362313658670, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: a8bb42f5612a5794989d62c711ab4e38, type: 2}
+    - target: {fileID: 4021659523874481385, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021659523874481385, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021659523874481385, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021659523874481385, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209692062006485018, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Size.x
+      value: 2.6769447
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209692062006485018, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Size.y
+      value: 4.2551785
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209692062006485018, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.026266098
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209692062006485018, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.12758875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.539585
+      value: 11.482407
       objectReference: {fileID: 0}
     - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.422702
+      value: -0.07334018
       objectReference: {fileID: 0}
     - target: {fileID: 4538950359051299059, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15084,6 +15152,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6537985856625255961, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -384863430394946757, guid: 3f9b92c62369e0746a3c4a2b7e9c2aeb, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
