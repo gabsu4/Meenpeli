@@ -13,15 +13,6 @@ public class Health : MonoBehaviour
 
     private float soundVolumeBoost = 0.5f;
     private BossDamage bossDamage;
-    
-    void Update() // LISÄÄ TÄMÄ TILAPÄISESTI
-{
-    // Testataan R-näppäimellä parantamista
-    if (Input.GetKeyDown(KeyCode.R))
-    {
-        TestHeal(10); 
-    }
-}
 
 public void TestHeal(int amount) // LISÄÄ TÄMÄ
 {
