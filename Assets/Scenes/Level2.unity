@@ -319,11 +319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3573476212228433173, guid: 1a04bf8f373110e4d9e751f9280e94a6, type: 3}
       propertyPath: m_text
-      value: 100
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6331282674110527572, guid: 1a04bf8f373110e4d9e751f9280e94a6, type: 3}
       propertyPath: m_text
-      value: 10
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8612813762534682410, guid: 1a04bf8f373110e4d9e751f9280e94a6, type: 3}
       propertyPath: m_Pivot.x
