@@ -68,6 +68,8 @@ public class ButtonSoundAndMovement : MonoBehaviour, IPointerClickHandler, IPoin
 
     private void PlayButtonHighlightSound()
     {
+        if (MainMenuButtonSoundManager.Instance == null) return;
+
         if (highlightSound != null)
         {
             MainMenuButtonSoundManager.Instance.PlaySound(highlightSound, 0.8f);
@@ -80,6 +82,8 @@ public class ButtonSoundAndMovement : MonoBehaviour, IPointerClickHandler, IPoin
 
     private void PlayButtonPressedSound()
     {
+        if (MainMenuButtonSoundManager.Instance == null) return;
+
         if (pressedSound != null)
         {
             MainMenuButtonSoundManager.Instance.PlaySound(pressedSound, 1f);
