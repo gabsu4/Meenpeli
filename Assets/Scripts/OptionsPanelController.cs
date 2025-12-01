@@ -29,15 +29,10 @@ public class OptionsPanelController : MonoBehaviour
         // Pura vanhat kuuntelijat ensin, jotta niitä ei tule useita (hyvä käytäntö)
         volumeSlider.onValueChanged.RemoveListener(SetVolume);
         volumeSlider.onValueChanged.AddListener(SetVolume);
-
-        // 4. Pysäytä peli, kun asetusvalikko avataan
-        Time.timeScale = 0f;
     }
 
     void OnDisable()
     {
-        // Palauta pelin aika normaaliksi, kun asetusvalikko suljetaan
-        Time.timeScale = 1f;
         
         // Pura kuuntelija, jotta ei synny virheitä, jos slider tuhoutuu
         volumeSlider.onValueChanged.RemoveListener(SetVolume);
