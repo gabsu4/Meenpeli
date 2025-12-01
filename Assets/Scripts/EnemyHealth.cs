@@ -5,6 +5,8 @@ using System;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public GameObject healthPotionPrefab;
+
     public Animator animator;
     [SerializeField] private AudioClip Dead;
     [SerializeField] private AudioClip[] Hurt;
@@ -75,6 +77,9 @@ public class EnemyHealth : MonoBehaviour
     {
         if (IsDead) return;
         IsDead = true;
+
+        DropLoot();
+
         GetComponent<MonsterDamage>()?.Die();
         AiChase aiChase = GetComponent<AiChase>();
         if (animator != null)
@@ -87,5 +92,14 @@ public class EnemyHealth : MonoBehaviour
         }
         GetComponent<Collider2D>().enabled = false;
         Destroy(gameObject);
+    }
+
+    private void DropLoot()
+    {
+        if (healthPotionPrefab != null && UnityEngine.Random.value < 0.3f)
+        {
+            Instantiate(healthPotionPrefab, transform.position, Quaternion.identity);
+            Debug.Log(gameObject.name + " pudotti Health Potionin!");
+        }
     }
 }
