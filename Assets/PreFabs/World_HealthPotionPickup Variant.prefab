@@ -33,13 +33,25 @@ PrefabInstance:
       value: Potion
       objectReference: {fileID: 0}
     - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
+      propertyPath: isWeapon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: itemIcon
       value: 
       objectReference: {fileID: 4576071727898395855, guid: f7ccedf1f8f542e4db8202a0ed5b4aad, type: 3}
     - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: uiItemPrefab
       value: 
       objectReference: {fileID: 1160214797651799987, guid: 5ea7c5415982c854383a1e8afbf091c5, type: 3}
+    - target: {fileID: 4988470522979758705, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
+      propertyPath: isConsumableItem
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5148169003983553086, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -95,5 +107,32 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1788219699545655153, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 887039181641791465}
   m_SourcePrefab: {fileID: 100100000, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
+--- !u!1 &1030457856828292633 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1788219699545655153, guid: 27f803730281f574e98d1f57c6b849e3, type: 3}
+  m_PrefabInstance: {fileID: 1629708923819063656}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &887039181641791465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030457856828292633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bea7de3a9ea12f4195991dea859cbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthPotion
+  uiItemPrefab: {fileID: 1160214797651799987, guid: 5ea7c5415982c854383a1e8afbf091c5, type: 3}
+  ID: 0
+  Name: Health
+  itemIcon: {fileID: 4576071727898395855, guid: f7ccedf1f8f542e4db8202a0ed5b4aad, type: 3}
+  isConsumableItem: 1
+  isWeapon: 0
+  healAmount: 10

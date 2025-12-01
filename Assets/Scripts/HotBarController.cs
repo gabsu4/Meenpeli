@@ -64,39 +64,70 @@ public class HotBarController : MonoBehaviour
             }
         }
 
+        if (selectedSlotIndex != -1 && Keyboard.current.eKey.wasPressedThisFrame)
+            {
+                UseSelectedConsumableItem();
+            }
+
+            if (Keyboard.current.eKey.wasPressedThisFrame)
+    {
+        Debug.Log("--- E-NÄPPÄINTÄ PAINETTU! ---"); // LISÄYS
+
+        if (selectedSlotIndex != -1) 
+        {
+            UseSelectedConsumableItem();
+        }
+    }
+
         float scrollDelta = Mouse.current.scroll.y.ReadValue();
 
-    if (scrollDelta != 0f)
-    {
-        int direction = 0;
-        if (scrollDelta > 0)
+        if (scrollDelta != 0f)
         {
-            direction = -1;
-        }
-        else if (scrollDelta < 0)
-        {
-            direction = 1;
-        }
+            int direction = 0;
+            if (scrollDelta > 0)
+            {
+                direction = -1;
+            }
+            else if (scrollDelta < 0)
+            {
+                direction = 1;
+            }
 
-        // Laske uusi indeksi
-        int newIndex = selectedSlotIndex + direction;
+            int newIndex = selectedSlotIndex + direction;
 
-        // Käsittele kääriytyminen (wrapping)
-        if (newIndex >= slotCount)
-        {
-            newIndex = 0; // Siirry viimeisestä slottista ensimmäiseen
-        }
-        else if (newIndex < 0)
-        {
-            newIndex = slotCount - 1; // Siirry ensimmäisestä slottista viimeiseen
-        }
+            if (newIndex >= slotCount)
+            {
+                newIndex = 0;
+            }
+            else if (newIndex < 0)
+            {
+                newIndex = slotCount - 1;
+            }
         
-        // Varmista, että uusi indeksi on validi ja valitaan
-        SelectSlot(newIndex);
-    }
+            SelectSlot(newIndex);
+        }
     }
 
-    // HotBarController.cs - UUSI SelectSlot-funktio (EI COROUTINEA)
+    public void UseSelectedConsumableItem()
+    {
+        if (selectedSlotIndex < 0 || selectedSlotIndex >= slotCount) return;
+
+        Slot selectedSlot = slots[selectedSlotIndex];
+        ItemPickup itemToUse = selectedSlot.currentItem;
+
+        if (itemToUse != null && itemToUse.IsConsumable())
+        {
+            // 1. Kutsutaan UseItem() (esim. HealthPotion.cs)
+            itemToUse.UseItem(); 
+
+            // 2. Poistetaan esine slotti-inventaariosta
+            Destroy(itemToUse.gameObject); 
+            selectedSlot.currentItem = null; // Päivitetään slotti tyhjäksi
+            
+            // HUOM: Jos haluat heti käyttää seuraavan slotin, 
+            // voit kutsua SelectSlot(selectedSlotIndex) tässä.
+        }
+    }
 
     public void SelectSlot(int index)
     {
@@ -111,32 +142,21 @@ public class HotBarController : MonoBehaviour
         slots[selectedSlotIndex].SelectVisual();
 
         ItemPickup itemToEquip = slots[selectedSlotIndex].currentItem;
-        IWeapon equippedWeapon = null; // Määrittele viite tähän
+        IWeapon equippedWeapon = null;
 
         if (playerEquipmentManager != null)
-        {   
-        // Vastaanota IWeapon-viite suoraan EquipItem-kutsusta!
+        {
             equippedWeapon = playerEquipmentManager.EquipItem(itemToEquip);
         }
     
-    // UUSI KOODI: Käsittele ammusnäyttö heti
         if (ammoDisplay != null)
         {
             ammoDisplay.SetCurrentWeapon(equippedWeapon);
         
             if (equippedWeapon == null && itemToEquip != null && itemToEquip.isWeapon)
             {
-             // Jos on ase, mutta viite puuttuu, vika on komponentissa.
                 Debug.LogError("HotBarController: Asekomponenttia (Gun/Bowi) ei löytynyt aktiivisesta objektista. Tarkista komponentti/linkitykset!");
             }
-        }
-
-    // Vanha Consumable-logiikka pysyy ennallaan
-        if (itemToEquip != null && itemToEquip.IsConsumable())
-        {
-            itemToEquip.UseItem();
-            Destroy(itemToEquip.gameObject);
-            slots[selectedSlotIndex].currentItem = null;
         }
     }
 
