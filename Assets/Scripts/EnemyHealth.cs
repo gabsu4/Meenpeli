@@ -75,24 +75,17 @@ public class EnemyHealth : MonoBehaviour
     {
         if (IsDead) return;
         IsDead = true;
-
+        GetComponent<MonsterDamage>()?.Die();
+        AiChase aiChase = GetComponent<AiChase>();
+        if (animator != null)
+        {
+            animator.SetBool("IsDead", true);
+        }
         if (Dead != null)
         {
             AudioHelper.PlayClip2D(Dead, transform.position, soundVolumeBoost);
         }
-
-        GetComponent<MonsterDamage>()?.Die();
-        animator.SetBool("IsDead", true);
         GetComponent<Collider2D>().enabled = false;
-        AiChase aiChase = GetComponent<AiChase>();
-        if (aiChase != null)
-        {
-            aiChase.enabled = false;
-        }
-        this.enabled = false;
-    }
-    public void FinalDeathCleanup()
-    {
-        this.enabled = false;
+        Destroy(gameObject);
     }
 }

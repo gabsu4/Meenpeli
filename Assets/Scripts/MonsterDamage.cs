@@ -42,22 +42,6 @@ public class MonsterDamage : MonoBehaviour
     {
         if (animator != null)
             animator.SetTrigger("attack");
-
-        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, playerlayer);
-
-        foreach (Collider2D Player in hitPlayer)
-        {
-            if (Player.TryGetComponent<Health>(out Health health))
-            {
-                health.TakeDamage(attackDamage);
-            }
-
-            if (Player.TryGetComponent<PlayerMovement>(out PlayerMovement movement))
-            {
-                movement.KBCounter = movement.KBTotalTime;
-                movement.KnockFromRight = Player.transform.position.x <= transform.position.x;
-            }
-        }
     }
 
     public void ApplyDamage()
