@@ -35208,6 +35208,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -384863430394946757, guid: 3f9b92c62369e0746a3c4a2b7e9c2aeb, type: 3}
+    - target: {fileID: 7090944305840305230, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: dashSpeed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7970577249133422408, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_IsActive
       value: 1
