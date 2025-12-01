@@ -11,11 +11,11 @@ public class PlayerMovement : MonoBehaviour
     private float nextStepTime = 0f;
 
     [Header("Dash Settings")]
-    [SerializeField] private float dashSpeed = 20f; // Kuinka lujaa dash lähtee
-    [SerializeField] private float dashDuration = 0.2f; // Kuinka kauan dash kestää (sekunteina)
+    [SerializeField] private float dashSpeed = 20f;
+    [SerializeField] private float dashDuration = 0.2f;
     private float dashCooldown = 1.0f;
     private float nextDashTime = 0f;
-    private bool isDashing = false; // Onko dash käynnissä
+    private bool isDashing = false;
 
     [Header("Combat & Stats")]
     public Animator animator;
@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Physics2D.IgnoreCollision(playerCollider, GetComponent<Collider2D>());
         }
-        // Varmistetaan GameManagerin olemassaolo ennen käyttöä
+
         if (GameManager.Instance != null && GameManager.Instance.nextSpawnPosition != Vector2.zero)
         {
             transform.position = GameManager.Instance.nextSpawnPosition;
@@ -54,10 +54,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isDead) return;
 
-        // Jos dash on päällä, emme halua kääntää hahmoa tai lukea kävelysyötettä samalla tavalla
         if (isDashing) return;
 
-        HandleDash(); // Tarkistetaan painoiko pelaaja dash-nappia
+        HandleDash();
         HandleFootsteps();
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -71,8 +70,6 @@ public class PlayerMovement : MonoBehaviour
         movement = new Vector2(inputX, inputY).normalized;
         Vector3 currentScale = transform.localScale;
 
-        // Päivitetään viimeisin liikesuunta vain jos liikutaan.
-        // Tämä varmistaa, että dash lähtee sinne minne viimeksi käveltiin, vaikka oltaisiin pysähdyksissä.
         if (movement.magnitude > 0.1f) 
         {
             lastMoveDir = movement;
@@ -91,8 +88,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if(isDead) return;
 
-        // Jos dash on käynnissä, FixedUpdate ei saa puuttua nopeuteen.
-        // DashCoroutine hoitaa liikkumisen tällä hetkellä.
         if (isDashing) return;
 
         if (animator != null)
@@ -100,7 +95,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Speed", movement.magnitude);
         }
 
-        // Knockback logiikka
         if (KBCounter <= 0)
         {
             rb.linearVelocity = movement * moveSpeed;
@@ -121,7 +115,6 @@ public class PlayerMovement : MonoBehaviour
     
     private void HandleFootsteps()
     {
-        // Soitetaan ääniä vain jos liikutaan ja EI dashata
         if (rb.linearVelocity.magnitude > 0.1f && Time.time >= nextStepTime && !isDashing)
         {
             PlayRandomFootstep();
@@ -146,27 +139,22 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && Time.time >= nextDashTime)
         {
-            // Käynnistetään dash-aliohjelma (Coroutine)
             StartCoroutine(DashCoroutine());
         }
     }
 
     private IEnumerator DashCoroutine()
     {
-        isDashing = true; // Estää normaalin liikkumisen Updatessa ja FixedUpdatessa
+        isDashing = true;
         nextDashTime = Time.time + dashCooldown;
 
-        // Varmistetaan että lastMoveDir ei ole nolla (ettei jäädä paikalleen)
         Vector2 dashDirection = lastMoveDir == Vector3.zero ? new Vector2(transform.localScale.x, 0) : (Vector2)lastMoveDir;
 
-        // Asetetaan kova vauhti suoraan Rigidbodyyn
         rb.linearVelocity = dashDirection.normalized * dashSpeed;
 
-        // Odotetaan dashin keston ajan
         yield return new WaitForSeconds(dashDuration);
 
-        // Dash loppui, palautetaan kontrolli
-        rb.linearVelocity = Vector2.zero; // Pysäytetään liike hetkeksi (valinnainen, tekee dashista napakamman)
+        rb.linearVelocity = Vector2.zero;
         isDashing = false;
     }
 

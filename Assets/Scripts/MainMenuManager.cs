@@ -20,8 +20,6 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private TMP_Text volumeTextValue;
     [SerializeField] private Slider volumeSlider;
     
-    // POISTETTU: [SerializeField] private AudioSource musicSource; 
-    
     [Header("Scene Loading")]
     [SerializeField] private string _sceneToLoadAfterClickingPlay;
 
@@ -34,7 +32,7 @@ public class MainMenuManager : MonoBehaviour
         else
         {
             Debug.LogError("There are more than 1 MainMenuManager's in the scene");
-            Destroy(gameObject); // Tuhotaan ylimääräinen
+            Destroy(gameObject);
         }
     }
 
@@ -42,14 +40,11 @@ public class MainMenuManager : MonoBehaviour
     {
         OpenMenu(_MainMenuContainer);
 
-        // Asetetaan Sliderin arvo muistiin tallennettuun volyymiin
         float savedVolume = PlayerPrefs.GetFloat("masterVolume", 1f); 
         volumeSlider.value = savedVolume;
         
         UpdateVolumeText(savedVolume);
 
-        // Lisätään kuuntelija, joka kutsuu SetVolume-funktiota
-        // HUOM: onValueChangedin on suositeltavaa olla kytkettynä myös Editorin puolella, jos AddListener ei ole käytössä
         volumeSlider.onValueChanged.AddListener(SetVolume);
     }
     
@@ -88,8 +83,8 @@ public class MainMenuManager : MonoBehaviour
         switch (buttonClicked)
         {
             case OptionsButtons.back:
-                ReturnToMainMenu();
-                break;
+            ReturnToMainMenu();
+            break;
         }
     }
 
@@ -123,14 +118,12 @@ public class MainMenuManager : MonoBehaviour
 
     private void UpdateVolumeText(float volume)
     {
-         if (volumeTextValue != null)
-            volumeTextValue.text = volume.ToString("0.0");
+        if (volumeTextValue != null)
+        volumeTextValue.text = volume.ToString("0.0");
     }
 
-    // KORJATTU: Kutsuu AudioManager-Singletonia volyymin säätöön
     public void SetVolume(float volume)
     {
-        // 1. Kutsutaan globaalia AudioManager-Singletonia säätämään Mixeriä
         if (AudioManager.Instance != null)
         {
             AudioManager.Instance.SetMasterVolume(volume);
@@ -140,9 +133,7 @@ public class MainMenuManager : MonoBehaviour
             Debug.LogWarning("AudioManager Instance not found! Volume is only visually updated.");
         }
         
-        // 2. Päivitetään UI-teksti
         UpdateVolumeText(volume);
         
-        // POISTETTU VANHA musicSource.volume = volume; JA PlayerPrefs tallennus
     }
 }

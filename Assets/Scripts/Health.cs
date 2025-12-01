@@ -14,16 +14,15 @@ public class Health : MonoBehaviour
     private float soundVolumeBoost = 0.5f;
     private BossDamage bossDamage;
 
-public void TestHeal(int amount) // LISÄÄ TÄMÄ
-{
-    health += amount;
-    health = Mathf.Min(health, maxHealth);
+    public void TestHeal(int amount)
+    {
+        health += amount;
+        health = Mathf.Min(health, maxHealth);
 
-    OnHealthChanged?.Invoke(health, maxHealth);
+        OnHealthChanged?.Invoke(health, maxHealth);
     
-    // TÄMÄN LOKIN ON PAKKO TULLA, JOS Health.cs ON AKTIIVINEN
-    Debug.Log("--- HEALTH.CS TESTI: Terveys parannettu R-näppäimellä: " + health); 
-}
+        Debug.Log("--- HEALTH.CS TESTI: Terveys parannettu R-näppäimellä: " + health); 
+    }
 
     void Start()
     {
@@ -32,7 +31,7 @@ public void TestHeal(int amount) // LISÄÄ TÄMÄ
 
         if (playerMovement == null)
         {
-        playerMovement = GetComponentInParent<PlayerMovement>(); 
+            playerMovement = GetComponentInParent<PlayerMovement>(); 
         }
 
         OnHealthChanged?.Invoke(health, maxHealth);

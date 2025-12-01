@@ -16,19 +16,19 @@ public class Bowi : MonoBehaviour, IWeapon
 
     public event Action<int, int> OnAmmoChanged;
 
-void OnDisable()
-{
-    OnAmmoChanged = null; 
-}
+    void OnDisable()
+    {
+        OnAmmoChanged = null; 
+    }
 
     public void ForceRegister()
     {
         if (currentClip == 0 && currentAmmo == 0)
-    {
-        currentClip = maxClipSize;
-        currentAmmo = maxAmmoSize;
-    }
-    InvokeAmmoChange();
+        {
+            currentClip = maxClipSize;
+            currentAmmo = maxAmmoSize;
+        }
+        InvokeAmmoChange();
     }
 
     void Start()

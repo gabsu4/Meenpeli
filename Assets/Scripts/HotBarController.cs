@@ -69,15 +69,15 @@ public class HotBarController : MonoBehaviour
                 UseSelectedConsumableItem();
             }
 
-            if (Keyboard.current.eKey.wasPressedThisFrame)
-    {
-        Debug.Log("--- E-NÄPPÄINTÄ PAINETTU! ---"); // LISÄYS
-
-        if (selectedSlotIndex != -1) 
+        if (Keyboard.current.eKey.wasPressedThisFrame)
         {
-            UseSelectedConsumableItem();
+            Debug.Log("--- E-NÄPPÄINTÄ PAINETTU! ---");
+
+            if (selectedSlotIndex != -1) 
+            {
+                UseSelectedConsumableItem();
+            }
         }
-    }
 
         float scrollDelta = Mouse.current.scroll.y.ReadValue();
 
@@ -117,15 +117,11 @@ public class HotBarController : MonoBehaviour
 
         if (itemToUse != null && itemToUse.IsConsumable())
         {
-            // 1. Kutsutaan UseItem() (esim. HealthPotion.cs)
             itemToUse.UseItem(); 
 
-            // 2. Poistetaan esine slotti-inventaariosta
             Destroy(itemToUse.gameObject); 
-            selectedSlot.currentItem = null; // Päivitetään slotti tyhjäksi
+            selectedSlot.currentItem = null;
             
-            // HUOM: Jos haluat heti käyttää seuraavan slotin, 
-            // voit kutsua SelectSlot(selectedSlotIndex) tässä.
         }
     }
 
@@ -159,5 +155,4 @@ public class HotBarController : MonoBehaviour
             }
         }
     }
-
 }
