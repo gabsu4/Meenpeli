@@ -2,8 +2,7 @@ using NUnit.Framework;
 using UnityEngine;
 using System;
 
-
-public class EnemyHealth : MonoBehaviour
+public class BossHealth : MonoBehaviour
 {
     public Animator animator;
     [SerializeField] private AudioClip Dead;
@@ -31,6 +30,7 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
     }
+
     public void TakeDamage(int damage)
     {
         if (IsDead) return;
@@ -44,9 +44,8 @@ public class EnemyHealth : MonoBehaviour
 
             AudioHelper.PlayClip2D(randomClip, transform.position, soundVolumeBoost);
         }
-        animator.SetTrigger("Hurt");
 
-
+        // --- Boss-specific Thresholds (kept as they seem intended for the boss) ---
         if (!phaseTwoTriggered && currentHealth <= PhaseTwoThreshold)
         {
             phaseTwoTriggered = true;
@@ -65,12 +64,14 @@ public class EnemyHealth : MonoBehaviour
             nearDeathHpTriggered = true;
             AudioHelper.PlayClip2D(NearDeathHp, transform.position, soundVolumeBoost);
         }
+        // --------------------------------------------------------------------------
 
         if(currentHealth <= 0)
         {
             Die();
         }
     }
+
     void Die()
     {
         if (IsDead) return;
@@ -80,17 +81,30 @@ public class EnemyHealth : MonoBehaviour
         {
             AudioHelper.PlayClip2D(Dead, transform.position, soundVolumeBoost);
         }
+        
+        // This line is KEPT: It calls the Die method on the BossDamage script.
+        GetComponent<BossDamage>()?.Die(); 
+        
+        if (animator != null)
+        {
+            animator.SetBool("IsDead", true);
+        }
 
-        GetComponent<MonsterDamage>()?.Die();
-        animator.SetBool("IsDead", true);
+        // --- THIS LINE IS REMOVED/DELETED: It was only for regular enemies ---
+        // GetComponent<MonsterDamage>()?.Die(); 
+        
         GetComponent<Collider2D>().enabled = false;
+
         AiChase aiChase = GetComponent<AiChase>();
         if (aiChase != null)
         {
             aiChase.enabled = false;
         }
-        this.enabled = false;
+        
+        // IMPORTANT: Ensure you only disable the script *after* the animation plays
+        // This is handled by the Animation Event calling FinalDeathCleanup()
     }
+
     public void FinalDeathCleanup()
     {
         this.enabled = false;
