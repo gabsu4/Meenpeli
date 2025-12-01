@@ -20,6 +20,14 @@ PrefabInstance:
       propertyPath: itemIcon
       value: 
       objectReference: {fileID: 4576071727898395855, guid: f7ccedf1f8f542e4db8202a0ed5b4aad, type: 3}
+    - target: {fileID: 3587562653715573300, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587562653715573300, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+      propertyPath: isConsumableItem
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3773086942240019926, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -108,8 +116,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3587562653715573300, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5663659729767919178, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -3251924715834041621}
   m_SourcePrefab: {fileID: 100100000, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+--- !u!1 &1160214797651799987 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5663659729767919178, guid: fb060e8b121b941478649c2caf52f7fc, type: 3}
+  m_PrefabInstance: {fileID: 6809642413979566585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-3251924715834041621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160214797651799987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bea7de3a9ea12f4195991dea859cbee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  uiItemPrefab: {fileID: 1160214797651799987}
+  ID: 0
+  Name: Potion
+  itemIcon: {fileID: 4576071727898395855, guid: f7ccedf1f8f542e4db8202a0ed5b4aad, type: 3}
+  isConsumableItem: 1
+  isWeapon: 0
+  healAmount: 10
