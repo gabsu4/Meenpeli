@@ -60,9 +60,40 @@ public class HotBarController : MonoBehaviour
             if (Keyboard.current[hotbarKeys[i]].wasPressedThisFrame)
             {
                 SelectSlot(i);
-                break;
+                return;
             }
         }
+
+        float scrollDelta = Mouse.current.scroll.y.ReadValue();
+
+    if (scrollDelta != 0f)
+    {
+        int direction = 0;
+        if (scrollDelta > 0)
+        {
+            direction = -1;
+        }
+        else if (scrollDelta < 0)
+        {
+            direction = 1;
+        }
+
+        // Laske uusi indeksi
+        int newIndex = selectedSlotIndex + direction;
+
+        // Käsittele kääriytyminen (wrapping)
+        if (newIndex >= slotCount)
+        {
+            newIndex = 0; // Siirry viimeisestä slottista ensimmäiseen
+        }
+        else if (newIndex < 0)
+        {
+            newIndex = slotCount - 1; // Siirry ensimmäisestä slottista viimeiseen
+        }
+        
+        // Varmista, että uusi indeksi on validi ja valitaan
+        SelectSlot(newIndex);
+    }
     }
 
     // HotBarController.cs - UUSI SelectSlot-funktio (EI COROUTINEA)
