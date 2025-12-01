@@ -10206,7 +10206,7 @@ TilemapCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -1.3}
+  m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
@@ -11448,7 +11448,7 @@ MonoBehaviour:
   rayMaxDistance: 10
   obstacleLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   ignoreTriggers: 1
   drawGizmos: 0
   LogOutOfRange: 0
