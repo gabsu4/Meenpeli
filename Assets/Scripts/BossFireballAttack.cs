@@ -22,8 +22,7 @@ public class BossFireballAttack : MonoBehaviour
         animator = GetComponent<Animator>();
         if (player == null)
             player = GameObject.FindGameObjectWithTag("Player");
-
-        this.enabled = false; 
+        this.enabled = false;
     }
 
     void Update()
@@ -46,9 +45,10 @@ public class BossFireballAttack : MonoBehaviour
             }
         }
     }
-
     void ShootFireball()
     {
+        lastAttackTime = Time.time;
+
         IsAttacking = true;
         if (animator != null)
         {
