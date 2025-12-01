@@ -75,7 +75,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (IsDead) return;
         IsDead = true;
-        GetComponent<MonsterDamage>()?.Die();
+
         AiChase aiChase = GetComponent<AiChase>();
         if (animator != null)
         {
@@ -86,6 +86,6 @@ public class EnemyHealth : MonoBehaviour
             AudioHelper.PlayClip2D(Dead, transform.position, soundVolumeBoost);
         }
         GetComponent<Collider2D>().enabled = false;
-        Destroy(gameObject);
+        Destroy(gameObject); 
     }
 }

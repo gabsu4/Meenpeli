@@ -1,30 +1,36 @@
-using NUnit.Framework;
-using UnityEngine;
 using System;
+using UnityEngine;
 
-public class BossHealth : MonoBehaviour
+public class BossLifeCycle : MonoBehaviour
 {
+    // --- Public & Serialize Fields ---
     public Animator animator;
-    [SerializeField] private AudioClip Dead;
-    [SerializeField] private AudioClip[] Hurt;
-    public AudioClip LowHp;
-    public AudioClip NearDeathHp;
-    public AudioClip PhaseHp;
+    public BossAiChase aiChaseScript; // Drag the BossAiChase script component here
+    public BossDamage bossDamageScript; // Drag the BossDamage script component here
+    public Rigidbody2D rb; // Drag the Rigidbody2D component here
+    
+    [SerializeField] private AudioClip DeadSound;
     private float soundVolumeBoost = 0.5f;
 
-    public event Action OnHealthThresholdReached;
-    public int CurrentHealth => currentHealth;
-    public int maxHealth = 10;
+    // --- Health Variables ---
+    public int maxHealth = 100;
     public int currentHealth;
-    public bool IsDead = false;
+    public bool IsDead { get; private set; } = false;
 
-    private const int PhaseTwoThreshold = 25;
-    private const int LowHpLine = 30;
-    private const int NearDeathHpLine = 10;
-
+    // --- Phase Two Logic (Kept for integration) ---
+    public event Action OnHealthThresholdReached;
+    private const int PhaseTwoThreshold = 50; // Example Phase 2 HP
     private bool phaseTwoTriggered = false;
-    private bool lowHpTriggered = false; 
-    private bool nearDeathHpTriggered = false;
+
+
+    void Awake()
+    {
+        // Safety checks for component assignment (in case they are missed in the Inspector)
+        if (animator == null) animator = GetComponent<Animator>();
+        if (rb == null) rb = GetComponent<Rigidbody2D>();
+        if (aiChaseScript == null) aiChaseScript = GetComponent<BossAiChase>();
+        if (bossDamageScript == null) bossDamageScript = GetComponent<BossDamage>();
+    }
 
     void Start()
     {
@@ -36,35 +42,14 @@ public class BossHealth : MonoBehaviour
         if (IsDead) return;
 
         currentHealth -= damage;
-        if (currentHealth > 0 && Hurt.Length > 0)
-        {
-            int randomIndex = UnityEngine.Random.Range(0, Hurt.Length);
-        
-            AudioClip randomClip = Hurt[randomIndex];
+        animator.SetTrigger("Hurt"); // Assuming you still have a Hurt trigger
 
-            AudioHelper.PlayClip2D(randomClip, transform.position, soundVolumeBoost);
-        }
-
-        // --- Boss-specific Thresholds (kept as they seem intended for the boss) ---
+        // Phase Two Check
         if (!phaseTwoTriggered && currentHealth <= PhaseTwoThreshold)
         {
             phaseTwoTriggered = true;
-            AudioHelper.PlayClip2D(PhaseHp, transform.position, soundVolumeBoost);
-            OnHealthThresholdReached?.Invoke();
+            OnHealthThresholdReached?.Invoke(); // Triggers the StartPhaseTwo in BossAiChase
         }
-
-        if (!lowHpTriggered && currentHealth <= LowHpLine)
-        {
-            lowHpTriggered = true;
-            AudioHelper.PlayClip2D(LowHp, transform.position, soundVolumeBoost);
-        }
-
-        if (!nearDeathHpTriggered && currentHealth <= NearDeathHpLine)
-        {
-            nearDeathHpTriggered = true;
-            AudioHelper.PlayClip2D(NearDeathHp, transform.position, soundVolumeBoost);
-        }
-        // --------------------------------------------------------------------------
 
         if(currentHealth <= 0)
         {
@@ -77,36 +62,47 @@ public class BossHealth : MonoBehaviour
         if (IsDead) return;
         IsDead = true;
 
-        if (Dead != null)
-        {
-            AudioHelper.PlayClip2D(Dead, transform.position, soundVolumeBoost);
-        }
-        
-        // This line is KEPT: It calls the Die method on the BossDamage script.
-        GetComponent<BossDamage>()?.Die(); 
-        
+        // 1. Play Visuals and Audio
         if (animator != null)
         {
-            animator.SetBool("IsDead", true);
+            animator.SetBool("IsDead", true); 
+        }
+        // if (DeadSound != null)
+        // {
+        //     AudioHelper.PlayClip2D(DeadSound, transform.position, soundVolumeBoost);
+        // }
+        
+        // 2. IMMEDIATE SHUTDOWN (Prevents movement/attack resurrection)
+        
+        // Stop Movement
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.angularVelocity = 0f;
+            rb.bodyType = RigidbodyType2D.Kinematic; // Lock position
         }
 
-        // --- THIS LINE IS REMOVED/DELETED: It was only for regular enemies ---
-        // GetComponent<MonsterDamage>()?.Die(); 
+        // Disable AI and Attacks
+        if (aiChaseScript != null)
+        {
+            aiChaseScript.enabled = false;
+        }
+        if (bossDamageScript != null)
+        {
+            bossDamageScript.enabled = false;
+        }
         
+        // Disable main Collider
         GetComponent<Collider2D>().enabled = false;
 
-        AiChase aiChase = GetComponent<AiChase>();
-        if (aiChase != null)
-        {
-            aiChase.enabled = false;
-        }
-        
-        // IMPORTANT: Ensure you only disable the script *after* the animation plays
-        // This is handled by the Animation Event calling FinalDeathCleanup()
+        // Stop this script's Update/events if you decide to keep it enabled for a bit
+        this.enabled = false; 
     }
 
+    // This function MUST be called via an Animation Event on the death animation's last frame.
     public void FinalDeathCleanup()
     {
-        this.enabled = false;
+        // This permanently removes the boss from the scene.
+        Destroy(gameObject); 
     }
 }

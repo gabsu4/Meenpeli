@@ -6,7 +6,6 @@ using UnityEngine;
 public class BossAiChase : MonoBehaviour
 {
     [SerializeField] private BossDamage bossDamage;
-    private BossFireballAttack fireballAttack;
     public AudioClip First;
     private EnemyHealth enemyHealth;
     public Transform attackpoint;
@@ -29,12 +28,10 @@ public class BossAiChase : MonoBehaviour
     {
         if (enemyHealth == null) enemyHealth = GetComponent<EnemyHealth>();
         if (bossDamage == null) bossDamage = GetComponent<BossDamage>();
-        if (fireballAttack == null) fireballAttack = GetComponent<BossFireballAttack>();
         if (animator == null) animator = GetComponent<Animator>();
         if (bossCollider == null) bossCollider = GetComponent<Collider2D>();
 
         if (bossDamage != null) bossDamage.enabled = false;
-        if (fireballAttack != null) fireballAttack.enabled = false;
         
         if (enemyHealth != null)
         {
@@ -77,10 +74,6 @@ public class BossAiChase : MonoBehaviour
         {
             bossDamage.enabled = true;
         }
-        if (fireballAttack != null)
-        {
-            fireballAttack.enabled = false;
-        }
     }
 
     void Update()
@@ -92,8 +85,7 @@ public class BossAiChase : MonoBehaviour
         }
 
         bool currentlyAttacking = 
-            (bossDamage != null && bossDamage.enabled && bossDamage.IsAttacking) ||
-            (fireballAttack != null && fireballAttack.enabled && fireballAttack.IsAttacking);
+            bossDamage != null && bossDamage.enabled && bossDamage.IsAttacking;
         
         if(currentlyAttacking)
         {
@@ -193,11 +185,6 @@ public class BossAiChase : MonoBehaviour
         {
             bossDamage.enabled = false;
         }
-
-        if (fireballAttack != null)
-        {
-            fireballAttack.enabled = true;
-        }
     }
     private void HandlePhaseTwoBehavior()
     {
@@ -210,23 +197,30 @@ public class BossAiChase : MonoBehaviour
         }   
         distance = Vector2.Distance(transform.position, player.transform.position);
 
-        if (distance > fireballAttack.shootingRange)
+        if (distance <= bossDamage.attackRange)
+        {
+            animator.SetBool("IsWalking", false);
+        
+            if (Time.time - bossDamage.lastAttackTime >= bossDamage.attackCooldown)
+            {
+                Vector2 attackDirection = (player.transform.position - transform.position).normalized;
+                bossDamage.StartAttack(attackDirection);
+            }
+        
+            animator.SetFloat("X_Dir", 0.01f);
+            animator.SetFloat("Y_Dir", 0.01f);
+        }
+        else 
         {
             Vector2 targetPosition = player.transform.position;
             Vector2 currentPosition = transform.position;
-        
+    
             Vector2 moveDirection = (targetPosition - currentPosition).normalized;
-        
+    
             animator.SetBool("IsWalking", true);
             UpdateVisuals(moveDirection);
 
             transform.position = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
-        }
-        else 
-        {
-            animator.SetBool("IsWalking", false);
-            animator.SetFloat("X_Dir", 0.01f);
-            animator.SetFloat("Y_Dir", 0.01f);
         }
     }
     private IEnumerator StopChasingAfterDelay()
