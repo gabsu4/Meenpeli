@@ -32627,7 +32627,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -487, y: -274}
+  m_AnchoredPosition: {x: -397.91187, y: -224}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &972812365
@@ -32659,7 +32659,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279042124
+    rgba: 4279042178
   m_fontColor: {r: 0.50980395, g: 0, b: 0.050980393, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -34181,7 +34181,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -451, y: -206}
+  m_AnchoredPosition: {x: -397.91187, y: -224}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1111391250
@@ -37010,9 +37010,25 @@ PrefabInstance:
       propertyPath: dashSpeed
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 7951289261154059194, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Size.x
+      value: 2.854054
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951289261154059194, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Size.y
+      value: 2.8172991
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951289261154059194, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.62985295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7951289261154059194, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.64427555
+      objectReference: {fileID: 0}
     - target: {fileID: 7970577249133422408, guid: 42572924fc9b523459c3a2c48a04ee9e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
