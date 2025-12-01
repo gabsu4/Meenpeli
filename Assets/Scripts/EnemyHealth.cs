@@ -96,7 +96,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void DropLoot()
     {
-        if (healthPotionPrefab != null && UnityEngine.Random.value < 0.3f)
+        if (healthPotionPrefab != null && UnityEngine.Random.value < 1f)
         {
             Instantiate(healthPotionPrefab, transform.position, Quaternion.identity);
             Debug.Log(gameObject.name + " pudotti Health Potionin!");

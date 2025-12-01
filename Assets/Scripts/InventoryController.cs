@@ -39,6 +39,8 @@ public class InventoryController : MonoBehaviour
                 GameObject newItemGo = Instantiate(itemData.uiItemPrefab, slotTransform);
                 newItemGo.GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
+                ItemPickup itemComponentClone = newItemGo.GetComponent<ItemPickup>();
+
                 Image itemImage = newItemGo.GetComponent<Image>();
 
                 if (itemImage != null)
@@ -47,9 +49,19 @@ public class InventoryController : MonoBehaviour
                     itemImage.enabled = true;
                 }
 
-                slot.currentItem = itemData; 
+                if (itemComponentClone != null)
+                {
+                    slot.currentItem = itemComponentClone; 
+                    slot.itemGameObject = newItemGo;
+                    return true;
+                }
+                else
+                {
 
-                return true;
+                    Debug.LogError("Virhe: UI Prefabissa ei ollut ItemPickup-komponenttia klonauksen jälkeen!");
+                    Destroy(newItemGo);
+                    return false;
+                }
             }
         }
         return false;
