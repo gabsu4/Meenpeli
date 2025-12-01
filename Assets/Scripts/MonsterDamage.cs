@@ -32,9 +32,30 @@ public class MonsterDamage : MonoBehaviour
         {
             if (Time.time - lastAttackTime >= attackCooldown)
             {
-                if (animator != null)
-                    animator.SetTrigger("attack");
+                SoundManager.instance.PlaySound(hit);
                 lastAttackTime = Time.time;
+                Attack();
+            }
+        }
+    }
+        void Attack()
+    {
+        if (animator != null)
+            animator.SetTrigger("attack");
+
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, playerlayer);
+
+        foreach (Collider2D Player in hitPlayer)
+        {
+            if (Player.TryGetComponent<Health>(out Health health))
+            {
+                health.TakeDamage(attackDamage);
+            }
+
+            if (Player.TryGetComponent<PlayerMovement>(out PlayerMovement movement))
+            {
+                movement.KBCounter = movement.KBTotalTime;
+                movement.KnockFromRight = Player.transform.position.x <= transform.position.x;
             }
         }
     }
@@ -65,10 +86,15 @@ public class MonsterDamage : MonoBehaviour
 
     public void Die()
     {
+        if (IsDead) return;
         IsDead = true;
-        animator.SetBool("IsDead", true);
+    
+        if (animator != null)
+        {
+            animator.SetBool("IsDead", true);
+        }
+    
         GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
     }
 
     void OnDrawGizmosSelected()

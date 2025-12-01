@@ -40,9 +40,8 @@ public class BossFireballAttack : MonoBehaviour
 
         if (distanceToPlayer <= shootingRange)
         {
-            if (Time.time - lastAttackTime >= attackCooldown)
+            if (Time.time - lastAttackTime >= attackCooldown && !IsAttacking)
             {
-                lastAttackTime = Time.time;
                 ShootFireball();
             }
         }
@@ -53,7 +52,7 @@ public class BossFireballAttack : MonoBehaviour
         IsAttacking = true;
         if (animator != null)
         {
-            animator.SetTrigger("FireballAttack");
+            animator.SetTrigger("Boss_fireball_attack");
         }
         
         SpawnFireball();
