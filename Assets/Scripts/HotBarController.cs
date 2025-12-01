@@ -65,6 +65,8 @@ public class HotBarController : MonoBehaviour
         }
     }
 
+    // HotBarController.cs - UUSI SelectSlot-funktio (EI COROUTINEA)
+
     public void SelectSlot(int index)
     {
         if (index < 0 || index >= slotCount) return;
@@ -78,38 +80,27 @@ public class HotBarController : MonoBehaviour
         slots[selectedSlotIndex].SelectVisual();
 
         ItemPickup itemToEquip = slots[selectedSlotIndex].currentItem;
-        Bowi equippedWeapon = null;
+        IWeapon equippedWeapon = null; // Määrittele viite tähän
 
         if (playerEquipmentManager != null)
-        {   
-            playerEquipmentManager.EquipItem(itemToEquip);
-
-            if (equippedWeapon == null)
-            {
-                Bowi temporaryBowi = playerEquipmentManager.gameObject.GetComponentInChildren<Bowi>(true); 
-
-                if (temporaryBowi != null)
-                {
-                    temporaryBowi.ForceRegister(); 
-                    equippedWeapon = Bowi.ActiveWeapon; 
-                    Debug.Log("Bowi: Pakotettu rekisteröinti kutsuttu ja viite päivitetty.");
-                }
-                else
-                {
-                    Debug.LogError("Bowi rekisteröity."); 
-                }
-            }
+        {   
+        // Vastaanota IWeapon-viite suoraan EquipItem-kutsusta!
+            equippedWeapon = playerEquipmentManager.EquipItem(itemToEquip);
         }
+    
+    // UUSI KOODI: Käsittele ammusnäyttö heti
         if (ammoDisplay != null)
         {
-            Debug.Log("HotBarController: Yritetään asettaa uusi ase AmmoDisplaylle.");
             ammoDisplay.SetCurrentWeapon(equippedWeapon);
-        }
-        else
-        {
-            Debug.LogError("HotBarController: AmmoDisplay on NULL. Linkitys epäonnistui Inspectorissa tai FindObjectOfType.");
+        
+            if (equippedWeapon == null && itemToEquip != null && itemToEquip.isWeapon)
+            {
+             // Jos on ase, mutta viite puuttuu, vika on komponentissa.
+                Debug.LogError("HotBarController: Asekomponenttia (Gun/Bowi) ei löytynyt aktiivisesta objektista. Tarkista komponentti/linkitykset!");
+            }
         }
 
+    // Vanha Consumable-logiikka pysyy ennallaan
         if (itemToEquip != null && itemToEquip.IsConsumable())
         {
             itemToEquip.UseItem();
@@ -117,4 +108,5 @@ public class HotBarController : MonoBehaviour
             slots[selectedSlotIndex].currentItem = null;
         }
     }
+
 }

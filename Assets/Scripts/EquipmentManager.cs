@@ -24,45 +24,61 @@ public class EquipmentManager : MonoBehaviour
         currentWeaponObject = null;
     }
 
-    public void EquipItem(ItemPickup itemToEquip)
+    // EquipmentManager.cs
+// (Muuta julkinen EquipItem-funktio)
+
+public IWeapon EquipItem(ItemPickup itemToEquip) // <-- MUUTETTU PALAUTUSARVOKSI
+{
+    DisableAllWeapons();
+
+    if (itemToEquip == null)
     {
-        if (itemToEquip == null)
-        {
-            DisableAllWeapons();
-            return;
-        }
-
-        DisableAllWeapons();
-
-        if (itemToEquip.Name == "Dagger")
-        {
-            daggerObject.SetActive(true);
-            currentWeaponObject = daggerObject;
-        }
-        else if (itemToEquip.Name == "Sword")
-        {
-            swordObject.SetActive(true);
-            currentWeaponObject = swordObject;
-        }
-        else if (itemToEquip.Name == "Bow")
-        {
-            bowObject.SetActive(true);
-            currentWeaponObject = bowObject;
-        }
-        else if (itemToEquip.Name == "Gun")
-        {
-            gunObject.SetActive(true);
-            currentWeaponObject = gunObject;
-        }
-        else if (itemToEquip.Name == "Potion")
-        {
-            UseConsumable(itemToEquip);
-        }
-        else
-        {
-            Debug.Log($"Item {itemToEquip.Name} is not recognized as a weapon.");
-        }
+        return null; // Palauta null, jos esine on tyhjä
     }
+
+    // TÄMÄ ON UUSI LOGIIKKA
+    GameObject weaponToActivate = null;
+
+    if (itemToEquip.Name == "Dagger")
+    {
+        weaponToActivate = daggerObject;
+    }
+    else if (itemToEquip.Name == "Sword")
+    {
+        weaponToActivate = swordObject;
+    }
+    else if (itemToEquip.Name == "Bow")
+    {
+        weaponToActivate = bowObject;
+    }
+    else if (itemToEquip.Name == "Gun")
+    {
+        weaponToActivate = gunObject;
+    }
+    else if (itemToEquip.Name == "Potion")
+    {
+        UseConsumable(itemToEquip);
+        return null;
+    }
+    else
+    {
+        Debug.Log($"Item {itemToEquip.Name} is not recognized as a weapon.");
+        return null;
+    }
+
+    if (weaponToActivate != null)
+    {
+        weaponToActivate.SetActive(true);
+        currentWeaponObject = weaponToActivate;
+
+        // Etsitään IWeapon komponentti JUURI aktivoitavasta Gameobjectista.
+        IWeapon equippedWeapon = weaponToActivate.GetComponent<IWeapon>(); 
+        
+        return equippedWeapon; // <-- PALAUTA VIITE SUORAAN!
+    }
+
+    return null;
+}
 
     private void UseConsumable(ItemPickup potion)
     {

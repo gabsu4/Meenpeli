@@ -1,54 +1,66 @@
 using System;
 using UnityEngine;
+using System.Collections;
 
-public class Bowi : MonoBehaviour, IWeapon
+public class Gun : MonoBehaviour, IWeapon
 {
     public float offset;
-    public GameObject arrow;
-    public Transform shotPoint;
+    public GameObject bullet;
+    public Transform spawnPoint;
     public float startTimeBtwShots;
     private float timeBtwShots;
+
+    // TÄMÄ ON AINUT TAPAHTUMA, JOTA AMMODISPLAY KUUNTELEE
+    public event Action<int, int> OnAmmoChanged;
     
-    public int currentClip { get; private set; } = 10; 
+    public int currentClip { get; private set; } = 10;
     public int maxClipSize = 10;
     public int currentAmmo { get; private set; } = 100;
     public int maxAmmoSize = 100;
 
-    public event Action<int, int> OnAmmoChanged;
+    // EI TARVITA ENÄÄ: void OnEnable() {}
 
-
-    // Bowi.cs JA Gun.cs
-
-void OnDisable()
-{
-    // Nollaa kaikki tilaajat (kuten AmmoDisplay) pakolla, kun ase deaktivoituu.
-    // Tämä estää sen, että vanha ase lähettäisi päivityksiä.
-    OnAmmoChanged = null; 
-}
-
+    void OnDisable()
+    {
+        // KRIITTINEN: Kun ase deaktivoituu, tyhjennä kaikki tilaajat.
+        OnAmmoChanged = null; 
+        Debug.Log("Gun: OnDisable kutsuttu. OnAmmoChanged nollattu.");
+    }
+    
+    // TÄMÄ FUNKTIO ON PAKOLLINEN IWEAPON-RAJAPINNAN TOTEUTTAMISEKSI
     public void ForceRegister()
     {
-        if (currentClip == 0 && currentAmmo == 0)
+        StartCoroutine(DelayForceRegister());
+    }
+
+    private IEnumerator DelayForceRegister()
+    {
+    // Tämä odottaa yhden ruudun, jotta AmmoDisplay ehtii rekisteröidä tapahtuman
+    yield return null; 
+
+    if (currentClip == 0 && currentAmmo == 0)
     {
         currentClip = maxClipSize;
         currentAmmo = maxAmmoSize;
     }
     InvokeAmmoChange();
+    Debug.Log("Gun: ForceRegister (viivästetty) kutsuttu. Ammuspäivitys lähetetty.");
     }
-
+    
     void Start()
     {
-
+        // Alustus (jos tarpeen)
     }
 
     void Update()
     {
+        // Aseen ohjauslogiikka...
         Vector3 cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 direction = cursor - shotPoint.position;
+        Vector3 direction = cursor - spawnPoint.position;
 
         float rotZ = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
-        Quaternion arrowRotation = Quaternion.Euler(0f, 0f, rotZ + offset);
+        Quaternion bulletRotation = Quaternion.Euler(0f, 0f, rotZ + offset);
 
         if (timeBtwShots <= 0)
         {
@@ -56,7 +68,7 @@ void OnDisable()
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    Instantiate(arrow, shotPoint.position, arrowRotation);
+                    Instantiate(bullet, spawnPoint.position, bulletRotation);
                     timeBtwShots = startTimeBtwShots;
                     currentClip--;
 
@@ -73,10 +85,12 @@ void OnDisable()
             Reload();
         }
     }
+    
+    // --- AMMUSLIIKETOIMINTA ---
+
     public void Reload()
     {
         int ammoNeeded = maxClipSize - currentClip;
-        int originalCurrentAmmo = currentAmmo;
         int ammoToTransfer = Mathf.Min(ammoNeeded, currentAmmo);
 
         currentClip += ammoToTransfer;
@@ -87,6 +101,7 @@ void OnDisable()
             InvokeAmmoChange();
         }
     }
+    
     public void AddAmmo(int ammoAmount)
     {
         int originalCurrentAmmo = currentAmmo;
@@ -104,7 +119,7 @@ void OnDisable()
 
     private void InvokeAmmoChange()
     {
-        Debug.Log($"Bowi: Lähettää ammuspäivityksen: Clip={currentClip}, Reserve={currentAmmo}");
+        Debug.Log($"Gun: Lähettää ammuspäivityksen: Clip={currentClip}, Reserve={currentAmmo}");
         OnAmmoChanged?.Invoke(currentClip, currentAmmo);
     }
-} 
+}

@@ -8,14 +8,14 @@ public class AmmoDisplay : MonoBehaviour
     public TextMeshProUGUI reserveAmmoText;
 
     [SerializeField]
-    private Bowi currentWeapon;
+    private IWeapon currentWeapon;
 
-    public void SetCurrentWeapon(Bowi newWeapon)
+    public void SetCurrentWeapon(IWeapon newWeapon)
     {
         if (currentWeapon != null)
         {
             currentWeapon.OnAmmoChanged -= UpdateAmmoUI;
-            SetUITexts(string.Empty, string.Empty); 
+            SetUITexts(string.Empty, string.Empty);
         }
 
         currentWeapon = newWeapon;
@@ -23,8 +23,8 @@ public class AmmoDisplay : MonoBehaviour
         if (currentWeapon != null)
         {
             currentWeapon.OnAmmoChanged += UpdateAmmoUI;
-            
-            UpdateAmmoUI(currentWeapon.currentClip, currentWeapon.currentAmmo);
+        
+            currentWeapon.ForceRegister(); 
         }
     }
 
