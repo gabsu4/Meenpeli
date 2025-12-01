@@ -6,6 +6,8 @@ using System;
 public class EnemyHealth : MonoBehaviour
 {
     public GameObject healthPotionPrefab;
+    public GameObject arrowPrefab;
+    public GameObject bulletPrefab;
 
     public Animator animator;
     [SerializeField] private AudioClip Dead;
@@ -96,10 +98,22 @@ public class EnemyHealth : MonoBehaviour
 
     private void DropLoot()
     {
-        if (healthPotionPrefab != null && UnityEngine.Random.value < 1f)
+        if (healthPotionPrefab != null && UnityEngine.Random.value < 0.3f)
         {
             Instantiate(healthPotionPrefab, transform.position, Quaternion.identity);
             Debug.Log(gameObject.name + " pudotti Health Potionin!");
+        }
+
+        if (arrowPrefab != null && UnityEngine.Random.value < 1f)
+        {
+            Instantiate(arrowPrefab, transform.position, Quaternion.identity);
+            Debug.Log(gameObject.name + " pudotti Ammuksia.");
+        }
+
+        if (bulletPrefab != null && UnityEngine.Random.value < 1f) 
+        {
+            Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+            Debug.Log(gameObject.name + " pudotti Luoteja.");
         }
     }
 }

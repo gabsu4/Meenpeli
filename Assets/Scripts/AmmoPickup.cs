@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 public class AmmoPickup : MonoBehaviour
 {
+    public int ammoAmount = 10;
+
+    public AmmoType type = AmmoType.Arrow;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player"))
@@ -11,11 +15,25 @@ public class AmmoPickup : MonoBehaviour
             return;
         }
         
-        Bowi bowi = collision.gameObject.GetComponentInChildren<Bowi>();
-        if (bowi)
+        if (type == AmmoType.Arrow)
         {
-            bowi.AddAmmo(bowi.maxAmmoSize);
-            Destroy(gameObject);
+            Bowi bowi = collision.gameObject.GetComponentInChildren<Bowi>();
+            if (bowi != null)
+            {
+                bowi.AddAmmo(ammoAmount);
+                Destroy(gameObject);
+                return;
+            }
+        }
+        else if (type == AmmoType.Bullet)
+        {
+            Gun gun = collision.gameObject.GetComponentInChildren<Gun>();
+            if (gun != null)
+            {
+                gun.AddAmmo(ammoAmount);
+                Destroy(gameObject);
+                return;
+            }
         }
     }
 }

@@ -523,6 +523,18 @@ PrefabInstance:
       propertyPath: Dead
       value: 
       objectReference: {fileID: 8300000, guid: 8698e45711dc13547ada232e1d3ea399, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -12237,6 +12249,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -12455,6 +12479,18 @@ PrefabInstance:
       propertyPath: Dead
       value: 
       objectReference: {fileID: 8300000, guid: 8698e45711dc13547ada232e1d3ea399, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -12636,6 +12672,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -12907,6 +12955,18 @@ PrefabInstance:
       propertyPath: Dead
       value: 
       objectReference: {fileID: 8300000, guid: 8698e45711dc13547ada232e1d3ea399, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -15988,6 +16048,18 @@ PrefabInstance:
       propertyPath: Dead
       value: 
       objectReference: {fileID: 8300000, guid: ecd29f4b49237634a8076c528b2a5694, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -17583,6 +17655,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -17660,6 +17744,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -18234,6 +18330,18 @@ PrefabInstance:
       propertyPath: Dead
       value: 
       objectReference: {fileID: 8300000, guid: 8698e45711dc13547ada232e1d3ea399, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -35919,6 +36027,18 @@ PrefabInstance:
       propertyPath: Dead
       value: 
       objectReference: {fileID: 8300000, guid: ecd29f4b49237634a8076c528b2a5694, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -36175,6 +36295,18 @@ PrefabInstance:
       propertyPath: Dead
       value: 
       objectReference: {fileID: 8300000, guid: ecd29f4b49237634a8076c528b2a5694, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -36358,6 +36490,18 @@ PrefabInstance:
       propertyPath: Dead
       value: 
       objectReference: {fileID: 8300000, guid: ecd29f4b49237634a8076c528b2a5694, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
@@ -36476,6 +36620,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: arrowPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 760ae6d39fa0fc143987f7891329a52a, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 2993777526264994156, guid: 1540dccf09083f540a9b3a9576dc0f2e, type: 3}
+    - target: {fileID: 4360005597483289985, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
+      propertyPath: healthPotionPrefab
+      value: 
+      objectReference: {fileID: 1030457856828292633, guid: bba8de7e1cf406147bbed14aa43d2a5e, type: 3}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
       value: 
