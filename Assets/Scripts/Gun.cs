@@ -10,7 +10,6 @@ public class Gun : MonoBehaviour, IWeapon
     public float startTimeBtwShots;
     private float timeBtwShots;
 
-    // TÄMÄ ON AINUT TAPAHTUMA, JOTA AMMODISPLAY KUUNTELEE
     public event Action<int, int> OnAmmoChanged;
     
     public int currentClip { get; private set; } = 10;
@@ -18,16 +17,12 @@ public class Gun : MonoBehaviour, IWeapon
     public int currentAmmo { get; private set; } = 100;
     public int maxAmmoSize = 100;
 
-    // EI TARVITA ENÄÄ: void OnEnable() {}
-
     void OnDisable()
     {
-        // KRIITTINEN: Kun ase deaktivoituu, tyhjennä kaikki tilaajat.
         OnAmmoChanged = null; 
         Debug.Log("Gun: OnDisable kutsuttu. OnAmmoChanged nollattu.");
     }
     
-    // TÄMÄ FUNKTIO ON PAKOLLINEN IWEAPON-RAJAPINNAN TOTEUTTAMISEKSI
     public void ForceRegister()
     {
         StartCoroutine(DelayForceRegister());
@@ -35,26 +30,24 @@ public class Gun : MonoBehaviour, IWeapon
 
     private IEnumerator DelayForceRegister()
     {
-    // Tämä odottaa yhden ruudun, jotta AmmoDisplay ehtii rekisteröidä tapahtuman
-    yield return null; 
+        yield return null; 
 
-    if (currentClip == 0 && currentAmmo == 0)
-    {
-        currentClip = maxClipSize;
-        currentAmmo = maxAmmoSize;
-    }
-    InvokeAmmoChange();
-    Debug.Log("Gun: ForceRegister (viivästetty) kutsuttu. Ammuspäivitys lähetetty.");
+        if (currentClip == 0 && currentAmmo == 0)
+        {
+            currentClip = maxClipSize;
+            currentAmmo = maxAmmoSize;
+        }
+        InvokeAmmoChange();
+        Debug.Log("Gun: ForceRegister (viivästetty) kutsuttu. Ammuspäivitys lähetetty.");
     }
     
     void Start()
     {
-        // Alustus (jos tarpeen)
+
     }
 
     void Update()
     {
-        // Aseen ohjauslogiikka...
         Vector3 cursor = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = cursor - spawnPoint.position;
 
