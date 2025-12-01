@@ -16,13 +16,8 @@ public class Bowi : MonoBehaviour, IWeapon
 
     public event Action<int, int> OnAmmoChanged;
 
-
-    // Bowi.cs JA Gun.cs
-
 void OnDisable()
 {
-    // Nollaa kaikki tilaajat (kuten AmmoDisplay) pakolla, kun ase deaktivoituu.
-    // Tämä estää sen, että vanha ase lähettäisi päivityksiä.
     OnAmmoChanged = null; 
 }
 

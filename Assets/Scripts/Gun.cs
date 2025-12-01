@@ -78,8 +78,6 @@ public class Gun : MonoBehaviour, IWeapon
             Reload();
         }
     }
-    
-    // --- AMMUSLIIKETOIMINTA ---
 
     public void Reload()
     {
