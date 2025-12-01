@@ -25,12 +25,6 @@ public class BossAiChase : MonoBehaviour
     private Collider2D bossCollider;
 
     public bool IsActive { get; set; } = false;
-    private const int DIR_FRONT = 0;
-    private const int DIR_BACK = 1;
-    private const int DIR_RIGHT = 2;
-    private const int DIR_LEFT = 3;
-    
-
     void Start()
     {
         if (enemyHealth == null) enemyHealth = GetComponent<EnemyHealth>();
@@ -126,6 +120,11 @@ public class BossAiChase : MonoBehaviour
                     Voice = true; 
                 }
                 animator.SetBool("IsWalking", false);
+                if (Time.time - bossDamage.lastAttackTime >= bossDamage.attackCooldown)
+                {
+                    Vector2 attackDirection = (player.transform.position - transform.position).normalized;
+                    bossDamage.StartAttack(attackDirection);
+                }
             }
             else if(distance > bossDamage.attackRange)
             {
@@ -150,6 +149,10 @@ public class BossAiChase : MonoBehaviour
         {
             Voice = false;
             animator.SetBool("IsWalking", false);
+
+            animator.SetFloat("X_Dir", 0.01f);
+            animator.SetFloat("Y_Dir", 0.01f);
+
             if (stopChase == null)
             {
                 stopChase = StartCoroutine(StopChasingAfterDelay());
@@ -162,31 +165,16 @@ public class BossAiChase : MonoBehaviour
         float horizontal = intendedMovementDirection.x;
         float vertical = intendedMovementDirection.y;
 
-        int finalDirection = 0;
-        if (Mathf.Abs(horizontal) > Mathf.Abs(vertical))
+        if (Mathf.Abs(horizontal) > Mathf.Abs(vertical)) 
         {
-            if (horizontal > 0)
-            {
-                finalDirection = DIR_RIGHT;
-            }
-            else
-            {
-                finalDirection = DIR_LEFT;
-            }
+            animator.SetFloat("X_Dir", horizontal);
+            animator.SetFloat("Y_Dir", 0.01f); 
         }
         else
         {
-        
-            if (vertical > 0)
-            {
-                finalDirection = DIR_BACK;
-            }
-            else
-            {
-                finalDirection = DIR_FRONT;
-            }
+            animator.SetFloat("X_Dir", 0.01f);
+            animator.SetFloat("Y_Dir", vertical); 
         }
-        animator.SetInteger("Direction", finalDirection);
     }
 
 
@@ -216,6 +204,8 @@ public class BossAiChase : MonoBehaviour
         if (player == null)
         {
             animator.SetBool("IsWalking", false);
+            animator.SetFloat("X_Dir", 0.01f);
+            animator.SetFloat("Y_Dir", 0.01f);
             return;
         }   
         distance = Vector2.Distance(transform.position, player.transform.position);
@@ -235,6 +225,8 @@ public class BossAiChase : MonoBehaviour
         else 
         {
             animator.SetBool("IsWalking", false);
+            animator.SetFloat("X_Dir", 0.01f);
+            animator.SetFloat("Y_Dir", 0.01f);
         }
     }
     private IEnumerator StopChasingAfterDelay()

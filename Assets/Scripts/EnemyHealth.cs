@@ -27,9 +27,6 @@ public class EnemyHealth : MonoBehaviour
     private bool lowHpTriggered = false; 
     private bool nearDeathHpTriggered = false;
 
-    private bool Hp = false;
-    private bool Hp10 = false;
-    
     void Start()
     {
         currentHealth = maxHealth;
@@ -47,7 +44,7 @@ public class EnemyHealth : MonoBehaviour
 
             AudioHelper.PlayClip2D(randomClip, transform.position, soundVolumeBoost);
         }
-        animator.SetTrigger("Hurt");
+
 
         if (!phaseTwoTriggered && currentHealth <= PhaseTwoThreshold)
         {
@@ -82,15 +79,23 @@ public class EnemyHealth : MonoBehaviour
         {
             AudioHelper.PlayClip2D(Dead, transform.position, soundVolumeBoost);
         }
+        GetComponent<BossDamage>()?.Die();
+        if (animator != null)
+        {
+            animator.SetBool("IsDead", true);
+        }
 
         GetComponent<MonsterDamage>()?.Die();
-        animator.SetBool("IsDead", true);
         GetComponent<Collider2D>().enabled = false;
         AiChase aiChase = GetComponent<AiChase>();
         if (aiChase != null)
         {
             aiChase.enabled = false;
         }
+        this.enabled = false;
+    }
+    public void FinalDeathCleanup()
+    {
         this.enabled = false;
     }
 }

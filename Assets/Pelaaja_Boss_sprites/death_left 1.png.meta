@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: 54d0ec8bd3be3bd40b7b67f154f5e1d1
+guid: aa421417b21f5044d9cb65d908864a10
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 849954387293562029
-    second: Boss_attack_front_0
+      213: -1611103893052924428
+    second: death_left 1_0
   - first:
-      213: -5332142945665273775
-    second: Boss_attack_front_1
+      213: 6592040151402037073
+    second: death_left 1_1
   - first:
-      213: 270817618024868915
-    second: Boss_attack_front_2
+      213: -5752703143199322682
+    second: death_left 1_2
   - first:
-      213: -2638829311620198479
-    second: Boss_attack_front_3
-  - first:
-      213: 7984454236987327787
-    second: Boss_attack_front_4
-  - first:
-      213: -7082712133807643608
-    second: Boss_attack_front_5
+      213: -1902544369908707824
+    second: death_left 1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,133 +109,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_attack_front_0
+      name: death_left 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 899
-        width: 1
-        height: 1
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: da4eae11305abcb00800000000000000
-      internalID: 849954387293562029
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_attack_front_1
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 39
-        width: 1311
-        height: 790
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1503408ed3c6006b0800000000000000
-      internalID: -5332142945665273775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_attack_front_2
-      rect:
-        serializedVersion: 2
-        x: 1829
-        y: 39
-        width: 1352
-        height: 812
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 33c2a41503322c300800000000000000
-      internalID: 270817618024868915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_attack_front_3
-      rect:
-        serializedVersion: 2
-        x: 3689
-        y: 39
-        width: 1242
-        height: 822
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1bf4df1e8bef06bd0800000000000000
-      internalID: -2638829311620198479
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_attack_front_4
-      rect:
-        serializedVersion: 2
-        x: 5889
+        x: 19
         y: 0
-        width: 1012
-        height: 851
+        width: 172
+        height: 391
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b250ef833da7ece60800000000000000
-      internalID: 7984454236987327787
+      spriteID: 4fdd4569b8534a9e0800000000000000
+      internalID: -1611103893052924428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_attack_front_5
+      name: death_left 1_1
       rect:
         serializedVersion: 2
-        x: 7849
-        y: 39
-        width: 792
-        height: 812
+        x: 229
+        y: 0
+        width: 162
+        height: 351
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 824eb0217d625bd90800000000000000
-      internalID: -7082712133807643608
+      spriteID: 15f3e617791ab7b50800000000000000
+      internalID: 6592040151402037073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_left 1_2
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 0
+        width: 162
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cdc45b68fa4a20b0800000000000000
+      internalID: -5752703143199322682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: death_left 1_3
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 0
+        width: 162
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01e0c26c9fdc895e0800000000000000
+      internalID: -1902544369908707824
       vertices: []
       indices: 
       edges: []
@@ -250,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: acd6bf5e62dee9149ae70bed0ef9b5ee
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -260,12 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Boss_attack_front_0: 849954387293562029
-      Boss_attack_front_1: -5332142945665273775
-      Boss_attack_front_2: 270817618024868915
-      Boss_attack_front_3: -2638829311620198479
-      Boss_attack_front_4: 7984454236987327787
-      Boss_attack_front_5: -7082712133807643608
+      death_left 1_0: -1611103893052924428
+      death_left 1_1: 6592040151402037073
+      death_left 1_2: -5752703143199322682
+      death_left 1_3: -1902544369908707824
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 54d0ec8bd3be3bd40b7b67f154f5e1d1
+guid: 93e4e746449d02e4a933c9aef73e9e90
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 849954387293562029
-    second: Boss_attack_front_0
+      213: 6710430968918224413
+    second: Boss_attack_back_0
   - first:
-      213: -5332142945665273775
-    second: Boss_attack_front_1
+      213: 4544706524370924273
+    second: Boss_attack_back_1
   - first:
-      213: 270817618024868915
-    second: Boss_attack_front_2
+      213: -280528985428099278
+    second: Boss_attack_back_2
   - first:
-      213: -2638829311620198479
-    second: Boss_attack_front_3
+      213: -5149925414286417961
+    second: Boss_attack_back_3
   - first:
-      213: 7984454236987327787
-    second: Boss_attack_front_4
+      213: 1858281811256874866
+    second: Boss_attack_back_4
   - first:
-      213: -7082712133807643608
-    second: Boss_attack_front_5
+      213: -2219063768472512026
+    second: Boss_attack_back_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,55 +115,55 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_attack_front_0
+      name: Boss_attack_back_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 429
+        y: 49
+        width: 1315
+        height: 807
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ea620b96d302d50800000000000000
+      internalID: 6710430968918224413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Boss_attack_back_1
+      rect:
+        serializedVersion: 2
+        x: 1925
         y: 899
-        width: 1
+        width: 4
         height: 1
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.43245277, y: 0.5260337}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: da4eae11305abcb00800000000000000
-      internalID: 849954387293562029
+      spriteID: 1f27789418a021f30800000000000000
+      internalID: 4544706524370924273
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_attack_front_1
+      name: Boss_attack_back_2
       rect:
         serializedVersion: 2
-        x: 50
-        y: 39
-        width: 1311
-        height: 790
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1503408ed3c6006b0800000000000000
-      internalID: -5332142945665273775
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss_attack_front_2
-      rect:
-        serializedVersion: 2
-        x: 1829
-        y: 39
+        x: 2239
+        y: 49
         width: 1352
         height: 812
       alignment: 0
@@ -174,18 +174,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 33c2a41503322c300800000000000000
-      internalID: 270817618024868915
+      spriteID: 23f7b52cf5c5b1cf0800000000000000
+      internalID: -280528985428099278
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_attack_front_3
+      name: Boss_attack_back_3
       rect:
         serializedVersion: 2
-        x: 3689
-        y: 39
+        x: 4119
+        y: 49
         width: 1242
         height: 822
       alignment: 0
@@ -196,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1bf4df1e8bef06bd0800000000000000
-      internalID: -2638829311620198479
+      spriteID: 7df93b50f1ac788b0800000000000000
+      internalID: -5149925414286417961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_attack_front_4
+      name: Boss_attack_back_4
       rect:
         serializedVersion: 2
-        x: 5889
-        y: 0
-        width: 1012
-        height: 851
+        x: 5969
+        y: 49
+        width: 722
+        height: 812
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,18 +218,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b250ef833da7ece60800000000000000
-      internalID: 7984454236987327787
+      spriteID: 27719843671f9c910800000000000000
+      internalID: 1858281811256874866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_attack_front_5
+      name: Boss_attack_back_5
       rect:
         serializedVersion: 2
-        x: 7849
-        y: 39
+        x: 7669
+        y: 49
         width: 792
         height: 812
       alignment: 0
@@ -240,8 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 824eb0217d625bd90800000000000000
-      internalID: -7082712133807643608
+      spriteID: 6e9914a724d4431e0800000000000000
+      internalID: -2219063768472512026
       vertices: []
       indices: 
       edges: []
@@ -250,7 +250,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: acd6bf5e62dee9149ae70bed0ef9b5ee
+    spriteID: 37133cf5b13fa9c4cb621ae52d2adcad
     internalID: 0
     vertices: []
     indices: 
@@ -260,12 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Boss_attack_front_0: 849954387293562029
-      Boss_attack_front_1: -5332142945665273775
-      Boss_attack_front_2: 270817618024868915
-      Boss_attack_front_3: -2638829311620198479
-      Boss_attack_front_4: 7984454236987327787
-      Boss_attack_front_5: -7082712133807643608
+      Boss_attack_back_0: 6710430968918224413
+      Boss_attack_back_1: 4544706524370924273
+      Boss_attack_back_2: -280528985428099278
+      Boss_attack_back_3: -5149925414286417961
+      Boss_attack_back_4: 1858281811256874866
+      Boss_attack_back_5: -2219063768472512026
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
