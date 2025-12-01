@@ -8,29 +8,17 @@ public class HealthPotion : ItemPickup
     {
         base.UseItem(); 
 
-        // 1. Etsitään objekti "Player"-tagin avulla (LUOTETTAVA)
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Player"); 
+        Health playerHealth = FindObjectOfType<Health>();
         
-        if (playerObject != null)
+        if (playerHealth != null)
         {
-            // 2. Haetaan Health-komponentti LÖYDETTYLTÄ pelaajaobjektilta.
-            Health playerHealth = playerObject.GetComponentInChildren<Health>();
-        
-            if (playerHealth != null)
-            {
-                playerHealth.Heal(healAmount);
-                Debug.Log("Player healed for " + healAmount + " health!");
-            }
-            else
-            {
-                 // Virhe, jos Tag on oikein, mutta komponentti puuttuu.
-                 Debug.LogError("HealthPotion: Player-objektilta puuttuu Health-komponentti, vaikka Tag löytyi!");
-            }
+            playerHealth.Heal(healAmount);
+            Debug.Log("Player healed for " + healAmount + " health! (E-key works!)");
+
         }
         else
         {
-            // Virhe, jos Tagia "Player" ei löydy.
-            Debug.LogError("HealthPotion: Player-objektia (Tag: Player) ei löytynyt! Oletko asettanut Tagin?");
+            Debug.LogError("HealthPotion: Health.cs-skriptiä ei löydy pelistä. Onko se kiinnitetty ja aktiivinen?");
         }
     }
 }
