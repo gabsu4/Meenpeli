@@ -10,7 +10,7 @@ public class BossDamage : MonoBehaviour
     public LayerMask playerlayer;
     public float attackRange = 0.5f;
     public float attackCooldown = 1.5f;
-    private float lastAttackTime = 0f;
+    public float lastAttackTime = 0f;
 
     public Animator animator;
     public GameObject Player;
@@ -25,68 +25,80 @@ public class BossDamage : MonoBehaviour
 
     void Update()
     {
-        if (IsDead)
+        if (IsDead || Player == null)
         {
             return;
-        }
-        if(Player == null)
-        {
-            return;
-        }
-        float distanceToPlayer = Vector2.Distance(transform.position, Player.transform.position);
-
-        if (distanceToPlayer <= attackRange)
-        {
-            if (Time.time - lastAttackTime >= attackCooldown)
-            {
-                SoundManager.instance.PlaySound(hit);
-                lastAttackTime = Time.time;
-                Attack();
-            }
         }
     }
 
-    void Attack()
+    public void StartAttack(Vector2 directionToPlayer)
     {
+        if (IsAttacking) return;
+    
         IsAttacking = true;
-        if (animator != null)
-            animator.SetTrigger("attack");
+        lastAttackTime = Time.time; 
 
-            StartCoroutine(ResetAttackAfterTime());
+        bool isFacingBack = directionToPlayer.y > 0; 
+
+        if (animator != null)
+        {
+            if (isFacingBack)
+            {
+                animator.SetTrigger("Attack_Back_Trigger"); 
+            }
+            else
+            {
+                animator.SetTrigger("Attack_Front_Trigger"); 
+            }
+        
+            animator.SetBool("IsWalking", false); 
+        }
+    }
+
+    public void PerformDamageHit()
+    {   
+        if (!IsAttacking || Player == null)
+        {
+            return;
+        }
 
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, playerlayer);
 
-        foreach (Collider2D Player in hitPlayer)
+        foreach (Collider2D playerCollider in hitPlayer)
         {
-            if (Player.TryGetComponent<Health>(out Health health))
+            if (playerCollider.TryGetComponent<Health>(out Health health))
             {
                 health.TakeDamage(attackDamage);
             }
-            if (health.IsDead() && playerDeathTaunt != null) 
-                {
-                    AudioHelper.PlayClip2D(playerDeathTaunt, transform.position, 1f); 
-                }
 
-            if (Player.TryGetComponent<PlayerMovement>(out PlayerMovement movement))
+            if (health != null && health.IsDead() && playerDeathTaunt != null) 
+            {
+                AudioHelper.PlayClip2D(playerDeathTaunt, transform.position, 1f); 
+            }
+
+            if (playerCollider.TryGetComponent<PlayerMovement>(out PlayerMovement movement))
             {
                 movement.KBCounter = movement.KBTotalTime;
-                movement.KnockFromRight = Player.transform.position.x <= transform.position.x;
+                movement.KnockFromRight = playerCollider.transform.position.x <= transform.position.x;
             }
         }
+    
+            if (hit != null)
+                SoundManager.instance.PlaySound(hit);
     }
-    private IEnumerator ResetAttackAfterTime()
-    {
-        yield return new WaitForSeconds(0.8f);
-        IsAttacking = false;
-    }
+
     public void EndAttack()
     {
         IsAttacking = false;
     }
     public void Die()
     {
+        if (IsDead) return;
         IsDead = true;
-        animator.SetBool("IsDead", true);
+        if (animator != null)
+        {
+            animator.SetBool("IsDead", true);
+        }
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
 
