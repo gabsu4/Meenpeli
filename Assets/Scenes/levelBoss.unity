@@ -380,11 +380,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6694133105078228803, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.1934853
+      value: -0.19348526
       objectReference: {fileID: 0}
     - target: {fileID: 6694133105078228803, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2495488
+      value: -5.6341643
       objectReference: {fileID: 0}
     - target: {fileID: 6725805591197964898, guid: e6594ca140369b54d8e5ba33a05e9417, type: 3}
       propertyPath: Player
@@ -10901,6 +10901,7 @@ MonoBehaviour:
     m_Bits: 256
   attackRange: 10
   attackCooldown: 1.5
+  lastAttackTime: 0
   animator: {fileID: 960963747}
   Player: {fileID: 381632867}
 --- !u!114 &960963733
